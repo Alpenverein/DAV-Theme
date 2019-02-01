@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/variables.css",
+	"sources": [
+		"../sass/variables.scss"
+	],
+	"sourcesContent": [
+		"\n$gray-900: #3F3F3F;\n$dark: $gray-900;\n$table-dark-bg: $dark;\n$white: #fff;\n$table-dark-border-color: $white;\n$enable-rounded: false;\n$green: #61B732;\n$primary: $green;\n$orange: rgb(245, 121, 2);\n$secondary: $orange;\n$blue: #0083C7;\n$yellow: #FFDD00;\n$red: #E34348;\n$cyan: #674C1D;\n$gray-100: #F4F4F4;\n$success: $blue;\n$gray-400: #dddddd;\n$gray-700: #7A7A7A;\n$font-family-sans-serif: Fira Sans;\n$font-family-base: $font-family-sans-serif;\n$font-family-monospace: Fira Mono;\n$table-border-color: $gray-400;\n$table-accent-bg: $gray-100;\n$breadcrumb-divider: \">\";\n$breadcrumb-active-color: $primary;\n$breadcrumb-bg: $white;\n$font-weight-light: 200;\n$font-weight-normal: 400;\n$enable-shadows: true;\n$border-width: 0px;\n$table-border-width: 1px;\n$tooltip-bg: $dark;\n$popover-header-bg: $dark;\n$popover-header-color: $white;\n$list-group-border-width: 1px;\n$list-group-border-color: $gray-400;\n$carousel-control-color: $white;\n$carousel-control-width: 15%;\n$carousel-indicator-height: 3px;\n$carousel-indicator-width: 5px;\n$carousel-control-icon-width: 40px;\n$modal-content-box-shadow-sm-up: 2px 2px 6px 0 rgba(0,0,0,0.25);\n$modal-content-box-shadow-xs: 2px 2px 6px 0 rgba(0,0,0,0.25);\n$navbar-dark-hover-color: $white;\n$light: $gray-100;\n$navbar-dark-color: $light;\n$navbar-light-color: $dark;\n$navbar-light-active-color: $dark;\n$navbar-light-hover-color: $dark;\n$btn-box-shadow: none;\n$btn-active-box-shadow: none;"
+	],
+	"mappings": "",
+	"names": []
+}

@@ -1,0 +1,108 @@
+.bg-400 {
+  background-color: $gray-400;
+}
+
+.bg-700 {
+  background-color: $gray-700;
+}
+
+.card {
+  box-shadow: $shadow;
+}
+
+.container-mainnav {
+  box-shadow: $shadow;
+}
+
+.btn-card-top, .btn-calendar {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  top: 15px;
+  background: $white;
+  border-radius: 50%;
+  box-shadow: -1px 0 1px 0 rgba(0,0,0,0.05), 1px -1px 1px 0 rgba(0,0,0,0.25), 1px 1px 0 0 rgba(97,183,50,0.75);
+  color: $primary;
+}
+
+.btn-calendar {
+  color: $success;
+  /* Oval 2: */
+background: #FFFFFF;
+box-shadow: -1px 0 1px 0 rgba(0,0,0,0.05), 1px -1px 1px 0 rgba(0,0,0,0.25), 1px 1px 0 0 rgba(0,131,199,0.75);
+}
+
+.btn-news {
+  width: 35px;
+  height: 35px;
+  background: $white;
+  border-radius: 50%;
+  box-shadow: -1px 0 1px 0 rgba(0,0,0,0.05), 1px -1px 1px 0 rgba(0,0,0,0.25), 1px 1px 0 0 rgba(97,183,50,0.75);
+  color: $primary;
+  float: right;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+
+.quicklink-primary {
+  border-top: 5px solid $white;
+  background-color: darken($primary, 5%);
+}
+
+.quicklink-primary .btn {
+    font-size: 14px;
+    text-transform: none;
+    color: #000;
+    font-weight: $font-weight-bold;
+}
+
+.quicklink-light .btn {
+    font-size: 14px;
+    text-transform: none;
+    color: $dark;
+    font-weight: $font-weight-bold;
+}
+
+.quicklink-primary .btn-quicklink {
+  background-color: #D8EDCC;
+  border-left: 2px solid darken($primary, 5%);
+  color: $dark;
+}
+
+.btn-quicklink {
+  letter-spacing: 1.1px;
+}
+  
+
+.quicklink-secondary {
+  border-top: 5px solid $white;
+  background-color: rgba($primary, .25);
+  color: $dark;
+}
+
+.quicklink-light {
+  border-top: 5px solid $primary;
+  background-color: #C6C3C3;
+}
+
+.quicklink-light .btn-quicklink {
+  background-color: $gray-700;
+  border-left: 2px solid #C6C3C3;
+  color: $white;
+}
+
+.quicklink-dark {
+  border-top: 5px solid $light;
+}
+
+.news-head {
+ border-bottom: 2px solid $primary;
+ font-size: 1.4em;
+ padding-bottom: 5px;
+}
