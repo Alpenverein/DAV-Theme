@@ -1067,6 +1067,15 @@ footer {
     width: 7px;
 }
 
+#content ul.wp-block-gallery{
+    margin-left: 0px;
+    padding-left: 0;
+}
+
+#content ul.wp-block-gallery li:before {
+    background: none;
+}
+
 #content-list .news-head {
     border: none;
 }
@@ -1115,4 +1124,16 @@ footer {
 
 .tour-list .card-body {
     margin-right: 60px;
+}
+
+
+
+/* GUTENBERG */
+ul .wp-block-gallery {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#content ul .wp-block-gallery li:before {
+    list-style: none;
 }
