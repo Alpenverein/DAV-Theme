@@ -87,6 +87,7 @@ function nav_breadcrumb() {
         } elseif ( is_single() && !is_attachment() ) {
             if ( get_post_type() != 'post' ) {
 
+
                 if(get_post_type() == 'touren') {
 
                     $post_type = get_post_type_object(get_post_type());

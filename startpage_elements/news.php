@@ -138,7 +138,7 @@ function show_news($news_quantity,$news_line,$news_category_in = '',$news_catego
     if($thumbnail == false) {
         $thumbnail[0] = get_template_directory_uri().'/images/placeholder_news.png';
     }
-                $return .= '<div class="col-lg-4 col-sm-6 pt-4">
+                $return .= '<div class="col-sm-6 col-md-'. $columns .'  pt-4">
                     <div class="card ">
                     <a href="' . get_the_permalink() . '"><img class="card-img-top" src="'.$thumbnail[0].'" alt="Artikelbild zu Artikel ' . get_the_title() . '"></a>
                         <div class="card-body card-news-image">

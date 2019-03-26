@@ -70,25 +70,25 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                                 
                                 </strong></p>
 
-                            <div class="d-flex bd-highlight">
+                            <div class="d-flex flex-sm-column">
                                 <div class="p-1 flex-grow-1">Dauer: </div>
-                                <div class="p-1"><strong><?php echo get_field('acf_tourtime'); ?></strong></div>
+                                <div class="p-1 text-right"><strong><?php echo get_field('acf_tourtime'); ?></strong></div>
                             </div>
-                            <div class="d-flex">
+                            <div class="d-flex flex-sm-column">
                                 <div class="p-1 flex-grow-1">Kilometer: </div>
                                 <div class="p-1 text-right"><strong><?php echo get_field('acf_tourkilometer'); ?></strong></div>
                             </div>
-                            <div class="d-flex">
+                            <div class="d-flex flex-sm-column">
                                 <div class="p-1 flex-grow-1">Höhenmeter: </div>
                                 <div class="p-1 text-right"><strong><?php echo get_field('acf_tourhohenmeter'); ?></strong></div>
                             </div>
-                            <div class="d-flex">
+                            <div class="d-flex flex-sm-column">
                                 <div class="p-1 flex-grow-1">Kondition: </div>
-                                <div class="p-1"><strong><?php echo $tour_condition; ?></strong></div>
+                                <div class="p-1 text-right"><strong><?php echo $tour_condition; ?></strong></div>
                             </div>
-                            <div class="d-flex">
+                            <div class="d-flex flex-sm-column">
                                 <div class="p-1 flex-grow-1">Technik: </div>
-                                <div class="p-1"><strong><?php echo $tour_technic; ?></strong></div>
+                                <div class="p-1 text-right"><strong><?php echo $tour_technic; ?></strong></div>
                             </div>
                         </div>
                     </div>

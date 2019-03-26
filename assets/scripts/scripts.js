@@ -100,6 +100,23 @@ $(document).ready(function() {
 
     });
 
+
+    $('.cr_button').addClass('btn btn-primary');
+    $('.tribe-events-ical').removeClass('tribe-events-button');
+    $('.tribe-events-ical').addClass('btn btn-primary');
+    $('.tribe-events-ical').removeClass('tribe-events-ical');
+
+    $('.tribe-events-gcal').removeClass('tribe-events-button');
+    $('.tribe-events-gcal').addClass('btn btn-primary');
+    $('.tribe-events-gcal').removeClass('tribe-events-gcal');
+
+
+    $(".cr_form").find("input").each(function() {
+        $(this).addClass('form-control');
+
+    });
+
+
 });
 
 $(window).on("scroll", function() {

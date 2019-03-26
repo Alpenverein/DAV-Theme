@@ -26,7 +26,19 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
             </div>
             <div class="row">
                 <?php
-                $pages = get_pages(array('parent' => $post->ID, 'sort_column'=>'post_title', 'post_status'=> 'publish', 'sort_order' => 'asc', 'hierarchical' => 0));
+
+                $pages_sort = get_field("dav_sortorder_pages");
+
+
+                switch ($pages_sort) {
+
+                    case "s" : $sortorder = 'menu_order'; break;
+                    case 'a' : $sortorder = 'post_title'; break;
+                    default: $sortorder = 'post_title'; break;
+                }
+
+
+                $pages = get_pages(array('parent' => $post->ID, 'sort_column' => $sortorder, 'post_status' => 'publish', 'sort_order' => 'asc', 'hierarchical' => 0));
 
                 $pagelist = array();
 

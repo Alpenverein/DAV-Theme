@@ -1,4 +1,4 @@
-<?php /* Template Name: Ohne Titel */ ?>
+<?php /* Template Name: Ohne Titelausgabe */ ?>
 
 <?php get_header(); ?>
 

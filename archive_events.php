@@ -1,5 +1,3 @@
-<?php /* Template Name: Ohne Titel */ ?>
-
 <?php get_header(); ?>
 
 <?php
@@ -16,6 +14,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
     <div class="container">
         <div class="container-content">
+
+            <div class="row">
+                <div class="col-12">
+                    <h1><?php the_title(); ?>sdf dsff dsfdsf sdfsd f</h1>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12" id="content">
                     <?php the_content(); ?>
