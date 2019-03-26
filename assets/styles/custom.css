@@ -1187,3 +1187,10 @@ ul .wp-block-gallery {
     margin-left: 20px !important;
     width: auto !important;
 }
+
+@media (max-width: 768px) {
+    .tribe-events-calendar th {
+        font-size: 7px !important;
+        font-weight: 500 !important;
+    }
+}

@@ -17,10 +17,7 @@ function nav_breadcrumb() {
 
     $ec_overview_slug = get_option('tribe_events_calendar_options')['eventsSlug'];
     $ec_event_slug = get_option('tribe_events_calendar_options')['singleEventSlug'];
-
     $uri_slug = explode('/' , $_SERVER['REQUEST_URI']);
-    var_dump($ec_event_slug);
-    var_dump($uri_slug);
 
     if(get_theme_mod('dav_menuview') != false) {$dav_menuview = get_theme_mod('dav_menuview');} else {$dav_menuview = 'boxed';};
 

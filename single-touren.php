@@ -47,7 +47,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         </div>
         <div class="row" style="margin-top: 15px;">
             <div class="col-xs-12 col-sm-8" id="content">
+                <? $tour_image = wp_get_attachment_image_src(get_field('acf_tourphoto'), 'medium'); ?>
+
+                <img src="<?php echo $tour_image[0] ?>" class="img-fluid" style="margin-bottom: 1em;">
+
                 <p class="lead text-primary"><?php echo $tour_meta['acf_tourcompact'][0]; ?></p>
+
                 <?php the_content(); ?>
             </div>
             <div class="col-sm-4">
@@ -70,26 +75,62 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                                 
                                 </strong></p>
 
-                            <div class="d-flex flex-sm-column">
-                                <div class="p-1 flex-grow-1">Dauer: </div>
-                                <div class="p-1 text-right"><strong><?php echo get_field('acf_tourtime'); ?></strong></div>
-                            </div>
-                            <div class="d-flex flex-sm-column">
-                                <div class="p-1 flex-grow-1">Kilometer: </div>
-                                <div class="p-1 text-right"><strong><?php echo get_field('acf_tourkilometer'); ?></strong></div>
-                            </div>
-                            <div class="d-flex flex-sm-column">
-                                <div class="p-1 flex-grow-1">Höhenmeter: </div>
-                                <div class="p-1 text-right"><strong><?php echo get_field('acf_tourhohenmeter'); ?></strong></div>
-                            </div>
-                            <div class="d-flex flex-sm-column">
-                                <div class="p-1 flex-grow-1">Kondition: </div>
-                                <div class="p-1 text-right"><strong><?php echo $tour_condition; ?></strong></div>
-                            </div>
-                            <div class="d-flex flex-sm-column">
-                                <div class="p-1 flex-grow-1">Technik: </div>
-                                <div class="p-1 text-right"><strong><?php echo $tour_technic; ?></strong></div>
-                            </div>
+                            <?
+
+                            if (get_field('acf_tourtreffzeit') != "") {
+
+                                echo '<p class="lead text-right"><strong>' . get_field("acf_tourtreffzeit") .'</strong></p>';
+                            }
+
+                            if (get_field('acf_tourtreffpunkt') != "") {
+
+                                echo '<div class="d-flex flex-sm-column">
+                                <div class="flex-sm-grow-1">Treffpunkt: </div>
+                                <div class="text-right"><strong>'.get_field("acf_tourtreffpunkt").' h</strong></div>
+                            </div>';
+                            }
+
+                            if (get_field('acf_tourtime') != "") {
+
+                                echo '<div class="d-flex flex-sm-column">
+                                <div class="flex-sm-grow-1">Dauer: </div>
+                                <div class="text-right"><strong>'.get_field("acf_tourtime").' h</strong></div>
+                            </div>';
+                            }
+
+                            if (get_field('acf_tourkilometer') != "") {
+
+                                echo '<div class="d-flex flex-sm-column">
+                                <div class="flex-sm-grow-1">Kilometer: </div>
+                                <div class="text-right"><strong>'.get_field("acf_tourkilometer").'</strong></div>
+                            </div>';
+                            }
+
+                            if (get_field('acf_tourhohenmeter') != "") {
+
+                                echo '<div class="d-flex flex-sm-column">
+                                <div class="flex-sm-grow-1">Höhenmeter: </div>
+                                <div class="text-right"><strong>'.get_field("acf_tourhohenmeter").'</strong></div>
+                            </div>';
+                            }
+
+                            if ($tour_condition != "") {
+
+                                echo '<div class="d-flex flex-sm-column">
+                                <div class="flex-sm-grow-1">Kondition: </div>
+                                <div class="text-right"><strong>'.$tour_condition.'</strong></div>
+                            </div>';
+                            }
+
+                            if ($tour_technic != "") {
+
+                                echo '<div class="d-flex flex-sm-column">
+                                <div class="flex-sm-grow-1">Technik: </div>
+                                <div class="text-right"><strong>'.$tour_technic.'</strong></div>
+                            </div>';
+                            }
+
+                            ?>
                         </div>
                     </div>
                 </div>
