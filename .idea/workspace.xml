@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/assets/styles/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/custom-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/custom-functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single-touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-touren.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,29 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="single-touren.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/single-touren.php">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="88" column="95" selection-start-line="88" selection-start-column="95" selection-end-line="88" selection-end-column="95" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom-functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/custom-functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#68#75#1" expanded="true" />
-                <element signature="e#68#76#1" expanded="true" />
-                <element signature="e#68#76#1" expanded="true" />
-                <element signature="e#68#75#1" expanded="true" />
-              </folding>
+            <state relative-caret-position="108">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -102,6 +85,7 @@
         <option value="$PROJECT_DIR$/functions/custom-functions.php" />
         <option value="$PROJECT_DIR$/assets/styles/custom.css" />
         <option value="$PROJECT_DIR$/single-touren.php" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -214,12 +198,12 @@
       <workItem from="1553505050653" duration="2033000" />
       <workItem from="1553521315180" duration="4000" />
       <workItem from="1553583473911" duration="9130000" />
-      <workItem from="1553596768626" duration="6213000" />
+      <workItem from="1553596768626" duration="6317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44360000" />
+    <option name="totallyTimeSpent" value="44464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1673" y="112" width="1440" height="877" extended-state="0" />
@@ -254,19 +238,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/functions/custom-functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="106" column="17" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
-          <folding>
-            <element signature="e#68#75#1" expanded="true" />
-            <element signature="e#68#76#1" expanded="true" />
-            <element signature="e#68#76#1" expanded="true" />
-            <element signature="e#68#75#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/styles/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19368">
@@ -583,19 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/custom-functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#68#75#1" expanded="true" />
-            <element signature="e#68#76#1" expanded="true" />
-            <element signature="e#68#76#1" expanded="true" />
-            <element signature="e#68#75#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/styles/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="604">
@@ -610,6 +568,26 @@
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/custom-functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#68#75#1" expanded="true" />
+            <element signature="e#68#76#1" expanded="true" />
+            <element signature="e#68#76#1" expanded="true" />
+            <element signature="e#68#75#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
