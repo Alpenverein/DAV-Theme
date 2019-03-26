@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5236462c-1586-46cd-9960-f572d72226b0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/page_kalender.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page_withouttitle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scripts/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/custom-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/custom-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_full.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_full.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_overview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single-touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-touren.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startpage_elements/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/startpage_elements/news.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startpage_elements/slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/startpage_elements/slider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/acf.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/acf.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,11 +13,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="page_overview.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page_overview.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page_overview.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="292">
               <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="acf.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions/acf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+              <folding>
+                <element signature="e#90#1717#1#PHP" />
+                <element signature="e#90#1871#1#PHP" />
+                <element signature="e#1905#4076#1#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,6 +141,7 @@
         <option value="$PROJECT_DIR$/assets/styles/custom.css" />
         <option value="$PROJECT_DIR$/startpage_elements/slider.php" />
         <option value="$PROJECT_DIR$/page_overview.php" />
+        <option value="$PROJECT_DIR$/functions/acf.php" />
       </list>
     </option>
   </component>
@@ -298,12 +301,12 @@
       <workItem from="1553460479661" duration="7482000" />
       <workItem from="1553505050653" duration="2033000" />
       <workItem from="1553521315180" duration="4000" />
-      <workItem from="1553583473911" duration="596000" />
+      <workItem from="1553583473911" duration="1298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29613000" />
+    <option name="totallyTimeSpent" value="30315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1673" y="112" width="1440" height="877" extended-state="0" />
@@ -338,13 +341,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tribe-events/month/loop-grid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tribe-events/month.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -678,6 +674,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/acf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding>
+            <element signature="e#90#1717#1#PHP" />
+            <element signature="e#90#1871#1#PHP" />
+            <element signature="e#1905#4076#1#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
