@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
+
 // Title Bar
 tribe_get_template_part( 'month/title-bar' );
 

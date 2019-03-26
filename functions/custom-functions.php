@@ -15,6 +15,13 @@
  */
 function nav_breadcrumb() {
 
+    $ec_overview_slug = get_option('tribe_events_calendar_options')['eventsSlug'];
+    $ec_event_slug = get_option('tribe_events_calendar_options')['singleEventSlug'];
+
+    $uri_slug = explode('/' , $_SERVER['REQUEST_URI']);
+    var_dump($ec_event_slug);
+    var_dump($uri_slug);
+
     if(get_theme_mod('dav_menuview') != false) {$dav_menuview = get_theme_mod('dav_menuview');} else {$dav_menuview = 'boxed';};
 
     $delimiter = '&nbsp;>&nbsp;';
@@ -64,6 +71,7 @@ function nav_breadcrumb() {
         echo '<a href="' . $homeLink . '"><li class="breadcrumb-item" aria-current="page">' . $home . '</li></a> '. $delimiter;
 
         if ( is_category()) {
+
             global $wp_query;
             $cat_obj = $wp_query->get_queried_object();
             $thisCat = $cat_obj->term_id;
@@ -85,8 +93,8 @@ function nav_breadcrumb() {
             echo $before . get_the_time('Y') . $after;
 
         } elseif ( is_single() && !is_attachment() ) {
-            if ( get_post_type() != 'post' ) {
 
+            if ( get_post_type() != 'post' ) {
 
                 if(get_post_type() == 'touren') {
 
@@ -104,8 +112,17 @@ function nav_breadcrumb() {
 
                     $post_type = get_post_type_object(get_post_type());
                     $slug = $post_type->rewrite;
+
+                    if($uri_slug[1] == $ec_event_slug) {
+
+                        echo '<a href="' . $homeLink . '/' . $ec_overview_slug . '/">'. ucfirst($ec_overview_slug) . '</a> ' . $after;
+
+                    } else {
+
                     echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a> ' . $delimiter . ' ';
                     echo $before . get_the_title() . $after;
+                    }
+
                 }
             }
 
@@ -115,8 +132,8 @@ function nav_breadcrumb() {
                 echo $before . get_the_title() . $after;
             }
 
-        } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && get_post_type() != 'touren' && get_post_type() != 'persona' && !is_404() ) {
-            //$post_type = get_post_type_object(get_post_type());
+        } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && get_post_type() != 'touren' && get_post_type() != 'persona' && !is_404()  && $uri_slug[1] != $ec_overview_slug && $uri_slug[1] != $ec_event_slug) {
+
             echo $before . 'Ergebnisse für Ihre Suche  "' . get_search_query() . '"' . $after;
 
 
@@ -149,7 +166,7 @@ function nav_breadcrumb() {
             }
             $breadcrumbs = array_reverse($breadcrumbs);
             foreach ($breadcrumbs as $crumb) echo $crumb . ' ' . $delimiter . ' ';
-            echo $before . get_the_title() . $after;
+            echo $before .get_the_title() . $after;
 
         } elseif ( is_search() ) {
             echo $before . 'Ergebnisse für Ihre Suche nach "' . get_search_query() . '"' . $after;
@@ -159,9 +176,18 @@ function nav_breadcrumb() {
 
         } elseif ( is_404() ) {
             echo $before . 'Fehler 404' . $after;
+
         }
 
-        if ( get_query_var('paged') ) {
+        if ($uri_slug[1] == $ec_overview_slug) {
+
+            echo $before . ucfirst($ec_overview_slug) . $after;
+        }
+
+
+
+
+        if ( get_query_var('paged')) {
             if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo '&nbsp;(';
             echo __('Seite') . ' ' . get_query_var('paged');
             if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')&nbsp;';

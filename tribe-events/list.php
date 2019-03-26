@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'tribe_events_before_template' );
 ?>
 
+
 <!-- Title Bar -->
 <?php tribe_get_template_part( 'list/title-bar' ); ?>
 

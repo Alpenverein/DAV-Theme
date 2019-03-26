@@ -1182,3 +1182,8 @@ ul .wp-block-gallery {
 .tribe-events-meta-group {
     padding: 0 !important;
 }
+
+.tribe-bar-submit {
+    margin-left: 20px !important;
+    width: auto !important;
+}
