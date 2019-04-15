@@ -64,7 +64,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     <div class="card-body">
                         <div class="price-body pt-2">
 
-                            <p class="lead text-right"><strong><?php echo substr(get_field('acf_tourstartdate'),0,2).'.'.substr(get_field('acf_tourstartdate'),3,2).'.'.substr(get_field('acf_tourstartdate'),6,4);
+                            <p class="lead text-left"><strong><?php echo substr(get_field('acf_tourstartdate'),0,2).'.'.substr(get_field('acf_tourstartdate'),3,2).'.'.substr(get_field('acf_tourstartdate'),6,4);
 
                                 if((get_field('acf_tourstartdate') != '') && (get_field('acf_tourallday') == 1)) {
 
@@ -79,54 +79,54 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                             if (get_field('acf_tourtreffzeit') != "") {
 
-                                echo '<p class="lead text-right"><strong>' . get_field("acf_tourtreffzeit") .'</strong></p>';
+                                echo '<p class="lead"><strong>' . get_field("acf_tourtreffzeit") .' Uhr</strong></p>';
                             }
 
                             if (get_field('acf_tourtreffpunkt') != "") {
 
-                                echo '<div class="d-flex flex-sm-column">
-                                <div class="flex-sm-grow-1">Treffpunkt: </div>
-                                <div class="text-right"><strong>'.get_field("acf_tourtreffpunkt").' h</strong></div>
+                                echo '<div class="d-flex mb-2">
+                                <div>Treffpunkt: <br>
+                                <strong>'.get_field("acf_tourtreffpunkt").' </strong></div>
                             </div>';
                             }
 
                             if (get_field('acf_tourtime') != "") {
 
-                                echo '<div class="d-flex flex-sm-column">
-                                <div class="flex-sm-grow-1">Dauer: </div>
-                                <div class="text-right"><strong>'.get_field("acf_tourtime").' h</strong></div>
+                                echo '<div class="d-flex mb-2">
+                                <div>Dauer: <br>
+                                <strong>'.get_field("acf_tourtime").' h</strong></div>
                             </div>';
                             }
 
                             if (get_field('acf_tourkilometer') != "") {
 
-                                echo '<div class="d-flex flex-sm-column">
-                                <div class="flex-sm-grow-1">Kilometer: </div>
-                                <div class="text-right"><strong>'.get_field("acf_tourkilometer").'</strong></div>
+                                echo '<div class="d-flex mb-2">
+                                <div>Kilometer: <br>
+                                <strong>'.get_field("acf_tourkilometer").'</strong></div>
                             </div>';
                             }
 
                             if (get_field('acf_tourhohenmeter') != "") {
 
-                                echo '<div class="d-flex flex-sm-column">
-                                <div class="flex-sm-grow-1">Höhenmeter: </div>
-                                <div class="text-right"><strong>'.get_field("acf_tourhohenmeter").'</strong></div>
+                                echo '<div class="d-flex mb-2">
+                                <div>Höhenmeter: <br>
+                                <strong>'.get_field("acf_tourhohenmeter").'</strong></div>
                             </div>';
                             }
 
                             if ($tour_condition != "") {
 
-                                echo '<div class="d-flex flex-sm-column">
-                                <div class="flex-sm-grow-1">Kondition: </div>
-                                <div class="text-right"><strong>'.$tour_condition.'</strong></div>
+                                echo '<div class="d-flex mb-2">
+                                <div>Kondition: <br>
+                                <strong>'.$tour_condition.'</strong></div>
                             </div>';
                             }
 
                             if ($tour_technic != "") {
 
-                                echo '<div class="d-flex flex-sm-column">
-                                <div class="flex-sm-grow-1">Technik: </div>
-                                <div class="text-right"><strong>'.$tour_technic.'</strong></div>
+                                echo '<div class="d-flex mb-2">
+                                <div>Technik: <br>
+                                <strong>'.$tour_technic.'</strong></div>
                             </div>';
                             }
 

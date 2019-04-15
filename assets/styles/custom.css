@@ -983,6 +983,8 @@ footer {
 
     .carousel-caption {
         padding-left: 15%;
+        padding-right: 15%;
+        padding-bottom: 15px;
     }
 
     .slider-caption-title {
@@ -1037,6 +1039,11 @@ footer {
     border: none;
     padding-top: 2rem;
     margin-bottom: 0.6rem;
+}
+
+#content .tribe-events-schedule h2 {
+    padding-top: 0rem;
+    margin-top: 0;
 }
 
 #content .alignleft {
