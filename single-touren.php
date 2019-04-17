@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <?php
 
 if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb') == 1)) {
@@ -138,12 +139,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 <?php
 
                 if(get_field('acf_tourpersona') != '') {
-
                     echo '
                     <div class="card bg-dark">
                         <div class="row m-3 align-self-stretch">
                             <div class="col-12 p-0">'.
-                                get_the_post_thumbnail($persona->ID, 'post-thumbnail', array('class' => 'img-fluid rounded-circle'))
+                                get_the_post_thumbnail($persona->ID, 'persona-thumb', array('class' => 'img-fluid rounded-circle'))
                             .'</div>
                             <div class="col-12 p-0 pt-3 text-center">
                                 <span class="person-name">'.$persona->post_title.'</span>
