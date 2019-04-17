@@ -47,7 +47,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         </div>
         <div class="row" style="margin-top: 15px;">
             <div class="col-xs-12 col-sm-8" id="content">
-                <? $tour_image = wp_get_attachment_image_src(get_field('acf_tourphoto'), 'medium'); ?>
+                <?php $tour_image = wp_get_attachment_image_src(get_field('acf_tourphoto'), 'medium'); ?>
 
                 <img src="<?php echo $tour_image[0] ?>" class="img-fluid" style="margin-bottom: 1em;">
 
@@ -75,7 +75,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                                 
                                 </strong></p>
 
-                            <?
+                            <?php
 
                             if (get_field('acf_tourtreffzeit') != "") {
 
@@ -140,7 +140,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 if(get_field('acf_tourpersona') != '') {
 
                     echo '
-                    <div class="card card-touren bg-dark">
+                    <div class="card bg-dark">
                         <div class="row m-3 align-self-stretch">
                             <div class="col-12 p-0">'.
                                 get_the_post_thumbnail($persona->ID, 'post-thumbnail', array('class' => 'img-fluid rounded-circle'))
