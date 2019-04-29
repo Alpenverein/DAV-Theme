@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <?php
 
 if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb') == 1)) {
@@ -47,7 +48,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         </div>
         <div class="row" style="margin-top: 15px;">
             <div class="col-xs-12 col-sm-8" id="content">
+                <?php $tour_image = wp_get_attachment_image_src(get_field('acf_tourphoto'), 'medium'); ?>
+
+                <img src="<?php echo $tour_image[0] ?>" class="img-fluid" style="margin-bottom: 1em;">
+
                 <p class="lead text-primary"><?php echo $tour_meta['acf_tourcompact'][0]; ?></p>
+
                 <?php the_content(); ?>
             </div>
             <div class="col-sm-4">
@@ -59,7 +65,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     <div class="card-body">
                         <div class="price-body pt-2">
 
-                            <p class="lead text-right"><strong><?php echo substr(get_field('acf_tourstartdate'),0,2).'.'.substr(get_field('acf_tourstartdate'),3,2).'.'.substr(get_field('acf_tourstartdate'),6,4);
+                            <p class="lead text-left"><strong><?php echo substr(get_field('acf_tourstartdate'),0,2).'.'.substr(get_field('acf_tourstartdate'),3,2).'.'.substr(get_field('acf_tourstartdate'),6,4);
 
                                 if((get_field('acf_tourstartdate') != '') && (get_field('acf_tourallday') == 1)) {
 
@@ -70,26 +76,62 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                                 
                                 </strong></p>
 
-                            <div class="d-flex bd-highlight">
-                                <div class="p-1 flex-grow-1">Dauer: </div>
-                                <div class="p-1"><strong><?php echo get_field('acf_tourtime'); ?></strong></div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="p-1 flex-grow-1">Kilometer: </div>
-                                <div class="p-1 text-right"><strong><?php echo get_field('acf_tourkilometer'); ?></strong></div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="p-1 flex-grow-1">Höhenmeter: </div>
-                                <div class="p-1 text-right"><strong><?php echo get_field('acf_tourhohenmeter'); ?></strong></div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="p-1 flex-grow-1">Kondition: </div>
-                                <div class="p-1"><strong><?php echo $tour_condition; ?></strong></div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="p-1 flex-grow-1">Technik: </div>
-                                <div class="p-1"><strong><?php echo $tour_technic; ?></strong></div>
-                            </div>
+                            <?php
+
+                            if (get_field('acf_tourtreffzeit') != "") {
+
+                                echo '<p class="lead"><strong>' . get_field("acf_tourtreffzeit") .' Uhr</strong></p>';
+                            }
+
+                            if (get_field('acf_tourtreffpunkt') != "") {
+
+                                echo '<div class="d-flex mb-2">
+                                <div>Treffpunkt: <br>
+                                <strong>'.get_field("acf_tourtreffpunkt").' </strong></div>
+                            </div>';
+                            }
+
+                            if (get_field('acf_tourtime') != "") {
+
+                                echo '<div class="d-flex mb-2">
+                                <div>Dauer: <br>
+                                <strong>'.get_field("acf_tourtime").' h</strong></div>
+                            </div>';
+                            }
+
+                            if (get_field('acf_tourkilometer') != "") {
+
+                                echo '<div class="d-flex mb-2">
+                                <div>Kilometer: <br>
+                                <strong>'.get_field("acf_tourkilometer").'</strong></div>
+                            </div>';
+                            }
+
+                            if (get_field('acf_tourhohenmeter') != "") {
+
+                                echo '<div class="d-flex mb-2">
+                                <div>Höhenmeter: <br>
+                                <strong>'.get_field("acf_tourhohenmeter").'</strong></div>
+                            </div>';
+                            }
+
+                            if ($tour_condition != "") {
+
+                                echo '<div class="d-flex mb-2">
+                                <div>Kondition: <br>
+                                <strong>'.$tour_condition.'</strong></div>
+                            </div>';
+                            }
+
+                            if ($tour_technic != "") {
+
+                                echo '<div class="d-flex mb-2">
+                                <div>Technik: <br>
+                                <strong>'.$tour_technic.'</strong></div>
+                            </div>';
+                            }
+
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -97,12 +139,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 <?php
 
                 if(get_field('acf_tourpersona') != '') {
-
                     echo '
-                    <div class="card card-touren bg-dark">
+                    <div class="card bg-dark">
                         <div class="row m-3 align-self-stretch">
                             <div class="col-12 p-0">'.
-                                get_the_post_thumbnail($persona->ID, 'post-thumbnail', array('class' => 'img-fluid rounded-circle'))
+                                get_the_post_thumbnail($persona->ID, 'persona-thumb', array('class' => 'img-fluid rounded-circle'))
                             .'</div>
                             <div class="col-12 p-0 pt-3 text-center">
                                 <span class="person-name">'.$persona->post_title.'</span>

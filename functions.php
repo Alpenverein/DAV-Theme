@@ -59,11 +59,11 @@ update_option( 'thumbnail_crop', 1 );
 
 update_option( 'medium_size_w', 1140 );
 update_option( 'medium_size_h', 650 );
-update_option( 'medium_crop', 1 );
+update_option( 'medium_crop', 0 );
 
 update_option( 'large_size_w', 1920 );
 update_option( 'large_size_h', 1080 );
-update_option( 'large_crop', 1 );
+update_option( 'large_crop', 0 );
 
 //add support for post thumbnails
 add_theme_support( 'post-thumbnails', array( 'post', 'personas', 'touren', 'page' ) );

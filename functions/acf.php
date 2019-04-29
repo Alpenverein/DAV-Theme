@@ -1,7 +1,66 @@
 <?php
 
+/**
+ * ACF-Options for the templates
+ *
+ */
+
+
 if( function_exists('acf_add_local_field_group') ):
 
+    //Options for page_overview templates
+    acf_add_local_field_group(array(
+        'key' => 'group_5c980a9be256d',
+        'title' => 'Ausgabe Unterseiten Übersichtsseite',
+        'fields' => array(
+            array(
+                'key' => 'field_5c980acd24b3e',
+                'label' => 'Sortierung der Unterseiten',
+                'name' => 'dav_sortorder_pages',
+                'type' => 'select',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    'a' => 'Alphabetisch nach Seitentitel',
+                    's' => 'Wie in Seiteneinstellung sortiert',
+                ),
+                'default_value' => array(
+                    0 => 'a',
+                ),
+                'allow_null' => 0,
+                'multiple' => 0,
+                'ui' => 0,
+                'return_format' => 'value',
+                'ajax' => 0,
+                'placeholder' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'page_overview.php',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'side',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+
+    //Menu-Column-Options for the menu
     acf_add_local_field_group(array(
         'key' => 'group_5b8aefb0f1dff',
         'title' => 'Customizer_Menuspalte',
@@ -55,6 +114,7 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
 
+    //Extra Menu in page-templates
     acf_add_local_field_group(array(
         'key' => 'group_5b7d12c629f46',
         'title' => 'Zusatzmenü',

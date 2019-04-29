@@ -80,7 +80,10 @@ function show_slider() {
                 } else {
 
                     //fullscreen
-                    $return .= '<div class="carousel-item carousel-fullscreen ' . $carousel_css . '" style="background-image: url('.$sliderdata['meta-image'.$i][0].');">';
+
+
+                    $image = wp_get_attachment_image_src($sliderdata['meta-image'.$i.'-id'][0], 'large', false);
+                    $return .= '<div class="carousel-item carousel-fullscreen ' . $carousel_css . '" style="background-image: url('.$image[0].');">';
                 }
 
                 $return .= '<div class="carousel-caption d-block">';
