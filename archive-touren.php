@@ -121,10 +121,10 @@ if ($tour_dates == "true") {
             'orderby' => 'meta_value',
             'order' => 'ASC',
             'tax_query' => array(
-            array(
-                'taxonomy' => 'tourcategory',
-                'field' => 'slug',
-                'terms' => $_GET['tourentyp'])),
+                array(
+                    'taxonomy' => 'tourcategory',
+                    'field' => 'slug',
+                    'terms' => $_GET['tourentyp'])),
             'meta_query' => array(
                 'relation' => 'AND',
                 array(
@@ -201,6 +201,43 @@ if ($tour_dates == "true") {
                     'key' => 'acf_tourvisible',
                     'compare' => '==',
                     'value' => '1',
+                    'type' => 'string',
+                )
+            )
+        );
+    }
+
+    if (isset($_GET['tourenleiter'])) {
+
+        $persona_id = get_page_by_path($_GET['tourenleiter'], '', 'personas');
+        $persona_id = $persona_id->ID;
+
+        $args = array(
+            'post_type' => 'touren',
+            'posts_per_page' => $pagecount,
+            'paged' => $paged,
+            'offset' => $offset,
+            'meta_key' => 'acf_tourstartdate',
+            'orderby' => 'meta_value',
+            'order' => 'ASC',
+            'meta_query' => array(
+                'relation' => 'AND',
+                array(
+                    'key' => 'acf_tourstartdate',
+                    'compare' => '>=',
+                    'value' => date('Ymd', strtotime('-8 hours')),
+                    'type' => 'DATE',
+                ),
+                array(
+                    'key' => 'acf_tourvisible',
+                    'compare' => '==',
+                    'value' => '1',
+                    'type' => 'string',
+                ),
+                array(
+                    'key' => 'acf_tourpersona',
+                    'compare' => '==',
+                    'value' => $persona_id,
                     'type' => 'string',
                 )
             )
@@ -327,6 +364,43 @@ if ($tour_dates == "true") {
                     'key' => 'acf_tourvisible',
                     'compare' => '==',
                     'value' => '1',
+                    'type' => 'string',
+                )
+            )
+        );
+    }
+
+    if (isset($_GET['tourenleiter'])) {
+
+        $persona_id = get_page_by_path($_GET['tourenleiter'], '', 'personas');
+        $persona_id = $persona_id->ID;
+
+        $args = array(
+            'post_type' => 'touren',
+            'posts_per_page' => $pagecount,
+            'paged' => $paged,
+            'offset' => $offset,
+            'meta_key' => 'acf_tourstartdate',
+            'orderby' => 'meta_value',
+            'order' => 'ASC',
+            'meta_query' => array(
+                'relation' => 'AND',
+                array(
+                    'key' => 'acf_tourstartdate',
+                    'compare' => '>=',
+                    'value' => date('Ymd', strtotime('-8 hours')),
+                    'type' => 'DATE',
+                ),
+                array(
+                    'key' => 'acf_tourvisible',
+                    'compare' => '==',
+                    'value' => '1',
+                    'type' => 'string',
+                ),
+                array(
+                    'key' => 'acf_tourpersona',
+                    'compare' => '==',
+                    'value' => $persona_id,
                     'type' => 'string',
                 )
             )
@@ -529,12 +603,53 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 }
 
 
+                //Tourenleiter ausgeben
+                $persona_args = array(
+                    'post_type' => 'personas',
+                    'tax_query' => array(
+                        'relation' => 'OR',
+                        array(
+                            'taxonomy' => 'personarole',
+                            'field'    => 'slug',
+                            'terms'    => 'tourenleiter',
+                        ),
+                        array(
+                            'taxonomy' => 'personarole',
+                            'field'    => 'slug',
+                            'terms'    => 'tourenleiterin',
+                        ),
+                    ),
+                );
+
+                $the_query = new WP_Query($persona_args);
+                echo '<div class="card card-widget-primary mb-4">';
+                echo '<div class="card-header bg-dark text-uppercase py-1">Tourleiter</div>';
+                echo '<div class="card-body">';
+
+                echo '<ul>';
+
+                if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+
+                    echo '<li><a href="'.$current_url.'/?tourenleiter='.basename(get_permalink()).'">' . get_the_title() . '</a></li>';
+
+                endwhile;
+
+                    echo '</ul>';
+
+                else :
+
+                    echo '';
+
+                endif;
+
+                echo '</div></div>';
+
 
 
 
                 //Zurücksetzen
 
-                if(isset($_GET['technik']) || isset($_GET['kondition']) || isset($_GET['tourenart']) || isset($_GET['tourentyp'])) {
+                if(isset($_GET['technik']) || isset($_GET['kondition']) || isset($_GET['tourenart']) || isset($_GET['tourentyp']) || isset($_GET['tourenleiter'])) {
 
                     echo '<a class="btn btn-primary" href="'.$current_url.'">Filterung aufheben</a>';
 

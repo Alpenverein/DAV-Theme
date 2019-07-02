@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5236462c-1586-46cd-9960-f572d72226b0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive-touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-touren.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/cards.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_touren.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,38 +16,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="gutenberg.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/gutenberg.php">
+      <file leaf-file-name="archive-touren.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/archive-touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+            <state relative-caret-position="941">
+              <caret line="644" column="36" selection-start-line="644" selection-start-column="36" selection-end-line="644" selection-end-column="36" />
+              <folding>
+                <element signature="e#1123#12447#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions.php">
+      <file leaf-file-name="page_touren.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page_touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18803">
-              <caret line="1481" lean-forward="true" selection-start-line="1481" selection-end-line="1481" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="79" column="104" selection-start-line="79" selection-start-column="104" selection-end-line="79" selection-end-column="104" />
+            <state relative-caret-position="438">
+              <caret line="416" column="1" selection-start-line="416" selection-start-column="1" selection-end-line="416" selection-end-column="1" />
+              <folding>
+                <element signature="e#7#39#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,6 +111,8 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/archive-touren.php" />
+        <option value="$PROJECT_DIR$/page_touren.php" />
       </list>
     </option>
   </component>
@@ -155,6 +147,12 @@
               <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
               <item name="DAV-Theme" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DAV-Theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="styles" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
@@ -246,7 +244,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68113000" />
+    <option name="totallyTimeSpent" value="68352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -590,27 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archive-touren.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="529" lean-forward="true" selection-start-line="529" selection-end-line="529" />
-          <folding>
-            <element signature="e#1123#10029#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_touren.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1681">
-          <caret line="546" column="122" selection-start-line="546" selection-start-column="122" selection-end-line="546" selection-end-column="122" />
-          <folding>
-            <element signature="e#7#39#0#PHP" expanded="true" />
-            <element signature="e#1416#12576#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/single-touren.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -618,17 +595,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/gutenberg.php">
+    <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        <state relative-caret-position="642">
+          <caret line="79" column="104" selection-start-line="79" selection-start-column="104" selection-end-line="79" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -639,10 +609,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
+    <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="79" column="104" selection-start-line="79" selection-start-column="104" selection-end-line="79" selection-end-column="104" />
+        <state relative-caret-position="140">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/gutenberg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive-touren.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="941">
+          <caret line="644" column="36" selection-start-line="644" selection-start-column="36" selection-end-line="644" selection-end-column="36" />
+          <folding>
+            <element signature="e#1123#12447#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_touren.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="416" column="1" selection-start-line="416" selection-start-column="1" selection-end-line="416" selection-end-column="1" />
+          <folding>
+            <element signature="e#7#39#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
