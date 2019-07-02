@@ -5,6 +5,7 @@ require_once "functions/slider.php";
 require_once "functions/widgets.php";
 require_once "functions/acf.php";
 require_once "functions/custom-functions.php";
+require_once "functions/gutenberg.php";
 
 
 //Initialize the update checker.
