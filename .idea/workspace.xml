@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5236462c-1586-46cd-9960-f572d72226b0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/archive-touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-touren.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/cards.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_touren.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,26 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="archive-touren.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/archive-touren.php">
+      <file leaf-file-name="page_touren.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page_touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="941">
-              <caret line="644" column="36" selection-start-line="644" selection-start-column="36" selection-end-line="644" selection-end-column="36" />
+            <state relative-caret-position="260">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
               <folding>
-                <element signature="e#1123#12447#0#PHP" />
+                <element signature="e#7#39#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page_touren.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page_touren.php">
+      <file leaf-file-name="archive-touren.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/archive-touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="416" column="1" selection-start-line="416" selection-start-column="1" selection-end-line="416" selection-end-column="1" />
-              <folding>
-                <element signature="e#7#39#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="417">
+              <caret line="374" column="8" selection-start-line="374" selection-start-column="8" selection-end-line="375" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -244,7 +239,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68352000" />
+    <option name="totallyTimeSpent" value="72292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -588,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single-touren.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="28" column="68" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="28" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="642">
@@ -623,20 +611,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/single-touren.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="28" column="68" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="28" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/archive-touren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="941">
-          <caret line="644" column="36" selection-start-line="644" selection-start-column="36" selection-end-line="644" selection-end-column="36" />
-          <folding>
-            <element signature="e#1123#12447#0#PHP" />
-          </folding>
+        <state relative-caret-position="417">
+          <caret line="374" column="8" selection-start-line="374" selection-start-column="8" selection-end-line="375" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page_touren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="416" column="1" selection-start-line="416" selection-start-column="1" selection-end-line="416" selection-end-column="1" />
+        <state relative-caret-position="260">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
           <folding>
             <element signature="e#7#39#0#PHP" expanded="true" />
           </folding>
