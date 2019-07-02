@@ -75,11 +75,9 @@ while(wp_get_post_parent_id($parent) != 0) {
     <meta charset="utf-8">
     <title><?php if(!is_front_page()){wp_title(''); echo ' | '; bloginfo( 'name' );} else {bloginfo( 'name' );}  ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/fontawesome.css" type="text/css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri();; ?>/assets/styles/custom.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/cards.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css">
 <?php wp_head(); ?>
 </head>
 
