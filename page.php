@@ -1,5 +1,3 @@
-<?php /* Template Name: Standardtemplate */ ?>
-
 <?php get_header(); ?>
 
 

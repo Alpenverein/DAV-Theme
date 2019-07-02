@@ -3,426 +3,20 @@
 
 get_header();
 
-$i = 0;
 
-global $wp;
-if(get_theme_mod('dav_touren_counter') != false) {$pagecount = get_theme_mod('dav_touren_counter');}
-else {$pagecount = 10;};
-$current_url = home_url( add_query_arg( array(), $wp->request) );
-$paged = get_query_var('paged') ? get_query_var('paged') : 1;
-$offset = ($paged - 1) * $pagecount;
-
-
-if($paged > 1) {
-
-    $pattern = '/page\/\d/';
-    $current_url = preg_replace($pattern,'',$current_url);
-
-}
-
-$offset = ($paged - 1) * get_option('posts_per_page');
-
-
-if(get_theme_mod('dav_touren_pageid') != false) {$dav_pageid = get_theme_mod('dav_touren_pageid');}
-else {$dav_pageid = false;};
-
-
-if($dav_pageid != false) {
-
-    $page_id = get_post($dav_pageid);
-    $tourhead_title = $page_id->post_title;
-    $tourhead_content = $page_id->post_content;
-    $tourhead_content = apply_filters('the_content', $tourhead_content);
-    $tourhead_content = str_replace(']]>', ']]>', $tourhead_content);
-
-}
-
-$taxonomy = '';
-$term = '';
-
-$args = array();
-
-
-
-if(get_theme_mod('dav_touren_datenewer')) {
-    $tour_dates = get_theme_mod('dav_touren_datenewer');
-} else { $tour_dates = true; }
-
-
-if ($tour_dates == "true") {
-
-// Printout only tours in future
-    $args = array(
-        'post_type' => 'touren',
-        'posts_per_page' => $pagecount,
-        'paged' => $paged,
-        'offset' => $offset,
-        'meta_key' => 'acf_tourstartdate',
-        'orderby' => 'meta_value',
-        'order' => 'ASC',
-        'meta_query' => array(
-            'relation' => 'AND',
-            array(
-                'key' => 'acf_tourstartdate',
-                'compare' => '>=',
-                'value' => date('Ymd', strtotime('-8 hours')),
-                'type' => 'DATE',
-            ),
-            array(
-                'key' => 'acf_tourvisible',
-                'compare' => '==',
-                'value' => '1',
-                'type' => 'string',
-            )
-        )
-    );
-
-
-//taxonomie tourenart
-    if (isset($_GET['tourenart'])) {
-        $args = array(
-            'post_type' => 'touren',
-            'posts_per_page' => $pagecount,
-            'paged' => $paged,
-            'offset' => $offset,
-            'meta_key' => 'acf_tourstartdate',
-            'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'tourtype',
-                    'field' => 'slug',
-                    'terms' => $_GET['tourenart'])),
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key' => 'acf_tourstartdate',
-                    'compare' => '>=',
-                    'value' => date('Ymd', strtotime('-8 hours')),
-                    'type' => 'DATE',
-                ),
-                array(
-                    'key' => 'acf_tourvisible',
-                    'compare' => '==',
-                    'value' => '1',
-                    'type' => 'string',
-                )
-            )
-        );
-    }
-
-    if (isset($_GET['tourentyp'])) {
-        $args = array(
-            'post_type' => 'touren',
-            'posts_per_page' => $pagecount,
-            'paged' => $paged,
-            'offset' => $offset,
-            'meta_key' => 'acf_tourstartdate',
-            'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'tourcategory',
-                    'field' => 'slug',
-                    'terms' => $_GET['tourentyp'])),
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key' => 'acf_tourstartdate',
-                    'compare' => '>=',
-                    'value' => date('Ymd', strtotime('-8 hours')),
-                    'type' => 'DATE',
-                ),
-                array(
-                    'key' => 'acf_tourvisible',
-                    'compare' => '==',
-                    'value' => '1',
-                    'type' => 'string',
-                )
-            )
-        );
-    }
-
-    if (isset($_GET['technik'])) {
-        $args = array(
-            'post_type' => 'touren',
-            'posts_per_page' => $pagecount,
-            'paged' => $paged,
-            'offset' => $offset,
-            'meta_key' => 'acf_tourstartdate',
-            'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'tourtechnic',
-                    'field' => 'slug',
-                    'terms' => $_GET['technik'])),
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key' => 'acf_tourstartdate',
-                    'compare' => '>=',
-                    'value' => date('Ymd', strtotime('-8 hours')),
-                    'type' => 'DATE',
-                ),
-                array(
-                    'key' => 'acf_tourvisible',
-                    'compare' => '==',
-                    'value' => '1',
-                    'type' => 'string',
-                )
-            )
-        );
-    }
-
-    if (isset($_GET['kondition'])) {
-        $args = array(
-            'post_type' => 'touren',
-            'posts_per_page' => $pagecount,
-            'paged' => $paged,
-            'offset' => $offset,
-            'meta_key' => 'acf_tourstartdate',
-            'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'tourcondition',
-                    'field' => 'slug',
-                    'terms' => $_GET['kondition'])),
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key' => 'acf_tourstartdate',
-                    'compare' => '>=',
-                    'value' => date('Ymd', strtotime('-8 hours')),
-                    'type' => 'DATE',
-                ),
-                array(
-                    'key' => 'acf_tourvisible',
-                    'compare' => '==',
-                    'value' => '1',
-                    'type' => 'string',
-                )
-            )
-        );
-    }
-
-    if (isset($_GET['tourenleiter'])) {
-
-        $persona_id = get_page_by_path($_GET['tourenleiter'], '', 'personas');
-        $persona_id = $persona_id->ID;
-
-        $args = array(
-            'post_type' => 'touren',
-            'posts_per_page' => $pagecount,
-            'paged' => $paged,
-            'offset' => $offset,
-            'meta_key' => 'acf_tourstartdate',
-            'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key' => 'acf_tourstartdate',
-                    'compare' => '>=',
-                    'value' => date('Ymd', strtotime('-8 hours')),
-                    'type' => 'DATE',
-                ),
-                array(
-                    'key' => 'acf_tourvisible',
-                    'compare' => '==',
-                    'value' => '1',
-                    'type' => 'string',
-                ),
-                array(
-                    'key' => 'acf_tourpersona',
-                    'compare' => '==',
-                    'value' => $persona_id,
-                    'type' => 'string',
-                )
-            )
-        );
-    }
-
-} else {
-
-// Printout only tours in future
-    $args = array(
-        'post_type' => 'touren',
-        'posts_per_page' => $pagecount,
-        'paged' => $paged,
-        'offset' => $offset,
-        'meta_key' => 'acf_tourstartdate',
-        'orderby' => 'meta_value',
-        'order' => 'ASC',
-        'meta_query' => array(
-            'relation' => 'AND',
-            array(
-                'key' => 'acf_tourvisible',
-                'compare' => '==',
-                'value' => '1',
-                'type' => 'string',
-            )
-        )
-    );
-
-    if (isset($_GET['tourenart'])) {
-        $args = array(
-            'post_type' => 'touren',
-            'posts_per_page' => $pagecount,
-            'paged' => $paged,
-            'offset' => $offset,
-            'meta_key' => 'acf_tourstartdate',
-            'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'tourtype',
-                    'field' => 'slug',
-                    'terms' => $_GET['tourenart'])),
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key' => 'acf_tourvisible',
-                    'compare' => '==',
-                    'value' => '1',
-                    'type' => 'string',
-                )
-            )
-        );
-    }
-
-    if (isset($_GET['tourentyp'])) {
-        $args = array(
-            'post_type' => 'touren',
-            'posts_per_page' => $pagecount,
-            'paged' => $paged,
-            'offset' => $offset,
-            'meta_key' => 'acf_tourstartdate',
-            'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'tourcategory',
-                    'field' => 'slug',
-                    'terms' => $_GET['tourentyp'])),
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key' => 'acf_tourvisible',
-                    'compare' => '==',
-                    'value' => '1',
-                    'type' => 'string',
-                )
-            )
-        );
-    }
-
-    if (isset($_GET['technik'])) {
-        $args = array(
-            'post_type' => 'touren',
-            'posts_per_page' => $pagecount,
-            'paged' => $paged,
-            'offset' => $offset,
-            'meta_key' => 'acf_tourstartdate',
-            'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'tourtechnic',
-                    'field' => 'slug',
-                    'terms' => $_GET['technik'])),
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key' => 'acf_tourvisible',
-                    'compare' => '==',
-                    'value' => '1',
-                    'type' => 'string',
-                )
-            )
-        );
-    }
-
-    if (isset($_GET['kondition'])) {
-        $args = array(
-            'post_type' => 'touren',
-            'posts_per_page' => $pagecount,
-            'paged' => $paged,
-            'offset' => $offset,
-            'meta_key' => 'acf_tourstartdate',
-            'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'tourcondition',
-                    'field' => 'slug',
-                    'terms' => $_GET['kondition'])),
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key' => 'acf_tourvisible',
-                    'compare' => '==',
-                    'value' => '1',
-                    'type' => 'string',
-                )
-            )
-        );
-    }
-
-    if (isset($_GET['tourenleiter'])) {
-
-        $persona_id = get_page_by_path($_GET['tourenleiter'], '', 'personas');
-        $persona_id = $persona_id->ID;
-
-        $args = array(
-            'post_type' => 'touren',
-            'posts_per_page' => $pagecount,
-            'paged' => $paged,
-            'offset' => $offset,
-            'meta_key' => 'acf_tourstartdate',
-            'orderby' => 'meta_value',
-            'order' => 'ASC',
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key' => 'acf_tourstartdate',
-                    'compare' => '>=',
-                    'value' => date('Ymd', strtotime('-8 hours')),
-                    'type' => 'DATE',
-                ),
-                array(
-                    'key' => 'acf_tourvisible',
-                    'compare' => '==',
-                    'value' => '1',
-                    'type' => 'string',
-                ),
-                array(
-                    'key' => 'acf_tourpersona',
-                    'compare' => '==',
-                    'value' => $persona_id,
-                    'type' => 'string',
-                )
-            )
-        );
-    }
-
-}
-
-//now we make the query
-$the_query = new WP_Query( $args );
-
+$the_query = new WP_Query(tourQuery());
 $pagesum = $the_query->max_num_pages;
 
-//printout the breadcrumb
-if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb') == 1)) {
-
-    if (function_exists('nav_breadcrumb')) nav_breadcrumb();
-}
 
 ?>
 
 
+<?php
+
+if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb') == 1)) {
+    if (function_exists('nav_breadcrumb')) nav_breadcrumb();
+}
+?>
 
 
 <div class="container">
@@ -435,13 +29,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                 <h1><?php echo $tourhead_title;  ?></h1>
 
-                <?php echo $tourhead_content; ?>
+                <?php echo $tourhead_content;  ?>
 
                 <div class="accordion tour-list" id="tourlist">
 
                     <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
-
-
 
                         <div class="card">
                             <div class="card-header" id="heading<?php echo get_the_ID(); ?>">
@@ -507,6 +99,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                         <div class="row mt-5">
                             <div class="col-xs-12 col-sm-8 col-lg-9">
+
                                 <?php if (function_exists("pagination")) {pagination($pagesum); } ?>
                             </div>
                         </div>
@@ -523,7 +116,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
             </div>
 
             <!-- die Widget-Spalte -->
-            <div class="col-sm-4">
+            <div class="col-xs-12 col-sm-4">
 
 
 
@@ -537,8 +130,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     echo '<ul>';
                     foreach ( $terms as $term ) {
-
-                        echo '<li><a href="'.$current_url.'?tourenart='.$term->slug.'">' . $term->name . '</a></li>';
+                        echo '<li><a href="'.getCurrentURI().'tourentyp='.$term->slug.'">' . $term->name . '</a></li>';
 
                     }
                     echo '</ul>';
@@ -558,7 +150,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     echo '<ul>';
                     foreach ( $terms as $term ) {
-                        echo '<li><a href="'.$current_url.'/?tourentyp='.$term->slug.'">' . $term->name . '</a></li>';
+                        echo '<li><a href="'.getCurrentURI().'tourenkategorie='.$term->slug.'">' . $term->name . '</a></li>';
 
                     }
                     echo '</ul>';
@@ -576,7 +168,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     echo '<ul>';
                     foreach ( $terms as $term ) {
-                        echo '<li><a href="'.$current_url.'/?technik='.$term->slug.'">' . $term->name . '</a></li>';
+                        echo '<li><a href="'.getCurrentURI().'tourentechnik='.$term->slug.'">' . $term->name . '</a></li>';
 
                     }
                     echo '</ul>';
@@ -595,13 +187,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     echo '<ul>';
                     foreach ( $terms as $term ) {
-                        echo '<li><a href="'.$current_url.'/?kondition='.$term->slug.'">' . $term->name . '</a></li>';
+                        echo '<li><a href="'.getCurrentURI().'tourenkondition='.$term->slug.'">' . $term->name . '</a></li>';
 
                     }
                     echo '</ul>';
                     echo '</div></div>';
                 }
-
 
                 //Tourenleiter ausgeben
                 $persona_args = array(
@@ -630,7 +221,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                 if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
 
-                    echo '<li><a href="'.$current_url.'/?tourenleiter='.basename(get_permalink()).'">' . get_the_title() . '</a></li>';
+                    echo '<li><a href="'.getCurrentURI().'tourenleiter='.basename(get_permalink()).'">' . get_the_title() . '</a></li>';
 
                 endwhile;
 
@@ -647,11 +238,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
 
 
+
                 //Zurücksetzen
 
-                if(isset($_GET['technik']) || isset($_GET['kondition']) || isset($_GET['tourenart']) || isset($_GET['tourentyp']) || isset($_GET['tourenleiter'])) {
+                if(isset($_GET['tourentechnik']) || isset($_GET['tourenkondition']) || isset($_GET['tourenkategorie']) || isset($_GET['tourentyp']) || isset($_GET['tourenleiter'])) {
 
-                    echo '<a class="btn btn-primary" href="'.$current_url.'">Filterung aufheben</a>';
+                    echo '<a class="btn btn-primary" href="/'.$wp->request.'/">Filterung aufheben</a>';
 
                 }
 
