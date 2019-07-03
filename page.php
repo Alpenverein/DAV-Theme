@@ -26,6 +26,10 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     <?php the_content(); ?>
                 </div>
                 <div class="col-xs-12 col-sm-4">
+
+
+                    <?php echo ListSubpages($post->ID, $sort = 'title'); ?>
+
                     <?php
                     // add a linklist to the right column
                     $linklist = get_field('page_linklist');
