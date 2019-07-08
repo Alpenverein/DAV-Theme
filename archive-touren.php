@@ -30,7 +30,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 <h1><?php echo $tourhead_title;  ?></h1>
 
                 <?php echo $tourhead_content;  ?>
-                <!-- <a class="btn btn-default btn-sm"><i class="fa fa-times"></i> Small button</a> -->
+
+                <?php echo resetFilter(); ?>
 
                 <div class="accordion tour-list" id="tourlist">
 
