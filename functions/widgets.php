@@ -124,13 +124,15 @@ $args = array(
     'date_format'  => get_option( 'date_format' ),
     'child_of'     => $id,
     'title_li'     => '',
-    'echo'         => 1,
+    'echo'         => 0,
     'sort_column'  => $sort,
     'item_spacing' => 'preserve',
     'walker'       => '',
 );
 
-    $list = get_pages($args);
+    $list = wp_list_pages($args);
+
+    /**
 
     $return .= '<div class="card card-widget-primary mb-4">';
     $return .= '<div class="card-header bg-primary text-white text-uppercase py-1">';
@@ -140,7 +142,7 @@ $args = array(
 
     $return .= '<ul class="list-group list-group-flush">';
 
-    var_dump($list);
+    $return = $list;
 
     $return .= '</ul>';
 
@@ -149,4 +151,9 @@ $args = array(
 
 
     return $return;
+     *
+     */
+
+
+    return $list;
 }

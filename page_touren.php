@@ -10,6 +10,22 @@ $the_query = new WP_Query(tourQuery());
 $pagesum = $the_query->max_num_pages;
 
 
+if(get_theme_mod('dav_touren_pageid') != false) {$dav_pageid = get_theme_mod('dav_touren_pageid');}
+else {$dav_pageid = true;};
+
+
+if($dav_pageid != false) {
+
+    $page_id = get_post($dav_pageid);
+    $tourhead_title = $page_id->post_title;
+    $tourhead_content = $page_id->post_content;
+    $tourhead_content = apply_filters('the_content', $tourhead_content);
+    $tourhead_content = str_replace(']]>', ']]>', $tourhead_content);
+
+}
+
+
+
 ?>
 
 
@@ -120,9 +136,24 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
             <!-- die Widget-Spalte -->
             <div class="col-xs-12 col-sm-4">
 
+                <h2>Filterung</h2>
+                <p>Klick auf ein Kriterium filtert die Ergebnisse.</p>
+
 
 
             <?php
+
+
+            //Zurücksetzen
+
+            if(isset($_GET['tourentechnik']) || isset($_GET['tourenkondition']) || isset($_GET['tourenkategorie']) || isset($_GET['tourentyp']) || isset($_GET['tourenleiter'])) {
+
+                echo '<a class="btn btn-primary mb-4" href="/'.$wp->request.'/">Filterung aufheben</a>';
+
+            }
+
+
+
             //Tourenarten ausgeben
             $terms = get_terms('tourtype');
             if ( !empty( $terms ) && !is_wp_error( $terms ) ){
