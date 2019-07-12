@@ -207,6 +207,38 @@ Text Domain: deutscheralpenverein
 }
 
 
+.btn-tourenfilter {
+    background: #efefef;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+}
+
+.btn-tourenfilter i {
+    color: #61B732;
+}
+
+.btn-tourenfilter-red {
+    background: #ef080a;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+}
+
+.btn-tourenfilter-red i {
+    color: #000;
+}
+
+
+
+
+
 /* WIDGET */
 
 .card-widget-primary-news,

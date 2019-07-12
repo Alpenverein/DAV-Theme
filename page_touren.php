@@ -49,7 +49,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                 <?php echo $tourhead_content;  ?>
 
-                <?php echo resetFilter(); ?>
+                <?php
+                $obj_id = get_queried_object_id();
+                $currentURL = get_permalink( $obj_id );
+
+                echo resetFilter($currentURL);
+                ?>
 
                 <div class="accordion tour-list" id="tourlist">
 
@@ -144,17 +149,6 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
 
             <?php
-
-
-            //Zurücksetzen
-
-            if(isset($_GET['tourentechnik']) || isset($_GET['tourenkondition']) || isset($_GET['tourenkategorie']) || isset($_GET['tourentyp']) || isset($_GET['tourenleiter'])) {
-
-                echo '<a class="btn btn-primary mb-4" href="/'.$wp->request.'/">Filterung aufheben</a>';
-
-            }
-
-
 
             //Tourenarten ausgeben
             $terms = get_terms('tourtype');
@@ -271,16 +265,6 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
             echo '</div></div>';
 
 
-
-
-
-            //Zurücksetzen
-
-            if(isset($_GET['tourentechnik']) || isset($_GET['tourenkondition']) || isset($_GET['tourenkategorie']) || isset($_GET['tourentyp']) || isset($_GET['tourenleiter'])) {
-
-            echo '<a class="btn btn-primary" href="/'.$wp->request.'/">Filterung aufheben</a>';
-
-            }
 
             ?>
 

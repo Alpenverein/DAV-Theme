@@ -31,7 +31,14 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                 <?php echo $tourhead_content;  ?>
 
-                <?php echo resetFilter(); ?>
+                <?php
+
+                $obj_id = get_queried_object_id();
+                $currentURL = get_permalink( $obj_id );
+
+                echo resetFilter($currentURL);
+
+                  ?>
 
                 <div class="accordion tour-list" id="tourlist">
 
