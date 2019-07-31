@@ -106,6 +106,7 @@ while(wp_get_post_parent_id($parent) != 0) {
 >
 <!-- Navigation Mobile start -->
 
+
 <div class="d-lg-none d-xl-none">
     <nav class="navbar bg-white navbar-mobile">
         <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Zur Startseite" rel="home">

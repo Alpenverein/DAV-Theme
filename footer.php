@@ -101,5 +101,8 @@ if(get_theme_mod('dav_instagram') != false) {$dav_instagram = get_theme_mod('dav
 <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/scripts.js" type="text/javascript"></script>
 
 <?php wp_footer(); ?>
+
+<a href="#" class="btn btn-primary" id="top-link"> <i class="fas fa-angle-up"></i></a>
+
 </body>
 </html>
