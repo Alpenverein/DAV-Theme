@@ -170,7 +170,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     echo '<ul>';
                     foreach ( $terms as $term ) {
-                        echo '<li><a href="'.getCurrentURI().'tourentyp='.$term->slug.'">' . $term->name . '</a></li>';
+
+                        if (in_array($term->slug, $termlist)) {
+                            echo '<li>' . $term->name . '</li>';
+                        } else {
+                            echo '<li><a href="'.getCurrentURI().'tourentyp='.$term->slug.'">' . $term->name . '</a></li>';
+                        }
 
                     }
                     echo '</ul>';
@@ -190,7 +195,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     echo '<ul>';
                     foreach ( $terms as $term ) {
-                        echo '<li><a href="'.getCurrentURI().'tourenkategorie='.$term->slug.'">' . $term->name . '</a></li>';
+
+                        if (in_array($term->slug, $termlist)) {
+                            echo '<li>' . $term->name . '</li>';
+                        } else {
+                            echo '<li><a href="'.getCurrentURI().'tourenkategorie='.$term->slug.'">' . $term->name . '</a></li>';
+                        }
 
                     }
                     echo '</ul>';
@@ -208,7 +218,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     echo '<ul>';
                     foreach ( $terms as $term ) {
-                        echo '<li><a href="'.getCurrentURI().'tourentechnik='.$term->slug.'">' . $term->name . '</a></li>';
+
+                        if (in_array($term->slug, $termlist)) {
+                            echo '<li>' . $term->name . '</li>';
+                        } else {
+                            echo '<li><a href="'.getCurrentURI().'tourentechnik='.$term->slug.'">' . $term->name . '</a></li>';
+                        }
 
                     }
                     echo '</ul>';
@@ -227,7 +242,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     echo '<ul>';
                     foreach ( $terms as $term ) {
-                        echo '<li><a href="'.getCurrentURI().'tourenkondition='.$term->slug.'">' . $term->name . '</a></li>';
+
+                        if (in_array($term->slug, $termlist)) {
+                            echo '<li>' . $term->name . '</li>';
+                        } else {
+                            echo '<li><a href="'.getCurrentURI().'tourenkondition='.$term->slug.'">' . $term->name . '</a></li>';
+                        }
 
                     }
                     echo '</ul>';
@@ -261,7 +281,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                 if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
 
-                    echo '<li><a href="'.getCurrentURI().'tourenleiter='.basename(get_permalink()).'">' . get_the_title() . '</a></li>';
+                    if (in_array(basename(get_permalink()), $termlist)) {
+                        echo '<li>' . get_the_title() . '</li>';
+                    } else {
+                        echo '<li><a href="'.getCurrentURI().'tourenleiter='.basename(get_permalink()).'">' . get_the_title() . '</a></li>';
+                    }
 
                 endwhile;
 

@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5236462c-1586-46cd-9960-f572d72226b0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/archive-touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-touren.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scripts/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_touren.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +16,8 @@
       <file leaf-file-name="page_touren.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page_touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="43" column="1" lean-forward="true" selection-start-line="26" selection-end-line="43" selection-end-column="1" />
+            <state relative-caret-position="668">
+              <caret line="295" column="17" lean-forward="true" selection-start-line="291" selection-start-column="16" selection-end-line="295" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -31,8 +25,8 @@
       <file leaf-file-name="archive-touren.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/archive-touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="787">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="491">
+              <caret line="287" column="21" selection-start-line="287" selection-start-column="21" selection-end-line="287" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -255,12 +249,12 @@
       <workItem from="1562863289642" duration="4691000" />
       <workItem from="1563276636752" duration="30000" />
       <workItem from="1564150069974" duration="469000" />
-      <workItem from="1564520782075" duration="9716000" />
+      <workItem from="1564520782075" duration="10475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111601000" />
+    <option name="totallyTimeSpent" value="112360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1525" y="42" width="1806" height="1038" extended-state="0" />
@@ -650,15 +644,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page_touren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="43" column="1" lean-forward="true" selection-start-line="26" selection-end-line="43" selection-end-column="1" />
+        <state relative-caret-position="668">
+          <caret line="295" column="17" lean-forward="true" selection-start-line="291" selection-start-column="16" selection-end-line="295" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/archive-touren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="491">
+          <caret line="287" column="21" selection-start-line="287" selection-start-column="21" selection-end-line="287" selection-end-column="21" />
         </state>
       </provider>
     </entry>
