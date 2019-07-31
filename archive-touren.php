@@ -33,8 +33,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                 <?php
 
-                $obj_id = get_queried_object_id();
-                $currentURL = get_permalink( $obj_id );
+                global $wp;
+                $currentURL = home_url( add_query_arg( array(), $wp->request ) );
 
                 echo resetFilter($currentURL);
 
