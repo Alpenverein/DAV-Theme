@@ -8,6 +8,19 @@ $the_query = new WP_Query(tourQuery());
 $pagesum = $the_query->max_num_pages;
 
 
+if(get_theme_mod('dav_touren_pageid') != false) {$dav_pageid = get_theme_mod('dav_touren_pageid');}
+else {$dav_pageid = false;};
+
+
+if($dav_pageid != false) {
+    $page_id = get_post($dav_pageid);
+    $tourhead_title = $page_id->post_title;
+    $tourhead_content = $page_id->post_content;
+    $tourhead_content = apply_filters('the_content', $tourhead_content);
+    $tourhead_content = str_replace(']]>', ']]>', $tourhead_content);
+}
+
+
 ?>
 
 
