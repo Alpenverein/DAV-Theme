@@ -30,10 +30,37 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     <?php
 
+                    $pagelist = get_field('pagelist');
 
-                    echo '<div class="sadsad">';
-                    echo ListSubpages($post->ID, $sort = 'title');
-                    echo '</div>';
+                        if ($pagelist == true) {
+
+                        $args = array('parent' => $post->ID);
+                        $pagelist = get_pages($args);
+
+                        if(!empty($pagelist)) {
+
+                            echo '<div class="card card-widget-primary mb-4">';
+                            echo '<div class="card-header bg-primary text-white text-uppercase py-1">';
+                            echo 'Unterseiten';
+                            echo '</div>';
+                            echo '<div class="card-body">';
+                            echo '<ul class="list-group list-group-flush">';
+
+                            foreach ($pagelist as $pageitem) {
+
+                                echo '<a class="list-group-item" href="'.get_the_permalink($pageitem->ID).'">';
+                                echo get_the_title($pageitem->ID);
+                                echo '</a>';
+
+                            }
+
+                            echo '</ul>';
+                            echo '</div>';
+                            echo '</div>';
+
+                        }
+
+                    }
 
 
                      ?>
@@ -68,6 +95,9 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     }
 
                     ?>
+
+
+
                 </div>
             </div>
         </div>
