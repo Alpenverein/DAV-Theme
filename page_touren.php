@@ -43,8 +43,6 @@ if($selectedterms != '') {
 
 }
 
-
-
 ?>
 
 

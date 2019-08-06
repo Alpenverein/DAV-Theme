@@ -32,9 +32,9 @@ if($selectedterms != '') {
 
     foreach ($parameter as $param) {
 
-        $test = substr($param,strpos($param,'=') + 1);
+        $termelem = substr($param,strpos($param,'=') + 1);
 
-        $termlist[] = $test;
+        $termlist[] = $termelem;
     }
 
 }
@@ -174,7 +174,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                         if (in_array($term->slug, $termlist)) {
                             echo '<li>' . $term->name . '</li>';
                         } else {
-                            echo '<li><a href="'.getCurrentURI().'tourentyp='.$term->slug.'">' . $term->name . '</a></li>';
+                            echo '<li><a href="'.getCurrentURI().'?tourentyp='.$term->slug.'">' . $term->name . '</a></li>';
                         }
 
                     }

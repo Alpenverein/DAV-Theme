@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5236462c-1586-46cd-9960-f572d72226b0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/archive-touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-touren.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_touren.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +18,8 @@
       <file leaf-file-name="page_touren.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page_touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="295" column="17" lean-forward="true" selection-start-line="291" selection-start-column="16" selection-end-line="295" selection-end-column="17" />
+            <state relative-caret-position="-2736">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -25,8 +27,22 @@
       <file leaf-file-name="archive-touren.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/archive-touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="287" column="21" selection-start-line="287" selection-start-column="21" selection-end-line="287" selection-end-column="21" />
+            <state relative-caret-position="204">
+              <caret line="176" column="64" selection-start-line="176" selection-start-column="64" selection-end-line="176" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom-functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions/custom-functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="15" selection-start-line="15" selection-end-line="195" selection-end-column="1" />
+              <folding>
+                <element signature="n#nav_breadcrumb#0;n#!!top" />
+                <element signature="n#new_excerpt_more#0;n#!!top" />
+                <element signature="n#excerpt_chars#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,9 +77,11 @@
       <find>tribe-events-nav-pagination</find>
       <find>$tax</find>
       <find>buttons</find>
+      <find>getCurrentURI</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/tribe-events</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -118,11 +136,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1525" />
-    <option name="y" value="42" />
-    <option name="width" value="1806" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -249,15 +266,17 @@
       <workItem from="1562863289642" duration="4691000" />
       <workItem from="1563276636752" duration="30000" />
       <workItem from="1564150069974" duration="469000" />
-      <workItem from="1564520782075" duration="10475000" />
+      <workItem from="1564520782075" duration="14100000" />
+      <workItem from="1565014677470" duration="2618000" />
+      <workItem from="1565072830884" duration="2461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112360000" />
+    <option name="totallyTimeSpent" value="121064000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1525" y="42" width="1806" height="1038" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -266,7 +285,7 @@
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16223699" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16180556" />
       <window_info anchor="bottom" id="Statistic" order="9" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="right" id="Database" order="3" />
@@ -552,15 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="877">
           <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
-          <folding>
-            <element signature="n#dav_page_widgets_init#0;n#!!top" />
-            <element signature="n#dav_footer1_widgets_init#0;n#!!top" />
-            <element signature="n#dav_footer2_widgets_init#0;n#!!top" />
-            <element signature="n#dav_footer3_widgets_init#0;n#!!top" />
-            <element signature="n#dav_news_primary_widgets_init#0;n#!!top" />
-            <element signature="n#dav_news_light_widgets_init#0;n#!!top" />
-            <element signature="n#dav_news_dark_widgets_init#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -613,18 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/custom-functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="15" selection-start-line="15" selection-end-line="195" selection-end-column="1" />
-          <folding>
-            <element signature="n#nav_breadcrumb#0;n#!!top" />
-            <element signature="n#new_excerpt_more#0;n#!!top" />
-            <element signature="n#excerpt_chars#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -642,17 +640,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions/custom-functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="15" selection-start-line="15" selection-end-line="195" selection-end-column="1" />
+          <folding>
+            <element signature="n#nav_breadcrumb#0;n#!!top" />
+            <element signature="n#new_excerpt_more#0;n#!!top" />
+            <element signature="n#excerpt_chars#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/page_touren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="295" column="17" lean-forward="true" selection-start-line="291" selection-start-column="16" selection-end-line="295" selection-end-column="17" />
+        <state relative-caret-position="-2736">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/archive-touren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="287" column="21" selection-start-line="287" selection-start-column="21" selection-end-line="287" selection-end-column="21" />
+        <state relative-caret-position="204">
+          <caret line="176" column="64" selection-start-line="176" selection-start-column="64" selection-end-line="176" selection-end-column="64" />
         </state>
       </provider>
     </entry>
