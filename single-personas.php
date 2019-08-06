@@ -67,7 +67,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                                     </div>
                                     <div class="flex-grow-1 pl-3" data-toggle="collapse" data-target="#collapse<?php echo get_the_ID(); ?>">
-                                        <h3><?php the_title(); ?></h3><span class="tour-data">
+                                        <h2><?php the_title(); ?></h2><span class="tour-data">
 
                                         <?php
                                         $tour_type = preg_replace('#<a.*?>(.*?)</a>#i', '\1', get_the_term_list($post->ID,'tourtype','',', '));
@@ -120,6 +120,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     <?php endif; ?>
                 </div>
+            </div>
 
 
             </div>
