@@ -215,15 +215,16 @@ Text Domain: deutscheralpenverein
     margin-bottom: 0.5rem;
     margin-right: 0.5rem;
     border-radius: 0px;
-    color: #000;
+    color: #fff;
 }
 
 .btn-tourenfilter i {
-    color: #000;
+    color: #fff;
 }
 
-.btn-tourenfilter-delete {
+.btn-tourenfilter-delete, .btn-tourenfilter-delete i {
     background: #eee;
+    color: #000;
 }
 
 
