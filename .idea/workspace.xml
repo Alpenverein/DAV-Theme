@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5236462c-1586-46cd-9960-f572d72226b0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/acf.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/acf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_overview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single-personas.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-personas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +20,8 @@
       <file leaf-file-name="page_touren.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page_touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="156" selection-end-column="22" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="1460">
+              <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="156" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -28,22 +29,46 @@
       <file leaf-file-name="archive-touren.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/archive-touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="155" column="18" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="155" selection-end-column="18" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="3100">
+              <caret line="155" column="18" selection-start-line="73" selection-start-column="16" selection-end-line="155" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single-personas.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="single-personas.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single-personas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+            <state relative-caret-position="702">
+              <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page_overview.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page_overview.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="74" column="1" lean-forward="true" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="acf.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions/acf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="45" column="46" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="46" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" />
+                <element signature="e#7#50#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,6 +105,7 @@
       <find>$tax</find>
       <find>buttons</find>
       <find>getCurrentURI</find>
+      <find>dav</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/tribe-events</dir>
@@ -104,7 +130,6 @@
         <option value="$PROJECT_DIR$/tribe-events/list/nav.php" />
         <option value="$PROJECT_DIR$/tribe-events/list/content.php" />
         <option value="$PROJECT_DIR$/tribe-events/month/content.php" />
-        <option value="$PROJECT_DIR$/page_overview.php" />
         <option value="$PROJECT_DIR$/tribe-events/list.php" />
         <option value="$PROJECT_DIR$/tribe-events/day.php" />
         <option value="$PROJECT_DIR$/tribe-events/month.php" />
@@ -121,16 +146,17 @@
         <option value="$PROJECT_DIR$/page_kalender.php" />
         <option value="$PROJECT_DIR$/functions/widgets.php" />
         <option value="$PROJECT_DIR$/functions/shortcodes.php" />
-        <option value="$PROJECT_DIR$/functions/acf.php" />
         <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/assets/scripts/scripts.js" />
         <option value="$PROJECT_DIR$/page_touren.php" />
         <option value="$PROJECT_DIR$/archive-touren.php" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/single_persona.php" />
         <option value="$PROJECT_DIR$/single-personas.php" />
+        <option value="$PROJECT_DIR$/functions/acf.php" />
+        <option value="$PROJECT_DIR$/page_overview.php" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -140,8 +166,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1822" />
+    <option name="y" value="56" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -170,6 +197,12 @@
               <item name="DAV-Theme" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DAV-Theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="styles" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
@@ -272,15 +305,17 @@
       <workItem from="1564150069974" duration="469000" />
       <workItem from="1564520782075" duration="14100000" />
       <workItem from="1565014677470" duration="2618000" />
-      <workItem from="1565072830884" duration="6158000" />
+      <workItem from="1565072830884" duration="6473000" />
+      <workItem from="1565163987600" duration="1809000" />
+      <workItem from="1565289652501" duration="1278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124761000" />
+    <option name="totallyTimeSpent" value="128163000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="-1822" y="56" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -323,6 +358,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/single-personas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2440">
+          <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/startpage_elements/news.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -529,13 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_overview.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page_kalender.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -613,26 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/acf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4580">
-          <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
-          <folding>
-            <element signature="e#7#50#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/single.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="224" column="52" selection-start-line="224" selection-start-column="52" selection-end-line="224" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions/custom-functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -647,31 +662,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page_touren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="156" selection-end-column="22" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="1460">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="156" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/archive-touren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="155" column="18" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="155" selection-end-column="18" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="3100">
+          <caret line="155" column="18" selection-start-line="73" selection-start-column="16" selection-end-line="155" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/single-personas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+        <state relative-caret-position="702">
+          <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/acf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="45" column="46" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="46" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" />
+            <element signature="e#7#50#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_overview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="74" column="1" lean-forward="true" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
         </state>
       </provider>
     </entry>

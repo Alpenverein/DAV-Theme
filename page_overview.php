@@ -52,7 +52,23 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                 if ($pagelist != null) {
 
+                    $imageview = get_field('dav_imageview_pages');
+
+                        if($imageview == true) {
+
+                            $card_images = 'card-noimage';
+
+                        } else {
+
+                            $card_images = '';
+
+                        }
+
+
+
+
                     foreach ($pagelist as $page) {
+
 
                         $pagelink = get_permalink($page["page_id"]);
 
@@ -61,8 +77,13 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                         } else {$img = $page['page_img'];}
 
                         echo '<div class="col-sm-6 col-lg-4 pt-4" id="content-list">
-                    <div class="card">
-                    <a href="'.$pagelink.'"><img class="card-img-top" src="'.$img.'" alt="Artikelbild zu Artikel ' . get_the_title() . '"></a>
+                    <div class="card '.$card_images.'">';
+
+                        if($imageview != true) {
+                            echo '<a href="' . $pagelink . '"><img class="card-img-top" src="' . $img . '" alt="Artikelbild zu Artikel ' . get_the_title() . '"></a>';
+                        }
+
+                        echo '
                         <div class="card-body card-page-overview">
                             <a href="'.$pagelink.'"><h2 class="news-head">'.$page["page_title"].'</h2></a>
                             <a href="'.$pagelink.'"><button class="btn btn-news"><i class="fas fa-chevron-right"></i></button> </a>

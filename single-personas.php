@@ -114,7 +114,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     <?php else : ?>
                         <div class="row">
                             <div class="col-12">
-                                <p>Für die gewünschte Auswahl haben wir aktuell leider keine Tour im Programm.</p>
+                                <p><?php the_title(); ?> hat zur Zeit keine Touren geplant.</p>
                             </div>
                         </div>
 
@@ -137,7 +137,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         <div class="row">
             <div class="col-12">
                 <h1>Entschuldigung!</h1>
-                <p>Leider gibt es hier nicht den gewünschten Inhalt.</p>
+                <p>Leider gibt es hier keinen Inhalt.</p>
             </div>
         </div>
     </div>

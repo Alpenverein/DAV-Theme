@@ -70,6 +70,16 @@ Text Domain: deutscheralpenverein
 }
 
 
+.card-noimage .card-page-overview {
+    background-color: #61B732;
+}
+
+.card-noimage .card-page-overview .news-head {
+    color: #fff;
+}
+
+
+
 /* PERSONAS */
 .card.card-person.col-6,
 .card.card-touren.col-6{
