@@ -3,6 +3,8 @@
 <?php
 
 require_once get_template_directory() . '/startpage_elements/main-menu.php';
+require_once get_template_directory() . '/template_snippets/sidebar_menu.php';
+
 
 //breadcrumb
 if(get_theme_mod('dav_breadcrumb') != false) {$breadcrumb = 1;} else {$breadcrumb = 0;};

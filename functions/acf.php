@@ -201,15 +201,15 @@ if( function_exists('acf_add_local_field_group') ):
 
 
     acf_add_local_field_group(array(
-        'key' => 'group_5d412205add35',
-        'title' => 'Subseitenliste',
+        'key' => 'group_5d52ba4ee0838',
+        'title' => 'Seitenmenü',
         'fields' => array(
             array(
-                'key' => 'field_5d412221ebe12',
-                'label' => 'Unterseiten als Liste anzeigen',
-                'name' => 'pagelist',
-                'type' => 'true_false',
-                'instructions' => '',
+                'key' => 'field_5d52ba673a427',
+                'label' => 'Seitentyp',
+                'name' => 'sidebarmenu_type',
+                'type' => 'radio',
+                'instructions' => 'Es können die Seiten auf gleicher Inhaltsebene oder die direkten Unterseiten der aktuellen Seite angezeigt werden.',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -217,11 +217,17 @@ if( function_exists('acf_add_local_field_group') ):
                     'class' => '',
                     'id' => '',
                 ),
-                'message' => '',
-                'default_value' => 0,
-                'ui' => 0,
-                'ui_on_text' => '',
-                'ui_off_text' => '',
+                'choices' => array(
+                    0 => 'Nichts anzeigen',
+                    1 => 'Geschwisterseiten',
+                    2 => 'Kinderseiten',
+                ),
+                'allow_null' => 0,
+                'other_choice' => 0,
+                'default_value' => '',
+                'layout' => 'vertical',
+                'return_format' => 'value',
+                'save_other_choice' => 0,
             ),
         ),
         'location' => array(

@@ -148,7 +148,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 				
 				<?php else : ?>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 mt-5">
                             <p>Für die gewünschte Auswahl haben wir aktuell leider keine Tour im Programm.</p>
                         </div>
                     </div>

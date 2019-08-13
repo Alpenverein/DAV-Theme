@@ -28,73 +28,9 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 <div class="col-xs-12 col-sm-4">
 
 
-                    <?php
+                    <?php echo DAV_AutoSidebarMenu($post); ?>
 
-                    $pagelist = get_field('pagelist');
-
-                        if ($pagelist == true) {
-
-                        $args = array('parent' => $post->ID);
-                        $pagelist = get_pages($args);
-
-                        if(!empty($pagelist)) {
-
-                            echo '<div class="card card-widget-primary mb-4">';
-                            echo '<div class="card-header bg-primary text-white text-uppercase py-1">';
-                            echo 'Unterseiten';
-                            echo '</div>';
-                            echo '<div class="card-body">';
-                            echo '<ul class="list-group list-group-flush">';
-
-                            foreach ($pagelist as $pageitem) {
-
-                                echo '<a class="list-group-item" href="'.get_the_permalink($pageitem->ID).'">';
-                                echo get_the_title($pageitem->ID);
-                                echo '</a>';
-
-                            }
-
-                            echo '</ul>';
-                            echo '</div>';
-                            echo '</div>';
-
-                        }
-
-                    }
-
-
-                     ?>
-
-                    <?php
-                    // add a linklist to the right column
-                    $linklist = get_field('page_linklist');
-
-                    if (!empty($linklist)) {
-
-
-                        echo '<div class="card card-widget-primary mb-4">';
-                            echo '<div class="card-header bg-primary text-white text-uppercase py-1">';
-                        echo get_field('page_linklist_title');
-                            echo '</div>';
-                            echo '<div class="card-body">';
-
-                            echo '<ul class="list-group list-group-flush">';
-
-                            for ($i = 0; $i < count($linklist); $i++) {
-
-                                echo '<a class="list-group-item" href="'.$linklist[$i].'">';
-                                echo get_the_title(url_to_postid($linklist[$i]));
-                                echo '</a>';
-                            }
-
-                            echo '</ul>';
-
-                            echo '</div>';
-                        echo '</div>';
-
-                    }
-
-                    ?>
+                    <?php echo DAV_CustomSidebarMenu(); ?>
 
 
 
