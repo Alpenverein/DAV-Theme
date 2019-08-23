@@ -28,7 +28,7 @@ function DAV_AutoSidebarMenu($post) {
             $sidebarheader = 'Unterseiten';
             break;
 
-            case 1 : $args = array('child_of' => $post->post_parent);
+            case 1 : $args = array('parent' => $post->post_parent);
             $sidebardata = get_pages($args);
             $sidebarheader = 'Weitere Seiten';
             break;
@@ -39,6 +39,13 @@ function DAV_AutoSidebarMenu($post) {
 
 
         if(!empty($sidebardata)) {
+
+            $title = get_field('sidebarmenu_title');
+
+            if($title != '') {
+                $sidebarheader = $title;
+            }
+
 
             $return .= '<div class="card card-widget-primary mb-4">';
             $return .= '<div class="card-header bg-primary text-white text-uppercase py-1">';

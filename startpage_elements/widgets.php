@@ -39,7 +39,12 @@ function checkCustomWidgets($sectorID) {
 }
 
 
-
+/**
+ *
+ *
+ * @param $sectorID
+ * @return array|bool
+ */
 function checkDAVWidgets($sectorID)
 {
     $return = array();
@@ -100,6 +105,12 @@ function buildCustomWidgets($widgets) {
 }
 
 
+/**
+ *
+ *
+ * @param $widgets
+ * @return string
+ */
 function buildDAVWidgets($widgets) {
 
     $return = '';

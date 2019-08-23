@@ -909,10 +909,15 @@ function dav_customwidgets_customize_register( $wp_customize ) {
         'type' => 'text',
         'settings' => 'dav_customwidget_6_link'
     ));
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'dav_customwidget_6_image', array(
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'dav_customwidget_6_image', array(
         'label'    => __( 'Bild 6 auswählen', 'dav' ),
         'section'  => 'dav_customwidgets6_section',
         'settings' => 'dav_customwidget_6_image',
+        'height' => 294,
+        'width' => 500,
+        'flex_width ' => false,
+        'flex_height ' => false,
+        'priority' => 1
     ) ) );
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'dav_customwidget_6_sector', array(
         'label'          => __( 'Sector auswählen für Widget 6', 'dav' ),

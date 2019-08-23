@@ -28,11 +28,9 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 <div class="col-xs-12 col-sm-4">
 
 
-                    <?php echo DAV_AutoSidebarMenu($post); ?>
-
                     <?php echo DAV_CustomSidebarMenu(); ?>
 
-
+                    <?php echo DAV_AutoSidebarMenu($post); ?>
 
                 </div>
             </div>
