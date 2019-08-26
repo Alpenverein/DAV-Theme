@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5236462c-1586-46cd-9960-f572d72226b0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/acf.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/acf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/customizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/customizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startpage_elements/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/startpage_elements/widgets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_snippets/sidebar_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/template_snippets/sidebar_menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_full.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_full.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +12,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="page_full.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page_full.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page_widgets.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page_widgets.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="23" column="18" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="23" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -87,7 +101,6 @@
         <option value="$PROJECT_DIR$/tribe-events/single-event.php" />
         <option value="$PROJECT_DIR$/functions/gutenberg.php" />
         <option value="$PROJECT_DIR$/functions.php" />
-        <option value="$PROJECT_DIR$/page_full.php" />
         <option value="$PROJECT_DIR$/page_kalender.php" />
         <option value="$PROJECT_DIR$/functions/widgets.php" />
         <option value="$PROJECT_DIR$/functions/shortcodes.php" />
@@ -105,6 +118,7 @@
         <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/startpage_elements/widgets.php" />
         <option value="$PROJECT_DIR$/functions/customizer.php" />
+        <option value="$PROJECT_DIR$/page_full.php" />
       </list>
     </option>
   </component>
@@ -279,14 +293,16 @@
       <workItem from="1566283963190" duration="25000" />
       <workItem from="1566321452250" duration="2513000" />
       <workItem from="1566386011472" duration="558000" />
+      <workItem from="1566847130513" duration="27000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136972000" />
+    <option name="totallyTimeSpent" value="136999000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
@@ -294,7 +310,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17521368" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17704518" />
       <window_info anchor="bottom" id="Statistic" order="9" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="right" id="Database" order="3" />
@@ -618,12 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
-          <folding>
-            <element signature="n#checkCustomWidgets#0;n#!!top" />
-            <element signature="n#checkDAVWidgets#0;n#!!top" />
-            <element signature="n#buildCustomWidgets#0;n#!!top" />
-            <element signature="n#buildDAVWidgets#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -655,17 +665,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_full.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="43" selection-start-column="43" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
           <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_widgets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_full.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
         </state>
       </provider>
     </entry>

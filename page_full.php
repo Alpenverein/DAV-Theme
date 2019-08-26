@@ -17,6 +17,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
     <div class="container">
         <div class="container-content">
             <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                    <h1><?php the_title(); ?></h1>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-12" id="content">
                     <?php the_content(); ?>
                 </div>
