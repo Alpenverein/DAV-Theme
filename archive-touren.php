@@ -6,6 +6,7 @@ get_header();
 
 $the_query = new WP_Query(tourQuery());
 $pagesum = $the_query->max_num_pages;
+$termlist = array();
 
 
 if(get_theme_mod('dav_touren_pageid') != false) {$dav_pageid = get_theme_mod('dav_touren_pageid');}
