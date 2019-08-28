@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5236462c-1586-46cd-9960-f572d72226b0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tribe-events/single-event.php" beforeDir="false" afterPath="$PROJECT_DIR$/tribe-events/single-event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_full.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_full.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,85 +12,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="single-touren.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/single-touren.php">
+    <leaf>
+      <file leaf-file-name="page_full.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page_full.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2556">
-              <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
+            <state relative-caret-position="440">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/styles/custom.css">
+      <file leaf-file-name="page_widgets.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page_widgets.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16776">
-              <caret line="932" selection-start-line="900" selection-end-line="932" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main-menu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/startpage_elements/main-menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="3" lean-forward="true" selection-end-line="406" selection-end-column="1" />
-              <folding>
-                <element signature="n#getDesktopMenu#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4068">
-              <caret line="226" column="20" lean-forward="true" selection-start-line="208" selection-start-column="12" selection-end-line="226" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="60" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom-functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/custom-functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="15" selection-start-line="15" selection-end-line="195" selection-end-column="1" />
-              <folding>
-                <element signature="n#nav_breadcrumb#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single-event.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tribe-events/single-event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-              <folding>
-                <element signature="e#6#13#1" expanded="true" />
-                <element signature="e#14#21#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="140" selection-start-line="140" selection-end-line="143" selection-end-column="4" />
+            <state relative-caret-position="460">
+              <caret line="23" column="18" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="23" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -100,7 +35,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>persona</find>
       <find>template</find>
       <find>touren</find>
       <find>#content ul li</find>
@@ -124,9 +58,17 @@
       <find>guten</find>
       <find>carousel-item</find>
       <find>tribe-events-nav-pagination</find>
+      <find>$tax</find>
+      <find>buttons</find>
+      <find>getCurrentURI</find>
+      <find>dav</find>
+      <find>seiten</find>
+      <find>custom</find>
+      <find>dav_customwidget_6_image</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/tribe-events</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -136,13 +78,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/page_events.php" />
-        <option value="$PROJECT_DIR$/page_full.php" />
         <option value="$PROJECT_DIR$/assets/styles/bootstrap.css" />
         <option value="$PROJECT_DIR$/startpage_elements/news.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/archive.php" />
         <option value="$PROJECT_DIR$/page_withouttitle.php" />
-        <option value="$PROJECT_DIR$/page_kalender.php" />
         <option value="$PROJECT_DIR$/tribe-events/month/title-bar.php" />
         <option value="$PROJECT_DIR$/tribe-events/list/title-bar.php" />
         <option value="$PROJECT_DIR$/tribe-events/day/title-bar.php" />
@@ -150,21 +89,36 @@
         <option value="$PROJECT_DIR$/tribe-events/list/nav.php" />
         <option value="$PROJECT_DIR$/tribe-events/list/content.php" />
         <option value="$PROJECT_DIR$/tribe-events/month/content.php" />
-        <option value="$PROJECT_DIR$/assets/scripts/scripts.js" />
-        <option value="$PROJECT_DIR$/page_overview.php" />
-        <option value="$PROJECT_DIR$/functions/acf.php" />
-        <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/tribe-events/list.php" />
         <option value="$PROJECT_DIR$/tribe-events/day.php" />
         <option value="$PROJECT_DIR$/tribe-events/month.php" />
         <option value="$PROJECT_DIR$/tribe-events/day/single-event.php" />
         <option value="$PROJECT_DIR$/functions/custom-functions.php" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/tribe-events/list/loop.php" />
         <option value="$PROJECT_DIR$/startpage_elements/slider.php" />
         <option value="$PROJECT_DIR$/single-touren.php" />
         <option value="$PROJECT_DIR$/assets/styles/custom.css" />
         <option value="$PROJECT_DIR$/tribe-events/single-event.php" />
+        <option value="$PROJECT_DIR$/functions/gutenberg.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/page_kalender.php" />
+        <option value="$PROJECT_DIR$/functions/widgets.php" />
+        <option value="$PROJECT_DIR$/functions/shortcodes.php" />
+        <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/assets/scripts/scripts.js" />
+        <option value="$PROJECT_DIR$/single_persona.php" />
+        <option value="$PROJECT_DIR$/single-personas.php" />
+        <option value="$PROJECT_DIR$/page_overview.php" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/archive-touren.php" />
+        <option value="$PROJECT_DIR$/page_touren.php" />
+        <option value="$PROJECT_DIR$/functions/acf.php" />
+        <option value="$PROJECT_DIR$/template_snippets/sidebar_menu.php" />
+        <option value="$PROJECT_DIR$/page.php" />
+        <option value="$PROJECT_DIR$/startpage_elements/widgets.php" />
+        <option value="$PROJECT_DIR$/functions/customizer.php" />
+        <option value="$PROJECT_DIR$/page_full.php" />
       </list>
     </option>
   </component>
@@ -175,20 +129,18 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1711" />
-    <option name="y" value="82" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,29 +151,43 @@
             <path>
               <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
               <item name="DAV-Theme" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAV-Theme" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAV-Theme" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="styles" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAV-Theme" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="functions" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
               <item name="DAV-Theme" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="startpage_elements" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DAV-Theme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DAV-Theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="template_snippets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DAV-Theme" type="cbb8eebc:String" user="DAV-Theme" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DAV-Theme" type="cbb8eebc:String" user="DAV-Theme" />
+              <item name="functions" type="cbb8eebc:String" user="functions" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DAV-Theme" type="cbb8eebc:String" user="DAV-Theme" />
+              <item name="startpage_elements" type="cbb8eebc:String" user="startpage_elements" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DAV-Theme" type="cbb8eebc:String" user="DAV-Theme" />
+              <item name="template_snippets" type="cbb8eebc:String" user="template_snippets" />
             </path>
           </expand>
           <select />
@@ -297,15 +263,45 @@
       <workItem from="1556095833008" duration="2530000" />
       <workItem from="1556181483787" duration="516000" />
       <workItem from="1556278145556" duration="551000" />
-      <workItem from="1556518585830" duration="541000" />
+      <workItem from="1556518585830" duration="1570000" />
+      <workItem from="1556540918748" duration="597000" />
+      <workItem from="1556559473173" duration="597000" />
+      <workItem from="1556628429547" duration="554000" />
+      <workItem from="1556997880675" duration="502000" />
+      <workItem from="1557123101094" duration="597000" />
+      <workItem from="1557200543148" duration="258000" />
+      <workItem from="1562148137848" duration="1052000" />
+      <workItem from="1562312581665" duration="2469000" />
+      <workItem from="1562585755211" duration="6348000" />
+      <workItem from="1562825976158" duration="557000" />
+      <workItem from="1562863289642" duration="4691000" />
+      <workItem from="1563276636752" duration="30000" />
+      <workItem from="1564150069974" duration="469000" />
+      <workItem from="1564520782075" duration="14100000" />
+      <workItem from="1565014677470" duration="2618000" />
+      <workItem from="1565072830884" duration="6473000" />
+      <workItem from="1565163987600" duration="1809000" />
+      <workItem from="1565289652501" duration="1278000" />
+      <workItem from="1565672556608" duration="1294000" />
+      <workItem from="1565674470629" duration="98000" />
+      <workItem from="1565702256776" duration="1488000" />
+      <workItem from="1565706426219" duration="11000" />
+      <workItem from="1565772368094" duration="595000" />
+      <workItem from="1565898358743" duration="195000" />
+      <workItem from="1565968331702" duration="2002000" />
+      <workItem from="1566136182624" duration="30000" />
+      <workItem from="1566283963190" duration="25000" />
+      <workItem from="1566321452250" duration="2513000" />
+      <workItem from="1566386011472" duration="558000" />
+      <workItem from="1566847130513" duration="27000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63703000" />
+    <option name="totallyTimeSpent" value="136999000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1711" y="82" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -314,11 +310,10 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18680556" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17704518" />
       <window_info anchor="bottom" id="Statistic" order="9" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -328,6 +323,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.29235882" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,91 +332,18 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/functions/acf.php</url>
+          <line>8</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/styles/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19368">
-          <caret line="1076" column="1" selection-start-line="1076" selection-start-column="1" selection-end-line="1076" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/styles/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19368">
-          <caret line="1076" column="1" selection-start-line="1076" selection-start-column="1" selection-end-line="1076" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/styles/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20196">
-          <caret line="1122" selection-start-line="1122" selection-end-line="1129" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_full.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/styles/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="1315" column="11" selection-start-line="1315" selection-start-column="11" selection-end-line="1315" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startpage_elements/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="140" column="40" selection-start-line="140" selection-start-column="40" selection-end-line="140" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tribe-events/month/title-bar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_withouttitle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tribe-events/list/title-bar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -454,13 +377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scripts/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="110" column="55" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tribe-events/modules/bar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -484,20 +400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="127" column="33" selection-start-line="127" selection-start-column="33" selection-end-line="127" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/acf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_overview.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -562,13 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_kalender.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tribe-events/blocks/event-links.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -612,83 +507,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/assets/styles/custom.css" />
+    <entry file="file://$PROJECT_DIR$/tribe-events/single-event.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        <state relative-caret-position="217">
+          <caret line="45" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
+    <entry file="file://$PROJECT_DIR$/functions/gutenberg.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="83" column="99" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="99" />
+        <state relative-caret-position="80">
+          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="140" selection-start-line="140" selection-end-line="143" selection-end-column="4" />
+        <state relative-caret-position="-726">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/single-touren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2556">
-          <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
+        <state relative-caret-position="20">
+          <caret line="140" column="54" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/widgets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="877">
+          <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="119" column="4" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/startpage_elements/main-menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="3" lean-forward="true" selection-end-line="406" selection-end-column="1" />
-          <folding>
-            <element signature="n#getDesktopMenu#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="167">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/styles/custom.css">
+    <entry file="file://$PROJECT_DIR$/functions/shortcodes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16776">
-          <caret line="932" selection-start-line="900" selection-end-line="932" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4068">
-          <caret line="226" column="20" lean-forward="true" selection-start-line="208" selection-start-column="12" selection-end-line="226" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="60" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="60" />
+        <state relative-caret-position="380">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/custom-functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="160">
           <caret line="15" selection-start-line="15" selection-end-line="195" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive-touren.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="148" column="51" selection-start-line="148" selection-start-column="46" selection-end-line="148" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single-personas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="74" column="1" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template_snippets/sidebar_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/acf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="234" column="44" selection-start-line="234" selection-start-column="27" selection-end-line="234" selection-end-column="44" />
           <folding>
-            <element signature="n#nav_breadcrumb#0;n#!!top" />
+            <element signature="e#7#50#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tribe-events/single-event.php">
+    <entry file="file://$PROJECT_DIR$/functions/customizer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-          <folding>
-            <element signature="e#6#13#1" expanded="true" />
-            <element signature="e#14#21#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="667">
+          <caret line="899" column="51" selection-start-line="899" selection-start-column="51" selection-end-line="899" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startpage_elements/widgets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_withouttitle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_touren.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3280">
+          <caret line="150" column="47" selection-start-line="150" selection-start-column="47" selection-end-line="150" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_overview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_kalender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_widgets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_full.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
         </state>
       </provider>
     </entry>

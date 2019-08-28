@@ -1,11 +1,20 @@
 <?php
 /**
  * Filename: widgets.php
- * Description:
- *
- * User: Stephan Mitteldorf
+ * Description: Contains Widgetsfunctions
  */
 
+
+//init WP-Widgets
+add_action( 'widgets_init', 'dav_footer1_widgets_init' );
+add_action( 'widgets_init', 'dav_footer2_widgets_init' );
+add_action( 'widgets_init', 'dav_footer3_widgets_init' );
+add_action( 'widgets_init', 'dav_news_primary_widgets_init' );
+add_action( 'widgets_init', 'dav_news_light_widgets_init' );
+add_action( 'widgets_init', 'dav_news_dark_widgets_init' );
+add_action( 'widgets_init', 'dav_page_widgets_init' );
+
+// WP-Widgets
 function dav_page_widgets_init()
 {
     register_sidebar(
@@ -74,7 +83,6 @@ function dav_news_primary_widgets_init() {
         ));
 }
 
-
 function dav_news_light_widgets_init() {
     register_sidebar(
         array(
@@ -103,10 +111,49 @@ function dav_news_dark_widgets_init() {
 }
 
 
-add_action( 'widgets_init', 'dav_footer1_widgets_init' );
-add_action( 'widgets_init', 'dav_footer2_widgets_init' );
-add_action( 'widgets_init', 'dav_footer3_widgets_init' );
-add_action( 'widgets_init', 'dav_news_primary_widgets_init' );
-add_action( 'widgets_init', 'dav_news_light_widgets_init' );
-add_action( 'widgets_init', 'dav_news_dark_widgets_init' );
-add_action( 'widgets_init', 'dav_page_widgets_init' );
+
+// CUSTOM Widgets
+function ListSubpages($id, $sort = 'title') {
+
+    $return = '';
+
+//get the arguments for the list
+$args = array(
+    'depth'        => 1,
+    'show_date'    => '',
+    'date_format'  => get_option( 'date_format' ),
+    'child_of'     => $id,
+    'title_li'     => '',
+    'echo'         => 0,
+    'sort_column'  => $sort,
+    'item_spacing' => 'preserve',
+    'walker'       => '',
+);
+
+    $list = wp_list_pages($args);
+
+    /**
+
+    $return .= '<div class="card card-widget-primary mb-4">';
+    $return .= '<div class="card-header bg-primary text-white text-uppercase py-1">';
+    $return .= 'sdfdsfdf';
+    $return .= '</div>';
+    $return .= '<div class="card-body">';
+
+    $return .= '<ul class="list-group list-group-flush">';
+
+    $return = $list;
+
+    $return .= '</ul>';
+
+    $return .= '</div>';
+    $return .= '</div>';
+
+
+    return $return;
+     *
+     */
+
+
+    return $list;
+}

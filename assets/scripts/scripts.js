@@ -117,6 +117,8 @@ $(document).ready(function() {
     });
 
 
+    $('#top-link').hide();
+
 });
 
 $(window).on("scroll", function() {
@@ -132,6 +134,12 @@ $(window).on("scroll", function() {
             $("#main-nav-head").addClass('bg-transparent60');
         }
 
+    }
+
+    if ($(this).scrollTop() > 100) { // Wenn 100 Pixel gescrolled wurde
+        $('#top-link').fadeIn();
+    } else {
+        $('#top-link').fadeOut();
     }
 });
 
@@ -159,4 +167,9 @@ $(document).keyup(function(e) {
 
 $(".fa-bars").click(function(){
     $(this).toggleClass("fa-times");
+});
+
+
+$('#top-link').click(function() {
+    $('html, body').animate({ scrollTop: '0px'},1000);
 });

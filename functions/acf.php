@@ -40,6 +40,25 @@ if( function_exists('acf_add_local_field_group') ):
                 'ajax' => 0,
                 'placeholder' => '',
             ),
+            array(
+                'key' => 'field_5d4c6d0d78d80',
+                'label' => 'Seitenbilder nicht anzeigen',
+                'name' => 'dav_imageview_pages',
+                'type' => 'true_false',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => 0,
+                'ui' => 0,
+                'ui_on_text' => '',
+                'ui_off_text' => '',
+            ),
         ),
         'location' => array(
             array(
@@ -180,4 +199,74 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => 'Mit diesem Auswahlfeld können bestimmten Seiten beliebige Menüs hinzugefügt werden.',
     ));
 
+
+    acf_add_local_field_group(array(
+        'key' => 'group_5d52ba4ee0838',
+        'title' => 'Seitenmenü',
+        'fields' => array(
+            array(
+                'key' => 'field_5d52ba673a427',
+                'label' => 'Seitentyp',
+                'name' => 'sidebarmenu_type',
+                'type' => 'radio',
+                'instructions' => 'Es können die Seiten auf gleicher Inhaltsebene oder die direkten Unterseiten der aktuellen Seite angezeigt werden.',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    0 => 'Nichts anzeigen',
+                    1 => 'Geschwisterseiten',
+                    2 => 'Kinderseiten',
+                ),
+                'allow_null' => 0,
+                'other_choice' => 0,
+                'default_value' => '',
+                'layout' => 'vertical',
+                'return_format' => 'value',
+                'save_other_choice' => 0,
+            ),
+            array(
+                'key' => 'field_5d53c9d82f8fd',
+                'label' => 'Titel Seitenmenü',
+                'name' => 'sidebarmenu_title',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'default',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'side',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+
 endif;
+
