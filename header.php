@@ -2,7 +2,7 @@
 
 <?php
 
-require_once get_template_directory() . '/startpage_elements/main-menu.php';
+require_once get_template_directory() . '/includes/main-menu.php';
 require_once get_template_directory() . '/template_snippets/sidebar_menu.php';
 
 

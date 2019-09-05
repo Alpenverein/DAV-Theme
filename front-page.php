@@ -2,9 +2,9 @@
 
 
 // require needed pages
-require_once 'startpage_elements/news.php';
-require_once 'startpage_elements/widgets.php';
-require_once 'startpage_elements/slider.php';
+require_once 'includes/news.php';
+require_once 'includes/widgets.php';
+require_once 'includes/slider.php';
 
 if(get_theme_mod('dav_menuview') != false) {$dav_menuview = get_theme_mod('dav_menuview');}
 else {$dav_menuview = 'boxed';};

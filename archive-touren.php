@@ -258,6 +258,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 //Tourenleiter ausgeben
                 $persona_args = array(
                     'post_type' => 'personas',
+                    'nopaging' => true,
+                    'posts_per_page' => -1,
                     'tax_query' => array(
                         'relation' => 'OR',
                         array(

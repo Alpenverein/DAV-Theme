@@ -89,7 +89,6 @@ function show_news($news_quantity,$news_line,$news_category_in = '',$news_catego
 
     }
 
-    //print_r($the_query);
 
     $return .= '<div class="container">';
 

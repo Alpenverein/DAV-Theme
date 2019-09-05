@@ -29,6 +29,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         </div>
     </div>
 
+    <?php echo do_shortcode("[insert-your-shortcode-here]"); ?>
+
 <?php endwhile; else : ?>
 
     <div class="container">
