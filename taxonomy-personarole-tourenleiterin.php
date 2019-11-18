@@ -20,7 +20,7 @@ get_theme_mod('dav_excerpt') ? $excerpt = get_theme_mod('dav_excerpt') : $excerp
         <div class="row">
 
                 <div class="col-xs-12 col-sm-8">
-                    <h1>Unsere <?php single_cat_title('',true); ?></h1>
+                    <h1>Unsere <?php single_cat_title('',true); ?>(nen)</h1>
                 </div>
         </div>
 

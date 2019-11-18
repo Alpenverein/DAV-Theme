@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5236462c-1586-46cd-9960-f572d72226b0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/archive-personas.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page_onepager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/taxonomy-personarole-vorstand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxonomy-personarole-tourenleiterin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/archive-touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-touren.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive_events.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scripts/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category_fullwidth.php" beforeDir="false" afterPath="$PROJECT_DIR$/category-fullwidth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/acf.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/acf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/custom-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/custom-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/customizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/customizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/shortcodes.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/shortcodes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/main-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/main-menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/news.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_full.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_full.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_overview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_touren.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_widgets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_withouttitle.php" beforeDir="false" afterPath="$PROJECT_DIR$/page_withouttitle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single-personas.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-personas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single-touren.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-touren.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taxonomy-personarole.php" beforeDir="false" afterPath="$PROJECT_DIR$/taxonomy-personarole-tourenleiter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_snippets/sidebar_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/template_snippets/sidebar_menu.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,56 +16,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/footer.php">
+      <file leaf-file-name="archive-touren.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/archive-touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="108" column="51" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
+            <state relative-caret-position="533">
+              <caret line="277" column="56" selection-start-line="277" selection-start-column="56" selection-end-line="277" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scripts/scripts.js">
+      <file leaf-file-name="taxonomy-personarole-tourenleiter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taxonomy-personarole-tourenleiter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3060">
-              <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
+            <state relative-caret-position="840">
+              <caret line="42" column="20" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="61" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taxonomy-personarole-vorstand.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taxonomy-personarole-vorstand.php">
+      <file leaf-file-name="taxonomy-personarole-tourenleiterin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/taxonomy-personarole-tourenleiterin.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taxonomy-personarole.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taxonomy-personarole.php">
+      <file leaf-file-name="page_touren.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page_touren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page_widgets.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page_widgets.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3080">
-              <caret line="154" column="39" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="39" />
+            <state relative-caret-position="474">
+              <caret line="282" column="49" selection-start-line="282" selection-start-column="49" selection-end-line="282" selection-end-column="49" />
+              <folding>
+                <element signature="e#7#39#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,7 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tribe-events/list/content.php" />
         <option value="$PROJECT_DIR$/tribe-events/month/content.php" />
         <option value="$PROJECT_DIR$/tribe-events/list.php" />
         <option value="$PROJECT_DIR$/tribe-events/day.php" />
@@ -173,8 +134,6 @@
         <option value="$PROJECT_DIR$/page_withouttitle.php" />
         <option value="$PROJECT_DIR$/page_full.php" />
         <option value="$PROJECT_DIR$/single-touren.php" />
-        <option value="$PROJECT_DIR$/archive-touren.php" />
-        <option value="$PROJECT_DIR$/page_touren.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/single-personas.php" />
         <option value="$PROJECT_DIR$/archive.php" />
@@ -190,6 +149,9 @@
         <option value="$PROJECT_DIR$/assets/scripts/scripts.js" />
         <option value="$PROJECT_DIR$/taxonomy-personarole-vorstand.php" />
         <option value="$PROJECT_DIR$/taxonomy-personarole.php" />
+        <option value="$PROJECT_DIR$/archive-touren.php" />
+        <option value="$PROJECT_DIR$/page_touren.php" />
+        <option value="$PROJECT_DIR$/taxonomy-personarole-tourenleiterin.php" />
       </list>
     </option>
   </component>
@@ -428,15 +390,15 @@
       <workItem from="1573058915882" duration="590000" />
       <workItem from="1573072066687" duration="591000" />
       <workItem from="1573624141677" duration="7696000" />
-      <workItem from="1574066652261" duration="573000" />
+      <workItem from="1574066652261" duration="1411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220313000" />
+    <option name="totallyTimeSpent" value="221151000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1400" y="23" width="1727" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1727" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -480,13 +442,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/page_widgets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1160">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tribe-events/list/single-event.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -675,13 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archive-touren.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="275" column="18" selection-start-line="258" selection-start-column="16" selection-end-line="275" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -703,20 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_touren.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taxonomy-personarole-tourenleiter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="42" column="20" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="61" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive-personas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
@@ -728,13 +662,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="189" column="48" selection-start-line="189" selection-start-column="48" selection-end-line="189" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="1358" column="22" selection-start-line="1358" selection-start-column="22" selection-end-line="1358" selection-end-column="22" />
+          <folding>
+            <element signature="e#68#75#1" expanded="true" />
+            <element signature="e#68#76#1" expanded="true" />
+            <element signature="e#68#76#1" expanded="true" />
+            <element signature="e#68#75#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -759,24 +692,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
+    <entry file="file://$PROJECT_DIR$/page_widgets.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3080">
-          <caret line="154" column="39" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="39" />
+        <state relative-caret-position="693">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
+    <entry file="file://$PROJECT_DIR$/taxonomy-personarole.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="108" column="51" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scripts/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
+        <state relative-caret-position="240">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -787,17 +713,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taxonomy-personarole.php">
+    <entry file="file://$PROJECT_DIR$/assets/scripts/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state relative-caret-position="491">
+          <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_widgets.php">
+    <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="493">
+          <caret line="108" column="51" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="154" column="39" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="1358" column="22" selection-start-line="1358" selection-start-column="22" selection-end-line="1358" selection-end-column="22" />
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_touren.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="282" column="49" selection-start-line="282" selection-start-column="49" selection-end-line="282" selection-end-column="49" />
+          <folding>
+            <element signature="e#7#39#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive-touren.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="277" column="56" selection-start-line="277" selection-start-column="56" selection-end-line="277" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taxonomy-personarole-tourenleiter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="42" column="20" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="61" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taxonomy-personarole-tourenleiterin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
         </state>
       </provider>
     </entry>

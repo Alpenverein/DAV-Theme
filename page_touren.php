@@ -277,6 +277,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                         'field'    => 'slug',
                         'terms'    => 'tourenleiterin',
                     ),
+                    array(
+                        'taxonomy' => 'personarole',
+                        'field'    => 'slug',
+                        'terms'    => 'tourenleitung',
+                    ),
                 ),
             );
 
