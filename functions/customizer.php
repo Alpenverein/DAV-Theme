@@ -1092,6 +1092,7 @@ function dav_theme_customize_register( $wp_customize ) {
     //Quicklinks
     $wp_customize->add_setting('dav_intern_link', array('default' => ''));
     $wp_customize->add_setting('dav_intern_text', array('default' => ''));
+    $wp_customize->add_setting('dav_mail', array('default' => ''));
     $wp_customize->add_setting('dav_phone', array('default' => ''));
     $wp_customize->add_setting('dav_member', array('default' => 'https://www.alpenverein.de/mitglied-werden-dav/so-werden-sie-dav-mitglied_aid_27574.html'));
     $wp_customize->add_setting('dav_extern1_link', array('default' => ''));
@@ -1123,6 +1124,15 @@ function dav_theme_customize_register( $wp_customize ) {
             'label'     => __('Telefonnummer', 'dav'),
             'section'   => 'dav_quicklinks_section',
             'settings'  => 'dav_phone',
+            'type'      => 'text',
+        )
+    );
+    $wp_customize->add_control('dav_mail',
+        array(
+            'title' => __('E-Mail','dav'),
+            'label'     => __('E-Mail', 'dav'),
+            'section'   => 'dav_quicklinks_section',
+            'settings'  => 'dav_mail',
             'type'      => 'text',
         )
     );
@@ -1189,6 +1199,7 @@ function dav_theme_customize_register( $wp_customize ) {
     //allgemeine Optionen
     $wp_customize->add_setting('dav_excerpt', array('default' => 160));
     $wp_customize->add_setting('dav_breadcrumb',array('default' => 'false'));
+    $wp_customize->add_setting('dav_gotop',array('default' => 'false'));
     $wp_customize->add_control( 'dav_excerpt', array(
         'title' => __('Auszuglänge', 'dav'),
         'label' => __( 'Auszuglänge in Zeichen', 'dav' ),
@@ -1202,9 +1213,21 @@ function dav_theme_customize_register( $wp_customize ) {
             'dav_breadcrumb',
             array(
                 'title' => __('Brotkrümmel-Navigation','dav'),
-                'label'     => __('anzeigen', 'dav'),
+                'label'     => __('Brotkrümmel Navigation anzeigen', 'dav'),
                 'section'   => 'dav_standard_section',
                 'settings'  => 'dav_breadcrumb',
+                'type'      => 'checkbox',
+            )
+        )
+    );
+    $wp_customize->add_control(new WP_Customize_Control(
+            $wp_customize,
+            'dav_gotop',
+            array(
+                'title' => __('Go to Top Button','dav'),
+                'label'     => __('"Go Top" Button anzeigen', 'dav'),
+                'section'   => 'dav_standard_section',
+                'settings'  => 'dav_gotop',
                 'type'      => 'checkbox',
             )
         )

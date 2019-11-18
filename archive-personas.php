@@ -7,6 +7,9 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
     if (function_exists('nav_breadcrumb')) nav_breadcrumb();
 }
 
+
+get_theme_mod('dav_excerpt') ? $excerpt = get_theme_mod('dav_excerpt') : $excerpt = 160;
+
 ?>
 
 
@@ -17,12 +20,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         <div class="row">
 
                 <div class="col-xs-12 col-sm-8">
-                    <h1><?php single_cat_title('',true); ?></h1>
+                    <h1>Übersicht</h1>
                 </div>
         </div>
 
         <div class="row">
-            <div class="col-12">
+            <div class="col-xs-12 col-sm-12">
 
                 <div class="row">
 
@@ -35,7 +38,6 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     $persona_thumb =    get_the_post_thumbnail($post->ID, 'persona-thumb', array('class' => 'img-fluid '));
 
                     ?>
-
 
                     <div class="col-md-4 pt-4">
                         <div class="card card-person ' . $persona_color . '">
@@ -72,7 +74,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         </div>
 
 <?php endif; ?>
-
+            </div>
         <div class="row mt-5">
             <div class="col-xs-12 col-sm-8 col-lg-9">
                 <?php if (function_exists("pagination")) {pagination(); } ?>

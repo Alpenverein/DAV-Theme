@@ -258,8 +258,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 //Tourenleiter ausgeben
                 $persona_args = array(
                     'post_type' => 'personas',
-                    'nopaging' => true,
                     'posts_per_page' => -1,
+                    'nopaging' => true,
                     'tax_query' => array(
                         'relation' => 'OR',
                         array(
@@ -276,6 +276,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 );
 
                 $the_query = new WP_Query($persona_args);
+
                 echo '<div class="card card-widget-primary mb-4">';
                 echo '<div class="card-header bg-dark text-uppercase py-1">Tourleiter</div>';
                 echo '<div class="card-body">';

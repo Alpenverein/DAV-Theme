@@ -238,6 +238,40 @@ Text Domain: deutscheralpenverein
 }
 
 
+/** ONEPAGER */
+.onepager {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.onepager:first-of-type {
+    padding-top: 0.5rem;
+}
+
+.onepager h1 {
+    font-size: 2.8rem;
+}
+
+.onepager h2 {
+    font-size: 2.6rem;
+}
+
+.onepager .bg-primary h1,
+.onepager .bg-primary h2,
+.onepager .bg-primary h3,
+.onepager .bg-primary h4,
+.onepager .bg-primary h5,
+.onepager .bg-primary h6 {
+    color: #fff;
+}
+
+#onepager-nav {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+
 
 
 /* WIDGET */
@@ -271,7 +305,14 @@ Text Domain: deutscheralpenverein
 
 
 
+/*******************/
+/* Horizontal Card */
+/*******************/
 
+.card-horizontal h3 {
+    padding-top: 0 !important;
+    margin-top: 0;
+}
 
 
 
@@ -701,6 +742,9 @@ a .news-head, a .news-head:hover {
     padding-left: 5px;
 }
 
+
+
+
 /* MOBILE NAV */
 
 .navbar-mobile {
@@ -1057,6 +1101,25 @@ hr {
     color: #fff !important;
 }
 
+.bg-primary p a, .bg-success p a, .bg-secondary p a, .bg-dark p a {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+
+
+.card-body>p, .bg-success>.text-black p, .bg-secondary>.card p, .bg-dark>.card p {
+    color: #000 !important;
+}
+
+.card-body>p, .bg-success>.text-black p, .bg-secondary>.card p, .bg-dark>.card p {
+    color: #000 !important;
+}
+
+.card-body>p a, .bg-success>.text-black p a, .bg-secondary>.card p a, .bg-dark>.card p a {
+    color: #61B732 !important;
+}
+
 
 /* CALENDAR LIST */
 .list-calendar {
@@ -1293,7 +1356,7 @@ footer {
     }
 
     .slider-caption-title {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
         margin-bottom: 5px;
     }
 
@@ -1422,6 +1485,10 @@ footer {
     margin-right: 60px;
 }
 
+#tourlist h3 {
+    margin-top: 0;
+    padding-top: 0;
+}
 
 
 /* GUTENBERG */

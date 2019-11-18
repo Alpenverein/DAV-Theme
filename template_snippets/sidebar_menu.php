@@ -23,19 +23,25 @@ function DAV_AutoSidebarMenu($post) {
 
 
         switch ($sidebartype) {
-            case 2 : $args = array('parent' => $post->ID);
-            $sidebardata = get_pages($args);
-            $sidebarheader = 'Unterseiten';
-            break;
+            case 2 : $args = array(
+                'parent' => $post->ID,
+                'sort_column' => 'menu_order',);
+                $sidebardata = get_pages($args);
+                $sidebarheader = 'Unterseiten';
+                break;
 
-            case 1 : $args = array('parent' => $post->post_parent);
-            $sidebardata = get_pages($args);
-            $sidebarheader = 'Weitere Seiten';
-            break;
+            case 1 : $args = array(
+                'parent' => $post->post_parent,
+                'sort_column' => 'menu_order');
+                $sidebardata = get_pages($args);
+                $sidebarheader = 'Weitere Seiten';
+                break;
 
             case 0 : $sidebardata = null; $sidebarheader = ''; break;
             default : $sidebardata = null; $sidebarheader = ''; break;
         }
+
+
 
 
         if(!empty($sidebardata)) {
@@ -56,9 +62,13 @@ function DAV_AutoSidebarMenu($post) {
 
             foreach ($sidebardata as $pageitem) {
 
-                $return .= '<a class="list-group-item" href="'.get_the_permalink($pageitem->ID).'">';
-                $return .= get_the_title($pageitem->ID);
-                $return .= '</a>';
+                if(get_field('onepager_show',$pageitem->ID) != 1) {
+
+                    $return .= '<a class="list-group-item" href="'.get_the_permalink($pageitem->ID).'">';
+                    $return .= get_the_title($pageitem->ID);
+                    $return .= '</a>';
+
+                }
 
             }
 
@@ -118,11 +128,3 @@ function DAV_CustomSidebarMenu() {
     return $return;
 
 }
-
-
-
-
-
-
-
-

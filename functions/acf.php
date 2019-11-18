@@ -199,7 +199,7 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => 'Mit diesem Auswahlfeld können bestimmten Seiten beliebige Menüs hinzugefügt werden.',
     ));
 
-
+    //Seitenmenü im Page-Template
     acf_add_local_field_group(array(
         'key' => 'group_5d52ba4ee0838',
         'title' => 'Seitenmenü',
@@ -255,6 +255,130 @@ if( function_exists('acf_add_local_field_group') ):
                     'param' => 'page_template',
                     'operator' => '==',
                     'value' => 'default',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'side',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+
+    //Content im Widget-Template
+    acf_add_local_field_group(array(
+        'key' => 'group_5db57903ed4f1',
+        'title' => 'Widget-Content',
+        'fields' => array(
+            array(
+                'key' => 'field_5db5791b1f766',
+                'label' => 'Inhalt',
+                'name' => 'widget_inhalt',
+                'type' => 'wysiwyg',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'tabs' => 'all',
+                'toolbar' => 'full',
+                'media_upload' => 1,
+                'delay' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'page_widgets.php',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'acf_after_title',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+
+    //OnePager
+    acf_add_local_field_group(array(
+        'key' => 'group_5d88884d8d124',
+        'title' => 'OnePager',
+        'fields' => array(
+            array(
+                'key' => 'field_5d8888b494237',
+                'label' => 'In OnePager anzeigen',
+                'name' => 'onepager_show',
+                'type' => 'radio',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    0 => 'Im Onepager nicht anzeigen',
+                    1 => 'Im Onepager anzeigen',
+                ),
+                'allow_null' => 0,
+                'other_choice' => 0,
+                'default_value' => 0,
+                'layout' => 'horizontal',
+                'return_format' => 'value',
+                'save_other_choice' => 0,
+            ),
+            array(
+                'key' => 'field_5d888ca5ed62a',
+                'label' => 'Hintergrundfarbe',
+                'name' => 'onepager_color',
+                'type' => 'radio',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    'w' => 'Weiß',
+                    'bg-primary' => 'Grün',
+                    'has-dav-gruen-75-background-color' => 'Grün, 75%',
+                    'has-dav-gruen-50-background-color' => 'Grün, 50%',
+                    'has-dav-gruen-25-background-color' => 'Grün, 25%',
+                    'bg-dark' => 'Dunkelgrau',
+                    'bg-light' => 'Hellgrau',
+                    'bg-secondary' => 'Orange',
+                    'bg-success' => 'Blau',
+                ),
+                'allow_null' => 0,
+                'other_choice' => 0,
+                'default_value' => '',
+                'layout' => 'vertical',
+                'return_format' => 'value',
+                'save_other_choice' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page',
                 ),
             ),
         ),

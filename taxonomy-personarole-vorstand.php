@@ -7,6 +7,9 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
     if (function_exists('nav_breadcrumb')) nav_breadcrumb();
 }
 
+
+get_theme_mod('dav_excerpt') ? $excerpt = get_theme_mod('dav_excerpt') : $excerpt = 160;
+
 ?>
 
 
@@ -17,7 +20,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         <div class="row">
 
                 <div class="col-xs-12 col-sm-8">
-                    <h1><?php single_cat_title('',true); ?></h1>
+                    <h1>Unser <?php single_cat_title('',true); ?></h1>
                 </div>
         </div>
 

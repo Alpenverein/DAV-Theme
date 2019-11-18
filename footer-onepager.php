@@ -6,7 +6,9 @@ if(get_theme_mod('dav_instagram') != false) {$dav_instagram = get_theme_mod('dav
 
 
 ?>
-<footer class="container d-print-none">
+<footer class="container-fluid d-print-none">
+
+    <div class="container">
 
     <?php
 
@@ -92,6 +94,8 @@ if(get_theme_mod('dav_instagram') != false) {$dav_instagram = get_theme_mod('dav
             </div>
         </div>
     </div>
+
+    </div>
 </footer>
 
 
@@ -102,14 +106,7 @@ if(get_theme_mod('dav_instagram') != false) {$dav_instagram = get_theme_mod('dav
 
 <?php wp_footer(); ?>
 
-<?php
-
-if(get_theme_mod('dav_gotop') == true) {
-
-    echo '<a href="#" class="btn btn-primary d-none" id="top-link"> <i class="fas fa-angle-up"></i></a>';
-
-}
-?>
+<a href="#" class="btn btn-primary" id="top-link"> <i class="fas fa-angle-up"></i></a>
 
 </body>
 </html>

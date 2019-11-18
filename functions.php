@@ -34,18 +34,8 @@ function setThemeDefaults()
     set_theme_mod('dav_touren_counter', 10);
 
 }
-add_action('load-themes.php', 'setThemeDefaults');
+//add_action('load-themes.php', 'setThemeDefaults');
 
-
-/**
- * delete template-defaults
- *
- * Todo: write function
- */
-function deleteThemeDefaults() {
-
-}
-add_action("switch_theme", "deleteThemeDefaults");
 
 
 /** Set images-sizes */
@@ -65,6 +55,7 @@ update_option( 'medium_crop', 0 );
 update_option( 'large_size_w', 1920 );
 update_option( 'large_size_h', 1080 );
 update_option( 'large_crop', 0 );
+
 
 //add support for post thumbnails
 add_theme_support( 'post-thumbnails', array( 'post', 'personas', 'touren', 'page' ) );
