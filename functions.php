@@ -322,5 +322,5 @@ jQuery("#postexcerpt .handlediv").after("<div style=position:absolute;top:12px;r
 } });</script>';
     }
 }
-add_action( 'admin_head-post.php', 'excerpt_count_js');
-add_action( 'admin_head-post-new.php', 'excerpt_count_js');
+//add_action( 'admin_head-post.php', 'excerpt_count_js');
+//add_action( 'admin_head-post-new.php', 'excerpt_count_js');
