@@ -83,7 +83,7 @@ while(wp_get_post_parent_id($parent) != 0) {
 <?php wp_head(); ?>
 </head>
 
-<body
+<body <?php body_class(); ?>
     <?php
 
     $style = 'style="';
