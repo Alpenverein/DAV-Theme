@@ -231,8 +231,7 @@ echo $menubehavior;
             </button>
             <div class="collapse navbar-collapse text-center justify-content-end" id="navbarDesktop">
 
-
-                <?php echo getDesktopMenu('Hauptmenue', $text_color, $parent, $current); ?>
+                <?php echo getDesktopMenu(get_term(get_nav_menu_locations()['primary'], 'nav_menu')->name, $text_color, $parent, $current); ?>
 
             </div>
         </div>
