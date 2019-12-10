@@ -48,7 +48,16 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
             <div class="col-xs-12 col-sm-8 col-lg-8" id="content">
                 <?php the_content(); ?>
 
-                <h2>Touren von <?php the_title(); ?></h2>
+
+                <?php
+
+                    if($the_query->found_posts != 0) {
+
+                        echo '<h2>Touren von ' . get_the_title() . '</h2>';
+
+                    }
+
+                 ?>
 
                 <div class="accordion tour-list" id="tourlist">
 
@@ -126,12 +135,23 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     <?php else : ?>
                         <div class="row">
                             <div class="col-12">
-                                <p><?php the_title(); ?> hat zur Zeit keine Touren geplant.</p>
+
+                                <?php
+
+                                if($the_query->found_posts != 0) {
+
+                                    echo '<p>'.get_the_title().' hat zur Zeit keine Touren geplant.</p>';
+
+                                }
+
+                                ?>
                             </div>
                         </div>
 
                     <?php endif; ?>
+
                 </div>
+
             </div>
 
             <div class="col-sm-4 col-lg-4">
