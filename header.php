@@ -33,31 +33,18 @@ switch($dav_menubehavior) {
 }
 
 
-if(is_front_page() == true) {
-
-    $fixed = '';
-
+$fixed = '';
+$fixed_before = '';
+$fixed_after = '';
+if(is_front_page() == true) {    
     if ((get_theme_mod('dav_startimage_radio') == 'fullscreen') && (get_theme_mod('dav_startimage') != '')) {
-
         $fixed_before .= '<div class="fixed-top">';
         $fixed_after .= '</div>';
 
-    } else {
-        $fixed_before .= '';
-        $fixed_after .= '';
-    };
-
-
-    if ((get_theme_mod('dav_slider_fullscreen') == 'true') && (get_theme_mod('dav_slider_visibility_check') == true)) {
-
+    } elseif ((get_theme_mod('dav_slider_fullscreen') == 'true') && (get_theme_mod('dav_slider_visibility_check') == true)) {
         $fixed_before .= '<div class="fixed-top">';
         $fixed_after .= '</div>';
-
-    } else {
-        $fixed_before .= '';
-        $fixed_after .= '';
-    };
-
+    } 
 }
 
 //set current page_id

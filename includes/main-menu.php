@@ -72,7 +72,7 @@ function getDesktopMenu($menu_name, $text_color = 'text-white', $parentitem = nu
             if ($menu_arr[$m]['parent'] == 0) {
 
                 //Ist das Folgeelement auch auf Ebene 1?
-                if ($menu_arr[$m + 1]['parent'] == 0) {
+                if(isset($menu_arr[$m+1]['parent']) && $menu_arr[$m+1]['parent'] == 0) {
 
                     // baue den Menüpunkt
                     $return .= '<li class="nav-item ' . $active . '"><a class="nav-link '. $active .'" href="'.$menu_arr[$m]['link'].'" title="'.$title.'" '.$target.' aria-label="'.$ariadesc.'">'.$menu_arr[$m]['text'].'</a></li>';
@@ -98,8 +98,10 @@ function getDesktopMenu($menu_name, $text_color = 'text-white', $parentitem = nu
                     $level++;
 
                     //speichere Eltern-ID des Folgeelement ab
-                    $parent = $menu_arr[$m + 1]['id'];
-
+                    if(isset($menu_arr[$m+1]['id'])){
+                    	$parent = $menu_arr[$m+1]['id'];
+                    }
+                    
                 }
             } else {
 
