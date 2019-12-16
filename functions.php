@@ -87,6 +87,10 @@ function bootstrap_responsive_images( $html ){
 
 function bootstrap_responsive_thumbs( $attr ){
   remove_filter('wp_get_attachment_image_attributes','my_custom_image_attributes');
+  $image = wp_get_attachment_image_src( $attachment->ID, 'full' );
+  $attr['data-src'] = $image[0];
+  $attr['data-alt'] = $attachment->post_title;
+  $attr['class'] .= '';
   return $attr;
 }
 

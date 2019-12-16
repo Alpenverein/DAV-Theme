@@ -33,22 +33,41 @@ switch($dav_menubehavior) {
 }
 
 
-
-$fixed_before = '';
-$fixed_after = '';
 if(is_front_page() == true) {
 
+    $fixed = '';
+
     if ((get_theme_mod('dav_startimage_radio') == 'fullscreen') && (get_theme_mod('dav_startimage') != '')) {
+
         $fixed_before .= '<div class="fixed-top">';
         $fixed_after .= '</div>';
-    }
+
+    } else {
+        $fixed_before .= '';
+        $fixed_after .= '';
+    };
+
 
     if ((get_theme_mod('dav_slider_fullscreen') == 'true') && (get_theme_mod('dav_slider_visibility_check') == true)) {
+
         $fixed_before .= '<div class="fixed-top">';
         $fixed_after .= '</div>';
-    }
+
+    } else {
+        $fixed_before .= '';
+        $fixed_after .= '';
+    };
+
 }
 
+//set current page_id
+global $post;
+$parent = $post->ID;
+$current = $post->ID;
+
+while(wp_get_post_parent_id($parent) != 0) {
+    $parent = wp_get_post_parent_id($parent);
+}
 
 ?>
 
@@ -121,7 +140,16 @@ if(is_front_page() == true) {
 
 
 <!-- Navigation Desktop start -->
+<?php
 
+if(is_front_page()) {
+
+    if ((get_theme_mod('dav_startimage') != false) || (get_theme_mod('dav_slider_visibility_check') != false)) {
+        $style_helper = '<div class="'.$fixed.'">';
+    } else {$style_helper = ' ';}
+
+} else {$style_helper = '';}
+?>
 <?php echo $fixed_before; ?>
 
 <?php if ((get_theme_mod('dav_quicklink') != false) && (get_theme_mod('dav_quicklink') == 'true')) {
@@ -203,7 +231,7 @@ echo $menubehavior;
             </button>
             <div class="collapse navbar-collapse text-center justify-content-end" id="navbarDesktop">
 
-                <?php echo getDesktopMenu(get_term(get_nav_menu_locations()['primary'], 'nav_menu')->name, $text_color); ?>
+                <?php echo getDesktopMenu(get_term(get_nav_menu_locations()['primary'], 'nav_menu')->name, $text_color, $parent, $current); ?>
 
             </div>
         </div>
