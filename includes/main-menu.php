@@ -8,50 +8,47 @@
  * @param int $menu_levels Number of Levels in Menü
  * @return string
  */
-function getDesktopMenu($menu_name, $text_color = 'text-white', $parentitem = null, $current = null, $menu_columns=3, $level_max = 3) {
+function getDesktopMenu($menu_name, $text_color = 'text-white', $menu_columns=3, $level_max = 3) {
 
     $return = '';
     $level = 1;
     $parent = 0;
-    $child = 0;
+    $parentitem = 0;
     $column_actual = 1;
 
+    $show_as_active = array();
 
+	global $post;
+	if($post != null){
+		$show_as_active[] = $post->ID;
+		$current = $post->ID;
+		while($current != 0) {
+    		$parent_id = wp_get_post_parent_id($current);
+    		$show_as_active[] = $parent_id;
+    		$current = $parent_id;
+		}
+	}
 
     $menu_arr = array();
-
     $menuitems = wp_get_nav_menu_items($menu_name,array('post_status' => 'publish'));
 
     if(!is_bool($menuitems)) {
 
-
         // push all menu-elements to array
         foreach ($menuitems as $item) {
 
-            $menu_link = $item->url;
-            $menu_text = $item->title;
-            $menu_classes = implode(' ', $item->classes);
-            $menu_parent = $item->menu_item_parent;
-            $menu_guid = $item->guid;
-            $menu_order = $item->menu_order;
-            $menu_id = $item->ID;
-            $object_id = $item->object_id;
-            $menu_target = $item->target;
-            $menu_desc = $item->description;
-            $menu_title_attr = $item->attr_title;
-
             array_push($menu_arr, array(
-                'link' => $menu_link,
-                'text' => $menu_text,
-                'classes' => $menu_classes,
-                'parent' => $menu_parent,
-                'order' => $menu_order,
-                'guid' => $menu_guid,
-                'id' => $menu_id,
-                'page_id' => $object_id,
-                'target' => $menu_target,
-                'desc' => $menu_desc,
-                'title_attr' => $menu_title_attr,
+                'link' => $item->url,
+                'text' => $item->title,
+                'classes' => implode(' ', $item->classes),
+                'parent' => $item->menu_item_parent,
+                'order' => $item->menu_order,
+                'guid' => $item->guid,
+                'id' => $item->ID,
+                'page_id' => $item->object_id,
+                'target' => $item->target,
+                'desc' => $item->description,
+                'title_attr' => $item->attr_title,
             ));
         }
 
@@ -61,8 +58,7 @@ function getDesktopMenu($menu_name, $text_color = 'text-white', $parentitem = nu
 
         for ($m = 0; $m < count($menu_arr); $m++) {
 
-
-            $menu_arr[$m]['page_id'] == $parentitem ? $active = 'active' : $active = '';
+            in_array($menu_arr[$m]['page_id'], $show_as_active) ? $active = 'active' : $active = '';
             $menu_arr[$m]['title_attr'] != '' ? $title = $menu_arr[$m]['title_attr'] : $title = $menu_arr[$m]['text'];
             $menu_arr[$m]['desc'] != '' ? $ariadesc = $menu_arr[$m]['desc'] : $ariadesc = $menu_arr[$m]['text'];
             $menu_arr[$m]['target'] != '' ? $target = 'target='.$menu_arr[$m]['target'] : $target = '';
@@ -71,8 +67,9 @@ function getDesktopMenu($menu_name, $text_color = 'text-white', $parentitem = nu
             //Ist es ein Ebene-1 Element?
             if ($menu_arr[$m]['parent'] == 0) {
 
+
                 //Ist das Folgeelement auch auf Ebene 1?
-                if ($menu_arr[$m + 1]['parent'] == 0) {
+                if (isset($menu_arr[$m + 1]['parent']) && $menu_arr[$m + 1]['parent'] == 0) {
 
                     // baue den Menüpunkt
                     $return .= '<li class="nav-item ' . $active . '"><a class="nav-link '. $active .'" href="'.$menu_arr[$m]['link'].'" title="'.$title.'" '.$target.' aria-label="'.$ariadesc.'">'.$menu_arr[$m]['text'].'</a></li>';
@@ -98,7 +95,10 @@ function getDesktopMenu($menu_name, $text_color = 'text-white', $parentitem = nu
                     $level++;
 
                     //speichere Eltern-ID des Folgeelement ab
-                    $parent = $menu_arr[$m + 1]['id'];
+                    if(isset($menu_arr[$m + 1]['id'])){
+                    	$parent = $menu_arr[$m + 1]['id'];	
+                    }
+                    
 
                 }
             } else {
@@ -190,8 +190,9 @@ function getMobileMenu($menu_name, $menu_columns=3, $level_max = 3) {
     $menu_arr = array();
 
     $menuitems = wp_get_nav_menu_items($menu_name);
-
-
+    if(!$menuitems){
+	return;	
+	}
 
     //TODO: Wenn Array leer, dann hier enden.
     // push all menu-elements to array
@@ -239,7 +240,7 @@ function getMobileMenu($menu_name, $menu_columns=3, $level_max = 3) {
         if($menu_arr[$m]['parent'] == 0) {
 
             //Ist das Folgeelement auch auf Ebene 1?
-            if($menu_arr[$m+1]['parent'] == 0) {
+            if(isset($menu_arr[$m+1]['parent']) && $menu_arr[$m+1]['parent'] == 0) {
 
                 // baue den Menüpunkt
                 $return .= '<li class="nav-item level-1"><a class="nav-link" href="'.$menu_arr[$m]['link'].'" title="'.$title.'" '.$target.' aria-label="'.$ariadesc.'">'.$menu_arr[$m]['text'].'</a></li>';
@@ -261,7 +262,10 @@ function getMobileMenu($menu_name, $menu_columns=3, $level_max = 3) {
                 $level++;
 
                 //speichere Eltern-ID des Folgeelement ab
-                $parent = $menu_arr[$m+1]['id'];
+                if(isset($menu_arr[$m+1]['id'])){
+                	$parent = $menu_arr[$m+1]['id'];	
+                }
+                
 
             }
         } else {
