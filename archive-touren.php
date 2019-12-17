@@ -1,6 +1,5 @@
 <?php
 
-
 get_header();
 
 
@@ -9,35 +8,24 @@ $pagesum = $the_query->max_num_pages;
 $termlist = array();
 
 
-if(get_theme_mod('dav_touren_pageid') != false) {$dav_pageid = get_theme_mod('dav_touren_pageid');}
-else {$dav_pageid = false;};
-
-
-if($dav_pageid != false) {
-    $page_id = get_post($dav_pageid);
-    $tourhead_title = $page_id->post_title;
-    $tourhead_content = $page_id->post_content;
+$dav_touren_page = get_post(get_theme_mod('dav_touren_pageid'));
+if($dav_touren_page) {
+    $tourhead_title = $dav_touren_page->post_title;
+    $tourhead_content = $dav_touren_page->post_content;
     $tourhead_content = apply_filters('the_content', $tourhead_content);
     $tourhead_content = str_replace(']]>', ']]>', $tourhead_content);
 }
 
+
 $selectedterms = $_SERVER["QUERY_STRING"];
-
 if($selectedterms != '') {
-
     $parameter = explode('&', $_SERVER["QUERY_STRING"]);
-
     $parameter = array_unique($parameter);
-
     rsort($parameter);
-
     foreach ($parameter as $param) {
-
         $termelem = substr($param,strpos($param,'=') + 1);
-
         $termlist[] = $termelem;
     }
-
 }
 
 ?>
@@ -59,10 +47,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
             <div class="col-xs-12 col-sm-8">
 
-                <h1><?php echo $tourhead_title;  ?></h1>
-
-                <?php echo $tourhead_content;  ?>
-
+            <?php 
+                if(isset($tourhead_title) && isset($tourhead_content)){
+                     echo "<h1>" . $tourhead_title . "</h1>";
+                     echo $tourhead_content;
+                } ?>
+               
                 <?php
 
                 global $wp;
