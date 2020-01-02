@@ -40,7 +40,7 @@ get_theme_mod('dav_excerpt') ? $excerpt = get_theme_mod('dav_excerpt') : $excerp
                     ?>
 
                     <div class="col-md-4 pt-4">
-                        <div class="card card-person ' . $persona_color . '">
+                        <div class="card card-person">
                             <div class="row m-3 align-self-stretch align-items-baseline">
                                 <div class="col-4">
                                     <?php echo $persona_thumb; ?>
