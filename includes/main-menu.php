@@ -117,7 +117,7 @@ function getDesktopMenu($menu_name, $text_color = 'text-white', $parentitem = nu
                     case 3 :
                         $return .= '<li class="li-level3 ' . $active . '"><i class="fas fa-angle-right"></i><a href="' . $menu_arr[$m]['link'] . '" title="'.$title.'" '.$target.' aria-label="'.$ariadesc.'">'.$menu_arr[$m]['text'].'</a></li>';
 
-                        if ($menu_arr[$m+1]['parent'] != $menu_arr[$m]['id']) {
+                        if (isset($menu_arr[$m+1]) && $menu_arr[$m+1]['parent'] != $menu_arr[$m]['id']) {
                             if ($parent != $menu_arr[$m + 1]['parent']) {
                                 $return .= '</ul>';
                                 $level--;
@@ -276,13 +276,13 @@ function getMobileMenu($menu_name, $menu_columns=3, $level_max = 3) {
     padding-top: 0;
 ">'.$menu_arr[$m]['text'].'</a></li>';
 
-                    if($parent != $menu_arr[$m+1]['parent']) {
+                    if(isset($menu_arr[$m+1]) && $parent != $menu_arr[$m+1]['parent']) {
 
                         $return .= '</ul>';
                         $level--;
                     }
 
-                    if($menu_arr[$m+1]['parent'] == 0) {
+                    if(isset($menu_arr[$m+1]) && $menu_arr[$m+1]['parent'] == 0) {
 
                         $return .= '</li></ul>';
                         $return .= '</div>';
