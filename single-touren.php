@@ -55,6 +55,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 <p class="lead text-primary"><?php echo $tour_meta['acf_tourcompact'][0]; ?></p>
 
                 <?php the_content(); ?>
+                <p><small><?php echo get_field('tour_intern'); ?></small></p>
             </div>
             <div class="col-sm-4">
 

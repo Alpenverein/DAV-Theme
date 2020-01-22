@@ -24,7 +24,7 @@ function nav_breadcrumb() {
     $delimiter = '&nbsp;>&nbsp;';
     $home = 'Home';
     $before = '<li class="breadcrumb-item" aria-current="page">';
-    $after = '</li>';
+    $after = ' </li>';
 
     if ( !is_home() && !is_front_page() || is_paged() ) {
 
@@ -129,7 +129,7 @@ function nav_breadcrumb() {
                 echo $before . get_the_title() . $after;
             }
 
-        } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && get_post_type() != 'touren' && get_post_type() != 'persona' && !is_404()  && $uri_slug[1] != $ec_overview_slug && $uri_slug[1] != $ec_event_slug) {
+        } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && get_post_type() != 'touren' && get_post_type() != 'personas' && !is_404()  && $uri_slug[1] != $ec_overview_slug && $uri_slug[1] != $ec_event_slug) {
 
             echo $before . 'Ergebnisse für Ihre Suche  "' . get_search_query() . '"' . $after;
 
@@ -137,7 +137,8 @@ function nav_breadcrumb() {
         } elseif ( is_attachment() ) {
             $parent = get_post($post->post_parent);
             $cat = get_the_category($parent->ID); $cat = $cat[0];
-            echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+
+            //echo get_category_parents($cat[0], TRUE, ' ' . $delimiter . ' ');
             echo '<a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a> ' . $delimiter . ' ';
             echo $before . get_the_title() . $after;
 
@@ -147,7 +148,7 @@ function nav_breadcrumb() {
                 echo $before . get_theme_mod('dav_touren_breadcrumb') . $after;
             } else {echo $before . 'Touren' . $after;}
 
-        } elseif ( 'persona' == get_post_type()) {
+        } elseif ( 'personas' == get_post_type()) {
             echo $before . 'Persona' . $after;
 
         } elseif ( is_page() && !$post->post_parent ) {
@@ -186,7 +187,7 @@ function nav_breadcrumb() {
 
         if ( get_query_var('paged')) {
             if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo '&nbsp;(';
-            echo __('Seite') . ' ' . get_query_var('paged');
+            echo '&nbsp;' .__('&nbsp;Seite&nbsp;') . '&nbsp;' . get_query_var('paged');
             if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')&nbsp;';
         }
 

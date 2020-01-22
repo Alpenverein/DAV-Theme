@@ -8,6 +8,7 @@ get_header();
 
 $the_query = new WP_Query(tourQuery());
 $pagesum = $the_query->max_num_pages;
+$termlist = array();
 
 
 if(get_theme_mod('dav_touren_pageid') != false) {$dav_pageid = get_theme_mod('dav_touren_pageid');}
@@ -260,9 +261,10 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
             echo '</div></div>';
             }
 
-            //Tourenleiter ausgeben
             $persona_args = array(
                 'post_type' => 'personas',
+                'posts_per_page' => -1,
+                'nopaging' => true,
                 'tax_query' => array(
                     'relation' => 'OR',
                     array(
@@ -274,6 +276,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                         'taxonomy' => 'personarole',
                         'field'    => 'slug',
                         'terms'    => 'tourenleiterin',
+                    ),
+                    array(
+                        'taxonomy' => 'personarole',
+                        'field'    => 'slug',
+                        'terms'    => 'tourenleitung',
                     ),
                 ),
             );

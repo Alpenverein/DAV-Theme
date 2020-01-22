@@ -17,6 +17,18 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+    <?php
+
+    $personaID = $post->ID;
+
+    $personaPosition = get_the_term_list($personaID,'personarole','',', ');
+    $personaPosition = get_the_term_list($personaID,'personarole','',', ');
+    $personaPosition = preg_replace('#<a.*?>(.*?)</a>#i', '\1', $personaPosition);
+    $personaPhone = get_field('persona_daten_telefon');
+    $personaMail = get_field('persona_daten_e_mail');
+    $personaFunktion = get_field('persona_daten_funktion');
+    ?>
+
     <div class="container">
         <div class="container-content">
             <?php
@@ -36,7 +48,16 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
             <div class="col-xs-12 col-sm-8 col-lg-8" id="content">
                 <?php the_content(); ?>
 
-                <h2>Touren von <?php the_title(); ?></h2>
+
+                <?php
+
+                    if($the_query->found_posts != 0) {
+
+                        echo '<h2>Touren von ' . get_the_title() . '</h2>';
+
+                    }
+
+                 ?>
 
                 <div class="accordion tour-list" id="tourlist">
 
@@ -67,7 +88,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                                     </div>
                                     <div class="flex-grow-1 pl-3" data-toggle="collapse" data-target="#collapse<?php echo get_the_ID(); ?>">
-                                        <h2><?php the_title(); ?></h2><span class="tour-data">
+                                        <h3><?php the_title(); ?></h3><span class="tour-data">
 
                                         <?php
                                         $tour_type = preg_replace('#<a.*?>(.*?)</a>#i', '\1', get_the_term_list($post->ID,'tourtype','',', '));
@@ -114,22 +135,71 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     <?php else : ?>
                         <div class="row">
                             <div class="col-12">
-                                <p><?php the_title(); ?> hat zur Zeit keine Touren geplant.</p>
+
+                                <?php
+
+                                if($the_query->found_posts != 0) {
+
+                                    echo '<p>'.get_the_title().' hat zur Zeit keine Touren geplant.</p>';
+
+                                }
+
+                                ?>
                             </div>
                         </div>
 
                     <?php endif; ?>
+
                 </div>
-            </div>
-
 
             </div>
+
             <div class="col-sm-4 col-lg-4">
 
+                <?php
+
+                echo '<div class="card bg-white">
+                        <div class="row m-3 align-self-stretch">
+                            <div class="col-12 p-0">
+                            <h2 class="text-center">Weitere Informationen</h2>';
+                echo get_the_post_thumbnail($personaID, 'persona-thumb', array('class' => 'img-fluid rounded-circle'));
+
+                echo '</div>
+                        </div>
+                        <div class="row m-3" style="margin-top: 0 !important;">
+                            <div class="col-12 p-0 p-lg-0">
+                                <div class="d-flex mb-2">
+                                    <div>Telefon: <br>
+                                    <strong><a href="tel://'.preg_replace ('#\s+#' , '' , $personaPhone).'" title="Jetzt Anrufen"><i class="fas fa-phone"> </i> '.$personaPhone.'</a></strong>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <div>E-Mail: <br>
+                                    <strong><a href="mailto:'.$personaMail.'">'.$personaMail.' </a></strong>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <div>Position: <br>
+                                    <strong>'.$personaPosition.'</strong>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <div>Funktion: <br>
+                                    <strong>'.$personaFunktion.'</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>';
+                ?>
+
+            </div>
+
+
             </div>
         </div>
         </div>
-    </div>
 
 <?php endwhile; else : ?>
 

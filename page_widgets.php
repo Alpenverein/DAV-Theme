@@ -31,8 +31,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                     //Widgets
 
-                    if ( is_active_sidebar( 'page_widgets' ) ) : dynamic_sidebar( 'page_widgets' ); endif;
+                    //if ( is_active_sidebar( 'page_widgets' ) ) : dynamic_sidebar( 'page_widgets' ); endif;
 
+                    $content = get_field('widget_inhalt');
+
+                    echo do_shortcode($content);
                     ?>
                 </div>
             </div>
@@ -50,5 +53,6 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         </div>
     </div>
 <?php endif; ?>
+
 
 <?php get_footer(); ?>

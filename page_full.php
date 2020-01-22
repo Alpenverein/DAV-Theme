@@ -29,6 +29,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         </div>
     </div>
 
+
 <?php endwhile; else : ?>
 
     <div class="container">

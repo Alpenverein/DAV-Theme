@@ -20,11 +20,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 <div class="col-12">
                     <h1><?php the_title(); ?></h1>
                 </div>
-                <div class="col-12 mt-5">
+                <div class="col-12 col-sm-10 offset-sm-1 mt-5">
                     <?php the_content(); ?>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <?php
 
                 $pages_sort = get_field("dav_sortorder_pages");
@@ -116,5 +116,6 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         </div>
     </div>
 <?php endif; ?>
+
 
 <?php get_footer(); ?>

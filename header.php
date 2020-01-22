@@ -2,7 +2,7 @@
 
 <?php
 
-require_once get_template_directory() . '/startpage_elements/main-menu.php';
+require_once get_template_directory() . '/includes/main-menu.php';
 require_once get_template_directory() . '/template_snippets/sidebar_menu.php';
 
 
@@ -33,31 +33,18 @@ switch($dav_menubehavior) {
 }
 
 
-if(is_front_page() == true) {
-
-    $fixed = '';
-
+$fixed = '';
+$fixed_before = '';
+$fixed_after = '';
+if(is_front_page() == true) {    
     if ((get_theme_mod('dav_startimage_radio') == 'fullscreen') && (get_theme_mod('dav_startimage') != '')) {
-
         $fixed_before .= '<div class="fixed-top">';
         $fixed_after .= '</div>';
 
-    } else {
-        $fixed_before .= '';
-        $fixed_after .= '';
-    };
-
-
-    if ((get_theme_mod('dav_slider_fullscreen') == 'true') && (get_theme_mod('dav_slider_visibility_check') == true)) {
-
+    } elseif ((get_theme_mod('dav_slider_fullscreen') == 'true') && (get_theme_mod('dav_slider_visibility_check') == true)) {
         $fixed_before .= '<div class="fixed-top">';
         $fixed_after .= '</div>';
-
-    } else {
-        $fixed_before .= '';
-        $fixed_after .= '';
-    };
-
+    } 
 }
 
 //set current page_id
@@ -83,7 +70,7 @@ while(wp_get_post_parent_id($parent) != 0) {
 <?php wp_head(); ?>
 </head>
 
-<body
+<body <?php body_class(); ?>
     <?php
 
     $style = 'style="';
@@ -127,7 +114,7 @@ while(wp_get_post_parent_id($parent) != 0) {
 
         <div class="navbar-collapse collapse" id="navbarMobile" style="">
             <?php get_search_form(); ?>
-            <?php echo getMobileMenu('Hauptmenü');
+            <?php echo getMobileMenu(get_term(get_nav_menu_locations()['primary'], 'nav_menu')->name);
 
             if ((get_theme_mod('dav_quicklink') != false) && (get_theme_mod('dav_quicklink') == 'true')) {
 

@@ -1,42 +1,31 @@
 <?php
 
-
 get_header();
 
 
 $the_query = new WP_Query(tourQuery());
 $pagesum = $the_query->max_num_pages;
+$termlist = array();
 
 
-if(get_theme_mod('dav_touren_pageid') != false) {$dav_pageid = get_theme_mod('dav_touren_pageid');}
-else {$dav_pageid = false;};
-
-
-if($dav_pageid != false) {
-    $page_id = get_post($dav_pageid);
-    $tourhead_title = $page_id->post_title;
-    $tourhead_content = $page_id->post_content;
+$dav_touren_page = get_post(get_theme_mod('dav_touren_pageid'));
+if($dav_touren_page) {
+    $tourhead_title = $dav_touren_page->post_title;
+    $tourhead_content = $dav_touren_page->post_content;
     $tourhead_content = apply_filters('the_content', $tourhead_content);
     $tourhead_content = str_replace(']]>', ']]>', $tourhead_content);
 }
 
+
 $selectedterms = $_SERVER["QUERY_STRING"];
-
 if($selectedterms != '') {
-
     $parameter = explode('&', $_SERVER["QUERY_STRING"]);
-
     $parameter = array_unique($parameter);
-
     rsort($parameter);
-
     foreach ($parameter as $param) {
-
         $termelem = substr($param,strpos($param,'=') + 1);
-
         $termlist[] = $termelem;
     }
-
 }
 
 ?>
@@ -58,10 +47,12 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
             <div class="col-xs-12 col-sm-8">
 
-                <h1><?php echo $tourhead_title;  ?></h1>
-
-                <?php echo $tourhead_content;  ?>
-
+            <?php 
+                if(isset($tourhead_title) && isset($tourhead_content)){
+                     echo "<h1>" . $tourhead_title . "</h1>";
+                     echo $tourhead_content;
+                } ?>
+               
                 <?php
 
                 global $wp;
@@ -257,6 +248,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 //Tourenleiter ausgeben
                 $persona_args = array(
                     'post_type' => 'personas',
+                    'posts_per_page' => -1,
+                    'nopaging' => true,
                     'tax_query' => array(
                         'relation' => 'OR',
                         array(
@@ -269,10 +262,16 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                             'field'    => 'slug',
                             'terms'    => 'tourenleiterin',
                         ),
+                        array(
+                            'taxonomy' => 'personarole',
+                            'field'    => 'slug',
+                            'terms'    => 'tourenleitung',
+                        ),
                     ),
                 );
 
                 $the_query = new WP_Query($persona_args);
+
                 echo '<div class="card card-widget-primary mb-4">';
                 echo '<div class="card-header bg-dark text-uppercase py-1">Tourleiter</div>';
                 echo '<div class="card-body">';
