@@ -71,7 +71,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 $obj_id = get_queried_object_id();
                 $currentURL = get_permalink( $obj_id );
 
-                echo resetFilter($currentURL);
+                echo getResetFilter($currentURL);
                 ?>
 
                 <div class="accordion tour-list" id="tourlist">
