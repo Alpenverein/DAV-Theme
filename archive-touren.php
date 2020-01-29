@@ -17,18 +17,6 @@ if($dav_touren_page) {
     $tourhead_content = str_replace(']]>', ']]>', $tourhead_content);
 }
 
-
-$selectedterms = $_SERVER["QUERY_STRING"];
-if($selectedterms != '') {
-    $parameter = explode('&', $_SERVER["QUERY_STRING"]);
-    $parameter = array_unique($parameter);
-    rsort($parameter);
-    foreach ($parameter as $param) {
-        $termelem = substr($param,strpos($param,'=') + 1);
-        $termlist[] = $termelem;
-    }
-}
-
 ?>
 
 
