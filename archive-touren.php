@@ -3,9 +3,11 @@
 
 get_header();
 
-
+/*
 $the_query = new WP_Query(tourQuery());
-$pagesum = $the_query->max_num_pages;
+$pagesum = $the_query->max_num_pages;    
+*/
+
 $termlist = array();
 
 
@@ -21,7 +23,6 @@ if($dav_touren_page) {
 
 
 <?php
-
 if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb') == 1)) {
     if (function_exists('nav_breadcrumb')) nav_breadcrumb();
 }
@@ -53,7 +54,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                 <div class="accordion tour-list" id="tourlist">
 
-                    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post();  ?>
 
                         <div class="card">
                             <div class="card-header" id="heading<?php echo get_the_ID(); ?>">
@@ -120,7 +121,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                         <div class="row mt-5">
                             <div class="col-xs-12 col-sm-8 col-lg-9">
 
-                                <?php if (function_exists("pagination")) {pagination($pagesum); } ?>
+                                <?php //if (function_exists("pagination")) {pagination($pagesum); } ?>
+                                <?php if (function_exists("pagination")) { pagination(); } ?>
                             </div>
                         </div>
 
@@ -151,7 +153,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     echo '<ul>';
                     foreach ( $terms as $term ) {
 
-                        if (in_array($term->slug, $termlist)) {
+                        if (is_term_in_query("tourentyp", $term->slug)) {
                             echo '<li>' . $term->name . '</li>';
                         } else {
                             echo '<li><a href="' . add_value_to_querystring( 'tourentyp', $term->slug ) . '">' . $term->name . '</a></li>';
@@ -176,7 +178,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     echo '<ul>';
                     foreach ( $terms as $term ) {
 
-                        if (in_array($term->slug, $termlist)) {
+                        if (is_term_in_query("tourenkategorie", $term->slug)) {
                             echo '<li>' . $term->name . '</li>';
                         } else {
                             echo '<li><a href="' . add_value_to_querystring( 'tourenkategorie', $term->slug ) . '">' . $term->name . '</a></li>';
@@ -199,7 +201,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     echo '<ul>';
                     foreach ( $terms as $term ) {
 
-                        if (in_array($term->slug, $termlist)) {
+                        if (is_term_in_query("tourentechnik", $term->slug)) {
                             echo '<li>' . $term->name . '</li>';
                         } else {
                             echo '<li><a href="' . add_value_to_querystring( 'tourentechnik', $term->slug ) . '">' . $term->name . '</a></li>';
@@ -223,7 +225,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     echo '<ul>';
                     foreach ( $terms as $term ) {
 
-                        if (in_array($term->slug, $termlist)) {
+                        if (is_term_in_query("tourenkondition", $term->slug)) {
                             echo '<li>' . $term->name . '</li>';
                         } else {
                             echo '<li><a href="' . add_value_to_querystring( 'tourenkondition', $term->slug ) . '">' . $term->name . '</a></li>';
@@ -269,7 +271,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                 if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
 
-                    if (in_array(basename(get_permalink()), $termlist)) {
+                    if (is_term_in_query("tourenleiter", basename(get_permalink()))) {
                         echo '<li>' . get_the_title() . '</li>';
                     } else {
                         echo '<li><a href="' . add_value_to_querystring( 'tourenleiter', basename(get_permalink()) ) .'">' . get_the_title() . '</a></li>';
