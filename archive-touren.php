@@ -11,8 +11,8 @@ $pagesum = $the_query->max_num_pages;
 $termlist = array();
 
 
-$dav_touren_page = get_post(get_theme_mod('dav_touren_pageid'));
-if($dav_touren_page) {
+if(get_theme_mod('dav_touren_pageid')){
+    $dav_touren_page = get_post(get_theme_mod('dav_touren_pageid'));
     $tourhead_title = $dav_touren_page->post_title;
     $tourhead_content = $dav_touren_page->post_content;
     $tourhead_content = apply_filters('the_content', $tourhead_content);
