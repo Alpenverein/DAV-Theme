@@ -21,6 +21,17 @@ function buildMenuStructure($nav_menu_items, &$menu_structure, $parent_id=0, $ac
                 "sub_items" => array()
                 );
             $menu_item["sub_items"] = buildMenuStructure($nav_menu_items, $menu_item["sub_items"], $item->ID, $active_ids);
+            
+            usort($menu_item["sub_items"], function($a, $b){
+                if($a["column"] == $b["column"]){
+                    return 0;
+                } elseif($a["column"] < $b["column"]){
+                    return -1;
+                }else{
+                    return 1;
+                }
+            });
+
             $menu_structure[] = $menu_item;
         }
     }
@@ -53,15 +64,27 @@ function getHTMLDesktopMenu($menu_structure, $level=0, $active_items=array()){
             $list_wrapper = "<ul>%s</ul>";
     }
         
+    
+    $last_item = null;
     foreach($menu_structure as $item){        
         $item["active"] ? $active = " active" : $active = "";
+        
+        if(!is_null($last_item)){
+            if($item["column"] != $last_item["column"]){
+                $new_column = true;
+            } else {
+                $new_column = false;
+            }
+        }
+         
         switch($level){
             case 1:
                 $html .= '<li class="nav-item dropdown ' . $active . '">';
                 $html .= '<a href="'. $item["item"]->url . '" class="nav-link" title="' . $item["item"]->attr_title . '">' . $item["item"]->title . '</a>';
                 break;
             case 2:
-                $html .= '<div class="col-lg-4"><ul class="nav flex-column" id="main-nav-list">';
+                $html .= $new_column ? '</div><div class="col-lg-4">' : "";
+                $html .= '<ul class="nav flex-column" id="main-nav-list">';
                 $html .= '<li class="nav-item li-level2' . $active . '">';
                 $html .= '<a href="'. $item["item"]->url . '" class="nav-link" title="' . $item["item"]->attr_title . '">' . $item["item"]->title . '</a>';
                 break;
@@ -80,7 +103,8 @@ function getHTMLDesktopMenu($menu_structure, $level=0, $active_items=array()){
         
         switch($level){
             case 2:
-                $html .= '</li></ul></div>';
+                $html .= '</li></ul>';
+                $last_item = $item;
             break;
             default:
                 $html .= "</li>";
@@ -88,8 +112,11 @@ function getHTMLDesktopMenu($menu_structure, $level=0, $active_items=array()){
 
     }
     
+    if($level==2){
+        $html = '<div class="col-lg-4">' . $html . "</div>";    
+    }
+    
     return sprintf($list_wrapper, $html);
-
 }
 
 
@@ -161,7 +188,7 @@ function getDesktopMenu($menu_name) {
     $menuitems = wp_get_nav_menu_items($menu_name,array('post_status' => 'publish'));
     $active_ids = getActiveIds($menuitems);
     $menu_structure = array();
-    $menu_structure = buildMenuStructure($menuitems, $menu_structure, 0, $active_ids);    
+    $menu_structure = buildMenuStructure($menuitems, $menu_structure, 0, $active_ids);
     return getHTMLDesktopMenu( $menu_structure) . getSearchForm();
 }
 
