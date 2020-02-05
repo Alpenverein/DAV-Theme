@@ -66,6 +66,7 @@ function getHTMLDesktopMenu($menu_structure, $level=0, $active_items=array()){
         
     
     $last_item = null;
+    $new_column = false;
     foreach($menu_structure as $item){        
         $item["active"] ? $active = " active" : $active = "";
         
@@ -75,7 +76,7 @@ function getHTMLDesktopMenu($menu_structure, $level=0, $active_items=array()){
             } else {
                 $new_column = false;
             }
-        }
+        } 
          
         switch($level){
             case 1:

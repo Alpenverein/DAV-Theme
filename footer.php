@@ -84,8 +84,13 @@ if(get_theme_mod('dav_instagram') != false) {$dav_instagram = get_theme_mod('dav
                 <div class="d-flex d-md-inline-flex justify-content-center justify-content-md-start">
                 <?php
 
-                wp_nav_menu(array('menu'=>'footer','menu_id'=>'footer_menu','menu_class'=>'nav flex-column flex-md-row justify-content-center','container'=>'d-inline-flex','add_li_class'=>'nav-item'));
+                $theme_locations = get_nav_menu_locations();
+                $menu_obj = get_term( $theme_locations["footer"], 'nav_menu' );
 
+                if(get_class($menu_obj) != "WP_Error"){
+                    $menu_name = $menu_obj->name;
+                    wp_nav_menu(array('menu'=>$menu_name,'menu_id'=>'footer_menu','menu_class'=>'nav flex-column flex-md-row justify-content-center','container'=>'d-inline-flex','add_li_class'=>'nav-item'));
+                }
                 ?>
                 </div>
 
