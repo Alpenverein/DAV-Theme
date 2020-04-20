@@ -133,7 +133,7 @@ foreach ( $taxonomies as $taxonomy ) {
 
 register_nav_menus( array(
 	'primary' => __( 'Hauptmenü', 'DAV' ),
-    'footer' => __( 'Footermenü', 'DAV' ),
+  'footer' => __( 'Footermenü', 'DAV' ),
 ) );
 
 

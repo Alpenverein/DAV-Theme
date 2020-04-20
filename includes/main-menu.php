@@ -1,6 +1,183 @@
 <?php
 
 
+
+/**
+ * Preparing a nested structure from the flat array of wp_get_nav_menu_items
+ * @param $nav_menu_items the return value from wp_get_nav_menu_items()
+ * @param $menu_structure reference to the nested array which will be built recursive
+ * @param $parent_id the parent_id of the actual navigation item 
+ *
+ */
+function buildMenuStructure($nav_menu_items, &$menu_structure, $parent_id=0, $active_ids=array()){
+
+    foreach($nav_menu_items as $item){
+        if($item->menu_item_parent == $parent_id){
+            $menu_item = array(
+                "ID" => $item->object_id,
+                "active" => in_array($item->ID, $active_ids),
+                "column" => get_field('dav_menucolumn', $item->ID),
+                "item" => $item,
+                "sub_items" => array()
+                );
+            $menu_item["sub_items"] = buildMenuStructure($nav_menu_items, $menu_item["sub_items"], $item->ID, $active_ids);
+            
+            usort($menu_item["sub_items"], function($a, $b){
+                if($a["column"] == $b["column"]){
+                    return 0;
+                } elseif($a["column"] < $b["column"]){
+                    return -1;
+                }else{
+                    return 1;
+                }
+            });
+
+            $menu_structure[] = $menu_item;
+        }
+    }
+    return $menu_structure;
+}
+
+
+/**
+ * Render a menu from the data of buildMenuStructure()
+ * @param $menu_structure array() data of buildMenuStructure()
+ */
+function getHTMLDesktopMenu($menu_structure, $level=0, $active_items=array()){
+
+    $level++;
+    $html = "";
+
+    switch($level){
+        case 1:
+            $search_button = '<li class="nav-item" style="padding-left: 0px;" id="main-search-icon" title="Suchfeld aufrufen"><i class="fa fa-search text-white" style="padding: 10px 15px 0px 15px; font-size: 1.5rem; cursor:pointer;"> </i></li>';
+            $list_wrapper = '<ul id="menu-items" class="navbar-nav level-1">%s' . $search_button . '</ul>';            
+            break;
+        case 2:
+            $list_wrapper  = '<div class="dropdown-menu"><div class="container"><div class="row">%s';
+            $list_wrapper .= '</div></div></div>';
+            break;
+        case 3:
+            $list_wrapper = '<ul class="nav nav-level3">%s</ul>';
+        break;
+        default:
+            $list_wrapper = "<ul>%s</ul>";
+    }
+        
+    
+    $last_item = null;
+    $new_column = false;
+    foreach($menu_structure as $item){        
+        $item["active"] ? $active = " active" : $active = "";
+        
+        if(!is_null($last_item)){
+            if($item["column"] != $last_item["column"]){
+                $new_column = true;
+            } else {
+                $new_column = false;
+            }
+        } 
+         
+        switch($level){
+            case 1:
+                $html .= '<li class="nav-item dropdown ' . $active . '">';
+                $html .= '<a href="'. $item["item"]->url . '" class="nav-link" title="' . $item["item"]->attr_title . '">' . $item["item"]->title . '</a>';
+                break;
+            case 2:
+                $html .= $new_column ? '</div><div class="col-lg-4">' : "";
+                $html .= '<ul class="nav flex-column" id="main-nav-list">';
+                $html .= '<li class="nav-item li-level2' . $active . '">';
+                $html .= '<a href="'. $item["item"]->url . '" class="nav-link" title="' . $item["item"]->attr_title . '">' . $item["item"]->title . '</a>';
+                break;
+            case 3:
+                $html .= '<li class="li-level3' . $active . '"><i class="fas fa-angle-right"></i>';
+                $html .= '<a href="'. $item["item"]->url . '" title="' . $item["item"]->attr_title . '">' . $item["item"]->title . '</a>';
+                break;
+            default:
+                $html .= '<li class="nav-item li-level' . $level . '' . $active . '">';
+                $html .= '<a href="'. $item["item"]->url . '" class="nav-link" title="' . $item["item"]->attr_title . '">' . $item["item"]->title . '</a>';
+        }
+            
+        if( count($item["sub_items"]) > 0){            
+            $html .= getHTMLDesktopMenu($item["sub_items"], $level, $active_items);            
+        }
+        
+        switch($level){
+            case 2:
+                $html .= '</li></ul>';
+                $last_item = $item;
+            break;
+            default:
+                $html .= "</li>";
+        }
+
+    }
+    
+    if($level==2){
+        $html = '<div class="col-lg-4">' . $html . "</div>";    
+    }
+    
+    return sprintf($list_wrapper, $html);
+}
+
+
+function getSearchForm(){
+    $form = <<<'EOT'
+    <form role="search" method="get" id="mainmenu-search" class="searchform group" action="%s">
+        <div class="input-group">
+            <div class="input-group-append">
+                <button class="btn" type="button" id="closesearch" style="background: #fff; color: #aaa; margin-left: 10px;" title="Suche schließen">
+                    <i class="fa fa-times"> </i>
+                </button>
+            </div>
+            <input type="search" class="form-control" placeholder="Suchbegriff eingeben" aria-label="Website durchsuchen" value="" name="s" id="s" title="Suche nach:">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" id="searchbutton" title="Suche ausführen" style="font-size: 1.5rem;">
+                    <i class="fa fa-search"> </i>
+                </button>
+            </div>
+        </div>
+    </form>
+EOT;
+$url = home_url('/');
+return sprintf($form, $url);
+}
+
+
+
+function getActiveIds($menuitems){
+    global $post;
+    $show_as_active = array();
+    
+    if($post != null){        
+        foreach($menuitems as $item){
+            if($item->object_id == $post->ID){
+                $act_id = $item->ID;
+                $show_as_active[] = $act_id;
+            }
+        }
+
+        $run = isset($act_id);        
+        $cnt = count($menuitems);
+        while($run && $cnt>=0){
+            foreach($menuitems as $item){
+                if($item->ID == $act_id){
+                    if($item->menu_item_parent != 0){
+                        $act_id = $item->menu_item_parent;
+                        $show_as_active[] = $act_id;
+                    }else{
+                        $run = false;
+                    }
+                }
+            }
+            $cnt--;
+        }
+    }
+    return $show_as_active;
+}
+
+
+
 /**
  * Build a bootstrap-based MegaMenu
  * @param $menu_name Name of Menu
@@ -8,156 +185,12 @@
  * @param int $menu_levels Number of Levels in Menü
  * @return string
  */
-function getDesktopMenu($menu_name, $text_color = 'text-white', $parentitem = null, $current = null, $menu_columns=3, $level_max = 3) {
-
-    $return = '';
-    $level = 1;
-    $parent = 0;
-    $child = 0;
-    $column_actual = 1;
-
-
-
-    $menu_arr = array();
-
+function getDesktopMenu($menu_name) {
     $menuitems = wp_get_nav_menu_items($menu_name,array('post_status' => 'publish'));
-
-    if(!is_bool($menuitems)) {
-
-
-        // push all menu-elements to array
-        foreach ($menuitems as $item) {
-
-            array_push($menu_arr, array(
-                'link' => $item->url,
-                'text' => $item->title,
-                'classes' => implode(' ', $item->classes),
-                'parent' => $item->menu_item_parent,
-                'order' => $item->menu_order,
-                'guid' => $item->guid,
-                'id' => $item->ID,
-                'page_id' => $item->object_id,
-                'target' => $item->target,
-                'desc' => $item->description,
-                'title_attr' => $item->attr_title
-            ));
-        }
-
-
-        // build the menu
-        $return .= '<ul class="navbar-nav level-1" id="menu-items">';
-
-        for ($m = 0; $m < count($menu_arr); $m++) {
-
-
-            $menu_arr[$m]['page_id'] == $parentitem ? $active = 'active' : $active = '';
-            $menu_arr[$m]['title_attr'] != '' ? $title = $menu_arr[$m]['title_attr'] : $title = $menu_arr[$m]['text'];
-            $menu_arr[$m]['desc'] != '' ? $ariadesc = $menu_arr[$m]['desc'] : $ariadesc = $menu_arr[$m]['text'];
-            $menu_arr[$m]['target'] != '' ? $target = 'target='.$menu_arr[$m]['target'] : $target = '';
-
-
-            //Ist es ein Ebene-1 Element?
-            if ($menu_arr[$m]['parent'] == 0) {
-
-                //Ist das Folgeelement auch auf Ebene 1?
-                if(isset($menu_arr[$m+1]['parent']) && $menu_arr[$m+1]['parent'] == 0) {
-
-                    // baue den Menüpunkt
-                    $return .= '<li class="nav-item ' . $active . '"><a class="nav-link '. $active .'" href="'.$menu_arr[$m]['link'].'" title="'.$title.'" '.$target.' aria-label="'.$ariadesc.'">'.$menu_arr[$m]['text'].'</a></li>';
-                } else {
-
-                    $column_actual = 1;
-
-
-                    // Das nächste Menüelement ist nicht auf Ebene 1
-                    // Baue den Menüpunkt, aber gleich mit Folgezeile
-                    $return .= '<li class="nav-item dropdown ' . $active . '">
-                    <a class="nav-link" href="' . $menu_arr[$m]['link'] . '" title="'.$title.'" '.$target.' aria-label="'.$ariadesc.'">
-                      ' . $menu_arr[$m]['text'] . '</a>
-                    <div class="dropdown-menu">';
-
-                    $return .= '
-                      <div class="container">
-                        <div class="row">
-                        <div class="col-lg-4">
-                            <ul class="nav flex-column" id="main-nav-list">';
-
-                    //erhöhe level auf 2
-                    $level++;
-
-                    //speichere Eltern-ID des Folgeelement ab
-                    if(isset($menu_arr[$m+1]['id'])){
-                    	$parent = $menu_arr[$m+1]['id'];
-                    }
-                    
-                }
-            } else {
-
-                $menu_arr[$m]['page_id'] == $current ? $active = 'active' : $active = '';
-
-                $level_act = $level;
-                switch ($level_act) {
-                    case 2 :
-                        if($column_actual < get_field('dav_menucolumn',$menu_arr[$m]['id'])) {
-                            $column_actual++;
-                            $return .= '</li></ul></div><div class="col-lg-4"><ul class="nav flex-column">';
-                        }
-                        $return .= '<li class="nav-item li-level2 ' . $active . '">
-                                <a class="nav-level2" href="'.$menu_arr[$m]['link'].'" title="'.$title.'" '.$target.' aria-label="'.$ariadesc.'">'.$menu_arr[$m]['text'].'</a>';
-                        if($menu_arr[$m+1]['parent'] == 0) {
-                            $return .= '</li></ul></div></div></div>';
-                            $level = 1;
-                        }
-                        if($menu_arr[$m]['id'] == $menu_arr[$m+1]['parent']) {
-                            $parent = $menu_arr[$m]['id'];
-                            $return .= '<ul class="nav nav-level3">';
-                            $level++;
-                        }
-                        break;
-                    case 3 :
-                        $return .= '<li class="li-level3 ' . $active . '"><i class="fas fa-angle-right"></i><a href="' . $menu_arr[$m]['link'] . '" title="'.$title.'" '.$target.' aria-label="'.$ariadesc.'">'.$menu_arr[$m]['text'].'</a></li>';
-
-                        if (isset($menu_arr[$m+1]) && $menu_arr[$m+1]['parent'] != $menu_arr[$m]['id']) {
-                            if ($parent != $menu_arr[$m + 1]['parent']) {
-                                $return .= '</ul>';
-                                $level--;
-                            }
-                            if ($menu_arr[$m + 1]['parent'] == 0) {
-                                $return .= '</li></ul></div></div></div>';
-                                $level = 1;
-                            }
-                        }
-                        break;
-
-                    //TODO: Wenn eine vierte Ebene eingefügt wird, kommt diese als Ebene2 an. Muss gefixt werden.
-                }
-            }
-
-        }
-
-
-        $return .= '<li class="nav-item" style="padding-left: 0px;" id="main-search-icon" title="Suchfeld aufrufen"><i class="fa fa-search ' . $text_color . '" style="padding: 10px 15px 0px 15px; font-size: 1.5rem; cursor:pointer;"> </i></li>';
-
-        // close the list
-        $return .= '</ul>';
-
-        //$return .= get_search_form();
-        $return .= '<form role="search" method="get" id="mainmenu-search" class="searchform group" action="' . home_url('/') . '">
-    <div class="input-group">
-        <div class="input-group-append">
-            <button class="btn" type="button" id="closesearch" style="background: #fff; color: #aaa; margin-left: 10px;" title="Suche schließen"><i class="fa fa-times"> </i></button>
-        </div>
-        <input type="search" class="form-control" placeholder="Suchbegriff eingeben" aria-label="Website durchsuchen" value="" name="s" id="s" title="Suche nach:">
-        <div class="input-group-append">
-            <button class="btn btn-primary" type="submit" id="searchbutton" title="Suche ausführen" style="font-size: 1.5rem;"><i class="fa fa-search"> </i></button>
-        </div>
-    </div>
-</form>';
-
-    }
-
-    //return the menu
-    return $return;
+    $active_ids = getActiveIds($menuitems);
+    $menu_structure = array();
+    $menu_structure = buildMenuStructure($menuitems, $menu_structure, 0, $active_ids);
+    return getHTMLDesktopMenu( $menu_structure) . getSearchForm();
 }
 
 
