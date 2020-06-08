@@ -631,7 +631,7 @@ a .news-head, a .news-head:hover {
 .bg-transparent60 .li-level2 a:hover {
     color: #0083C7 !important;
     text-decoration: none !important;
-    padding-left: 0px;
+    /*padding-left: 0px;*/
 }
 
 .bg-primary .li-level3,

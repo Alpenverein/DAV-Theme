@@ -10,9 +10,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
 ?>
 
-
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
 
 <?php
 
@@ -21,11 +19,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
     $tour_technic = preg_replace('#<a.*?>(.*?)</a>#i', '\1', get_the_term_list($post->ID,'tourtechnic','',', '));
     $tour_condition = preg_replace('#<a.*?>(.*?)</a>#i', '\1', get_the_term_list($post->ID,'tourcondition','',', '));
 
-
     $tour_meta = get_post_meta($post->ID);
-
     $persona = get_post($tour_meta['acf_tourpersona'][0]);
-
     $persona_meta = get_post_meta($tour_meta['acf_tourpersona'][0]);
 
     ?>
@@ -49,13 +44,9 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
         <div class="row" style="margin-top: 15px;">
             <div class="col-xs-12 col-sm-8" id="content">
                 <?php $tour_image = wp_get_attachment_image_src(get_field('acf_tourphoto'), 'medium'); ?>
-
                 <img src="<?php echo $tour_image[0] ?>" class="img-fluid" style="margin-bottom: 1em;">
-
                 <p class="lead text-primary"><?php echo $tour_meta['acf_tourcompact'][0]; ?></p>
-
                 <?php the_content(); ?>
-                <p><small><?php echo get_field('tour_intern'); ?></small></p>
             </div>
             <div class="col-sm-4">
 
@@ -65,7 +56,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     </div>
                     <div class="card-body">
                         <div class="price-body pt-2">
-
+                            
                             <p class="lead text-left"><strong><?php echo substr(get_field('acf_tourstartdate'),0,2).'.'.substr(get_field('acf_tourstartdate'),3,2).'.'.substr(get_field('acf_tourstartdate'),6,4);
 
                                 if((get_field('acf_tourstartdate') != '') && (get_field('acf_tourallday') == 1)) {
@@ -80,56 +71,35 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                             <?php
 
                             if (get_field('acf_tourtreffzeit') != "") {
-
                                 echo '<p class="lead"><strong>' . get_field("acf_tourtreffzeit") .' Uhr</strong></p>';
                             }
 
-                            if (get_field('acf_tourtreffpunkt') != "") {
+                            if (get_field('tour_intern') != "") {
+                                echo '<div class="d-flex mb-2"><div>Tourenkennung: <br><strong>'.get_field("tour_intern").' </strong></div></div>';
+                            }
 
-                                echo '<div class="d-flex mb-2">
-                                <div>Treffpunkt: <br>
-                                <strong>'.get_field("acf_tourtreffpunkt").' </strong></div>
-                            </div>';
+                            if (get_field('acf_tourtreffpunkt') != "") {
+                                echo '<div class="d-flex mb-2"><div>Treffpunkt: <br><strong>'.get_field("acf_tourtreffpunkt").' </strong></div></div>';
                             }
 
                             if (get_field('acf_tourtime') != "") {
-
-                                echo '<div class="d-flex mb-2">
-                                <div>Dauer: <br>
-                                <strong>'.get_field("acf_tourtime").' h</strong></div>
-                            </div>';
+                                echo '<div class="d-flex mb-2"><div>Dauer: <br><strong>'.get_field("acf_tourtime").' h</strong></div></div>';
                             }
 
                             if (get_field('acf_tourkilometer') != "") {
-
-                                echo '<div class="d-flex mb-2">
-                                <div>Kilometer: <br>
-                                <strong>'.get_field("acf_tourkilometer").'</strong></div>
-                            </div>';
+                                echo '<div class="d-flex mb-2"><div>Kilometer: <br><strong>'.get_field("acf_tourkilometer").'</strong></div></div>';
                             }
 
                             if (get_field('acf_tourhohenmeter') != "") {
-
-                                echo '<div class="d-flex mb-2">
-                                <div>Höhenmeter: <br>
-                                <strong>'.get_field("acf_tourhohenmeter").'</strong></div>
-                            </div>';
+                                echo '<div class="d-flex mb-2"><div>Höhenmeter: <br><strong>'.get_field("acf_tourhohenmeter").'</strong></div></div>';
                             }
 
                             if ($tour_condition != "") {
-
-                                echo '<div class="d-flex mb-2">
-                                <div>Kondition: <br>
-                                <strong>'.$tour_condition.'</strong></div>
-                            </div>';
+                                echo '<div class="d-flex mb-2"><div>Kondition: <br><strong>'.$tour_condition.'</strong></div></div>';
                             }
 
                             if ($tour_technic != "") {
-
-                                echo '<div class="d-flex mb-2">
-                                <div>Technik: <br>
-                                <strong>'.$tour_technic.'</strong></div>
-                            </div>';
+                                echo '<div class="d-flex mb-2"><div>Technik: <br><strong>'.$tour_technic.'</strong></div></div>';
                             }
 
                             ?>
@@ -137,33 +107,35 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     </div>
                 </div>
 
-                <?php
-
-                if(get_field('acf_tourpersona') != '') {
-                    echo '
-                    <div class="card bg-dark">
-                        <div class="row m-3 align-self-stretch">
-                            <div class="col-12 p-0">'.
-                                get_the_post_thumbnail($persona->ID, 'persona-thumb', array('class' => 'img-fluid rounded-circle'))
-                            .'</div>
+                <?php if(get_field('acf_tourpersona') != '') { ?>
+                    
+                <div class="card bg-dark">
+                    <div class="row m-3 align-self-stretch">
+                        <div class="col-12 p-0"><?php echo get_the_post_thumbnail($persona->ID, 'persona-thumb', array('class' => 'img-fluid rounded-circle')) ?></div>
                             <div class="col-12 p-0 pt-3 text-center">
-                                <span class="person-name">'.$persona->post_title.'</span>
-                                <span class="person-title">'.$persona_meta['persona_daten_funktion'][0].'</span>
+                                <span class="person-name"><a href="<?php echo get_permalink($persona)?>"><?php echo $persona->post_title ?></a></span><br />
+                                
+                                <?php if($persona_meta['persona_daten_funktion'][0] != ""){ ?>
+                                    <span class="person-title"><?php echo $persona_meta['persona_daten_funktion'][0] ?></span><br />
+                                <?php } ?>
+                                <?php if($persona_meta['persona_daten_telefon'][0] != ""){ ?>
+                                    <span class="person-title">Telefon: <a href="tel:<?php echo $persona_meta['persona_daten_telefon'][0] ?>"><?php echo $persona_meta['persona_daten_telefon'][0] ?></a></span><br />
+                                <?php } ?>
+                                <?php if($persona_meta['persona_daten_e_mail'][0] != ""){ ?>
+                                    <span class="person-title">Mail: <a href="mailto:<?php echo $persona_meta['persona_daten_e_mail'][0] ?>"><?php echo $persona_meta['persona_daten_e_mail'][0] ?></a></span><br />
+                                <?php } ?>
                                 <hr>
                             </div>
                         </div>
                         <div class="row m-3" style="margin-top: 0 !important;">
                             <div class="col-12 p-0 p-lg-0">
-                                <p>'.$persona->post_content.'</p>
-
+                                <p><?php echo get_the_excerpt($persona) ?></p>
                             </div>
                         </div>
                     </div>
-                </div>';
+                </div>
 
-                }
-
-                ?>
+                <?php } ?>
 
         </div>
         </div>

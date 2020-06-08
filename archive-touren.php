@@ -234,6 +234,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     'post_type' => 'personas',
                     'posts_per_page' => -1,
                     'nopaging' => true,
+                    'orderby' => 'title',
+                    'order' => 'ASC',
                     'tax_query' => array(
                         'relation' => 'OR',
                         array(
@@ -263,6 +265,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 echo '<ul>';
 
                 if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+
 
                     if (is_term_in_query("tourenleiter", basename(get_permalink()))) {
                         echo '<li>' . get_the_title() . '</li>';
