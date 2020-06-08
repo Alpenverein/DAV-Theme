@@ -1,38 +1,28 @@
 <?php
 
+
 get_header();
 
-
+/*
 $the_query = new WP_Query(tourQuery());
-$pagesum = $the_query->max_num_pages;
+$pagesum = $the_query->max_num_pages;    
+*/
+
 $termlist = array();
 
 
-$dav_touren_page = get_post(get_theme_mod('dav_touren_pageid'));
-if($dav_touren_page) {
+if(get_theme_mod('dav_touren_pageid')){
+    $dav_touren_page = get_post(get_theme_mod('dav_touren_pageid'));
     $tourhead_title = $dav_touren_page->post_title;
     $tourhead_content = $dav_touren_page->post_content;
     $tourhead_content = apply_filters('the_content', $tourhead_content);
     $tourhead_content = str_replace(']]>', ']]>', $tourhead_content);
 }
 
-
-$selectedterms = $_SERVER["QUERY_STRING"];
-if($selectedterms != '') {
-    $parameter = explode('&', $_SERVER["QUERY_STRING"]);
-    $parameter = array_unique($parameter);
-    rsort($parameter);
-    foreach ($parameter as $param) {
-        $termelem = substr($param,strpos($param,'=') + 1);
-        $termlist[] = $termelem;
-    }
-}
-
 ?>
 
 
 <?php
-
 if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb') == 1)) {
     if (function_exists('nav_breadcrumb')) nav_breadcrumb();
 }
@@ -53,18 +43,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                      echo $tourhead_content;
                 } ?>
                
-                <?php
-
-                global $wp;
-                $currentURL = home_url( add_query_arg( array(), $wp->request ) );
-
-                echo resetFilter($currentURL);
-
-                  ?>
+                <?php echo getResetFilter(); ?>
 
                 <div class="accordion tour-list" id="tourlist">
 
-                    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post();  ?>
 
                         <div class="card">
                             <div class="card-header" id="heading<?php echo get_the_ID(); ?>">
@@ -131,7 +114,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                         <div class="row mt-5">
                             <div class="col-xs-12 col-sm-8 col-lg-9">
 
-                                <?php if (function_exists("pagination")) {pagination($pagesum); } ?>
+                                <?php //if (function_exists("pagination")) {pagination($pagesum); } ?>
+                                <?php if (function_exists("pagination")) { pagination(); } ?>
                             </div>
                         </div>
 
@@ -162,10 +146,10 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     echo '<ul>';
                     foreach ( $terms as $term ) {
 
-                        if (in_array($term->slug, $termlist)) {
+                        if (is_term_in_query("tourentyp", $term->slug)) {
                             echo '<li>' . $term->name . '</li>';
                         } else {
-                            echo '<li><a href="' . add_query_arg( 'tourentyp', $term->slug ) . '">' . $term->name . '</a></li>';
+                            echo '<li><a href="' . preg_replace('/\/page\/[0-9]*/', "", add_value_to_querystring( 'tourentyp', $term->slug )) . '">' . $term->name . '</a></li>';
                         }
 
                     }
@@ -187,10 +171,10 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     echo '<ul>';
                     foreach ( $terms as $term ) {
 
-                        if (in_array($term->slug, $termlist)) {
+                        if (is_term_in_query("tourenkategorie", $term->slug)) {
                             echo '<li>' . $term->name . '</li>';
                         } else {
-                            echo '<li><a href="' . add_query_arg( 'tourenkategorie', $term->slug ) . '">' . $term->name . '</a></li>';
+                            echo '<li><a href="' . preg_replace('/\/page\/[0-9]*/', "", add_value_to_querystring( 'tourenkategorie', $term->slug )) . '">' . $term->name . '</a></li>';
                         }
 
                     }
@@ -210,10 +194,10 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     echo '<ul>';
                     foreach ( $terms as $term ) {
 
-                        if (in_array($term->slug, $termlist)) {
+                        if (is_term_in_query("tourentechnik", $term->slug)) {
                             echo '<li>' . $term->name . '</li>';
                         } else {
-                            echo '<li><a href="' . add_query_arg( 'tourentechnik', $term->slug ) . '">' . $term->name . '</a></li>';
+                            echo '<li><a href="' . preg_replace('/\/page\/[0-9]*/', "", add_value_to_querystring( 'tourentechnik', $term->slug )) . '">' . $term->name . '</a></li>';
                         }
 
                     }
@@ -234,10 +218,10 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     echo '<ul>';
                     foreach ( $terms as $term ) {
 
-                        if (in_array($term->slug, $termlist)) {
+                        if (is_term_in_query("tourenkondition", $term->slug)) {
                             echo '<li>' . $term->name . '</li>';
                         } else {
-                            echo '<li><a href="' . add_query_arg( 'tourenkondition', $term->slug ) . '">' . $term->name . '</a></li>';
+                            echo '<li><a href="' . preg_replace('/\/page\/[0-9]*/', "", add_value_to_querystring( 'tourenkondition', $term->slug )) . '">' . $term->name . '</a></li>';
                         }
 
                     }
@@ -250,6 +234,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                     'post_type' => 'personas',
                     'posts_per_page' => -1,
                     'nopaging' => true,
+                    'orderby' => 'title',
+                    'order' => 'ASC',
                     'tax_query' => array(
                         'relation' => 'OR',
                         array(
@@ -280,10 +266,11 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
 
                 if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
 
-                    if (in_array(basename(get_permalink()), $termlist)) {
+
+                    if (is_term_in_query("tourenleiter", basename(get_permalink()))) {
                         echo '<li>' . get_the_title() . '</li>';
                     } else {
-                        echo '<li><a href="' . add_query_arg( 'tourenleiter', basename(get_permalink()) ) .'">' . get_the_title() . '</a></li>';
+                        echo '<li><a href="' . preg_replace('/\/page\/[0-9]*/', "", add_value_to_querystring( 'tourenleiter', basename(get_permalink()))) .'">' . get_the_title() . '</a></li>';
                     }
 
                 endwhile;

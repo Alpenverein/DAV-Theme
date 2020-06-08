@@ -27,6 +27,7 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
     $personaPhone = get_field('persona_daten_telefon');
     $personaMail = get_field('persona_daten_e_mail');
     $personaFunktion = get_field('persona_daten_funktion');
+
     ?>
 
     <div class="container">
@@ -155,51 +156,37 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
             </div>
 
             <div class="col-sm-4 col-lg-4">
-
-                <?php
-
-                echo '<div class="card bg-white">
-                        <div class="row m-3 align-self-stretch">
-                            <div class="col-12 p-0">
-                            <h2 class="text-center">Weitere Informationen</h2>';
-                echo get_the_post_thumbnail($personaID, 'persona-thumb', array('class' => 'img-fluid rounded-circle'));
-
-                echo '</div>
+                <div class="card bg-white">
+                    <div class="row m-3 align-self-stretch">
+                        <div class="col-12 p-0">
+                            <h2 class="text-center">Weitere Informationen</h2>
+                                <?php echo get_the_post_thumbnail($personaID, 'persona-thumb', array('class' => 'img-fluid rounded-circle')); ?>
+                            </div>
                         </div>
                         <div class="row m-3" style="margin-top: 0 !important;">
                             <div class="col-12 p-0 p-lg-0">
-                                <div class="d-flex mb-2">
-                                    <div>Telefon: <br>
-                                    <strong><a href="tel://'.preg_replace ('#\s+#' , '' , $personaPhone).'" title="Jetzt Anrufen"><i class="fas fa-phone"> </i> '.$personaPhone.'</a></strong>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <div>E-Mail: <br>
-                                    <strong><a href="mailto:'.$personaMail.'">'.$personaMail.' </a></strong>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <div>Position: <br>
-                                    <strong>'.$personaPosition.'</strong>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <div>Funktion: <br>
-                                    <strong>'.$personaFunktion.'</strong>
-                                    </div>
-                                </div>
+                               <?php if(!is_null($personaPhone) && "" != $personaPhone ){ ?>
+                               <div class="d-flex mb-2"><div>Telefon: <br><strong><a href="tel://<?php echo preg_replace ('#\s+#' , '' , $personaPhone) ?>" title="Jetzt Anrufen"><i class="fas fa-phone"> </i><?php echo $personaPhone ?></a></strong></div></div>
+                               <?php } ?>
+                               <?php if(!is_null($personaMail) && "" != $personaMail) { ?>
+                               <div class="d-flex mb-2"><div>E-Mail: <br><strong><a href="mailto:<?php echo $personaMail ?>"><?php echo $personaMail ?></a></strong></div></div>
+                               <?php } ?>
+                               <?php if(!is_null($personaPosition) &&  "" != $personaPosition ){ ?>
+                               <div class="d-flex mb-2"><div>Position: <br><strong><?php echo $personaPosition ?></strong></div></div>
+                               <?php } ?>
+                               <?php if(!is_null($personaFunktion) && "" != $personaFunktion ){ ?>
+                               <div class="d-flex mb-2"><div>Funktion: <br><strong><?php echo $personaFunktion ?></strong></div></div>
+                               <?php } ?>
                             </div>
                         </div>
                     </div>
-                </div>';
-                ?>
-
+                </div>
             </div>
 
 
-            </div>
         </div>
-        </div>
+    </div>
+</div>
 
 <?php endwhile; else : ?>
 

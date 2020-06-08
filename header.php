@@ -16,12 +16,12 @@ if(get_theme_mod('dav_menubehavior') != false) {$dav_menubehavior = get_theme_mo
 
 //set the menucolor
 switch($dav_menucolor) {
-    case "primary" : $menucolor = 'bg-primary'; $navbar = 'navbar-dark'; $quicklink_style = 'quicklink-primary'; $text_color = 'text-white'; break;
-    case "light" :  $menucolor = 'bg-light'; $navbar = 'navbar-light'; $quicklink_style = 'quicklink-light'; $text_color = 'text-dark'; break;
-    case "dark" : $menucolor = 'bg-dark'; $navbar = 'navbar-dark'; $quicklink_style = 'quicklink-dark'; $text_color = 'text-white'; break;
-    case "white" : $menucolor = 'bg-white'; $navbar = 'navbar-light'; $quicklink_style = 'quicklink-light'; $text_color = 'text-dark'; break;
-    case "trans" : $menucolor = 'bg-transparent60'; $navbar = 'navbar-light trans'; $quicklink_style = 'quicklink-light'; $text_color = 'text-dark'; break;
-    default: $menucolor = 'bg-primary'; $navbar = 'navbar-dark'; $quicklink_style = 'quicklink-primary'; $text_color = 'text-white'; break;
+    case "primary" : $menucolor = 'bg-primary'; $navbar = 'navbar-dark'; $quicklink_style = 'quicklink-primary'; break;
+    case "light" :  $menucolor = 'bg-light'; $navbar = 'navbar-light'; $quicklink_style = 'quicklink-light'; break;
+    case "dark" : $menucolor = 'bg-dark'; $navbar = 'navbar-dark'; $quicklink_style = 'quicklink-dark'; break;
+    case "white" : $menucolor = 'bg-white'; $navbar = 'navbar-light'; $quicklink_style = 'quicklink-light'; break;
+    case "trans" : $menucolor = 'bg-transparent60'; $navbar = 'navbar-light trans'; $quicklink_style = 'quicklink-light'; break;
+    default: $menucolor = 'bg-primary'; $navbar = 'navbar-dark'; $quicklink_style = 'quicklink-primary'; break;
 }
 
 
@@ -40,20 +40,10 @@ if(is_front_page() == true) {
     if ((get_theme_mod('dav_startimage_radio') == 'fullscreen') && (get_theme_mod('dav_startimage') != '')) {
         $fixed_before .= '<div class="fixed-top">';
         $fixed_after .= '</div>';
-
     } elseif ((get_theme_mod('dav_slider_fullscreen') == 'true') && (get_theme_mod('dav_slider_visibility_check') == true)) {
         $fixed_before .= '<div class="fixed-top">';
         $fixed_after .= '</div>';
     } 
-}
-
-//set current page_id
-global $post;
-$parent = $post->ID;
-$current = $post->ID;
-
-while(wp_get_post_parent_id($parent) != 0) {
-    $parent = wp_get_post_parent_id($parent);
 }
 
 ?>
@@ -218,10 +208,7 @@ echo $menubehavior;
             </button>
             <div class="collapse navbar-collapse text-center justify-content-end" id="navbarDesktop">
 
-                <?php 
-                    $name = get_term(get_nav_menu_locations()['primary'], 'nav_menu')->name;
-                    echo getDesktopMenu($name, $text_color, $parent, $current); 
-                ?>
+                <?php echo getDesktopMenu(get_term(get_nav_menu_locations()['primary'], 'nav_menu')->name); ?>
 
             </div>
         </div>
