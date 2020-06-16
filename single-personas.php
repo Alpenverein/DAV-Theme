@@ -2,7 +2,7 @@
 
 <?php
 
-$leiter = array('leiter'=>array(basename(get_permalink())));
+$leiter = array('tourenleiter'=>array(basename(get_permalink())));
 $the_query = new WP_Query(tourQuery($leiter));
 
 $pagesum = $the_query->max_num_pages;
