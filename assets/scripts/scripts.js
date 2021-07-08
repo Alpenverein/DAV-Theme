@@ -1,4 +1,12 @@
-/*
+
+
+
+jQuery(document).ready(function($){
+
+
+
+
+    /*
 This function get the highest element with given class and give all elements the same high
  */
 function elementHeight(element) {
@@ -19,38 +27,7 @@ function elementHeight(element) {
 
 }
 
-var resizeTimer;
-$(window).resize(function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(elementHeight, 100);
-});
 
-
-elementHeight('.card-price');
-elementHeight('.price-body');
-elementHeight('.card-person');
-elementHeight('.card-news-one');
-elementHeight('.card-news-two');
-elementHeight('.card-news-three');
-elementHeight('.card-news-image');
-elementHeight('.card-page-overview');
-
-
-$(window).resize(function(){
-
-    elementHeight('.card-price');
-    elementHeight('.price-body');
-    elementHeight('.card-person');
-    elementHeight('.card-news-one');
-    elementHeight('.card-news-two');
-    elementHeight('.card-news-three');
-    elementHeight('.card-news-image');
-    elementHeight('.card-page-overview');
-
-});
-
-
-$(document).ready(function() {
 
     var subpagelist = '';
 
@@ -126,69 +103,104 @@ $(document).ready(function() {
 
     });
 
-});
-
-$('#top-link').click(function() {
-    $('html, body').animate({ scrollTop: '0px'},1000);
-});
 
 
+    var resizeTimer;
+    $(window).resize(function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(elementHeight, 100);
+    });
 
-$(window).on("scroll", function() {
 
-    if ($("#main-nav-head").hasClass("trans")) {
+    elementHeight('.card-price');
+    elementHeight('.price-body');
+    elementHeight('.card-person');
+    elementHeight('.card-news-one');
+    elementHeight('.card-news-two');
+    elementHeight('.card-news-three');
+    elementHeight('.card-news-image');
+    elementHeight('.card-page-overview');
 
-        if ($(window).scrollTop() > 500) {
-            $("#main-nav-head").addClass('bg-white');
-            $("#main-nav-head").removeClass('bg-transparent60');
-        } else {
-            //remove the background property so it comes transparent again (defined in your css)
-            $("#main-nav-head").removeClass('bg-white');
-            $("#main-nav-head").addClass('bg-transparent60');
+    $(window).resize(function(){
+        elementHeight('.card-price');
+        elementHeight('.price-body');
+        elementHeight('.card-person');
+        elementHeight('.card-news-one');
+        elementHeight('.card-news-two');
+        elementHeight('.card-news-three');
+        elementHeight('.card-news-image');
+        elementHeight('.card-page-overview');
+    });
+
+    $('#top-link').click(function() {
+        $('html, body').animate({ scrollTop: '0px'},1000);
+    });
+
+
+
+
+    $(window).on("scroll", function() {
+
+        if ($("#main-nav-head").hasClass("trans")) {
+
+            if ($(window).scrollTop() > 500) {
+                $("#main-nav-head").addClass('bg-white');
+                $("#main-nav-head").removeClass('bg-transparent60');
+            } else {
+                //remove the background property so it comes transparent again (defined in your css)
+                $("#main-nav-head").removeClass('bg-white');
+                $("#main-nav-head").addClass('bg-transparent60');
+            }
+
         }
 
-    }
-
-    if(document.body.scrollTop === 0) {
-        $('#top-link').removeClass('d-none');
-        console.log('down');
-    } else {
-        $('#top-link').addClass('d-none');
-        console.log('top');
-    }
-});
+        if(document.body.scrollTop === 0) {
+            $('#top-link').removeClass('d-none');
+            console.log('down');
+        } else {
+            $('#top-link').addClass('d-none');
+            console.log('top');
+        }
+    });
 
 
-$('#main-search-icon').click(function () {
+    $('#main-search-icon').click(function () {
 
-    $('#menu-items').hide();
-    $('#mainmenu-search').show();
-    $('#s').focus();
+        $('#menu-items').hide();
+        $('#mainmenu-search').show();
+        $('#s').focus();
 
-});
+    });
 
-$('#closesearch').click(function () {
-    $('#menu-items').show();
-    $('#mainmenu-search').hide();
-});
-
-$(document).keyup(function(e) {
-    if (e.keyCode === 27) {
-        $('#mainmenu-search').hide();
+    $('#closesearch').click(function () {
         $('#menu-items').show();
-    }
+        $('#mainmenu-search').hide();
+    });
+
+    $(document).keyup(function(e) {
+        if (e.keyCode === 27) {
+            $('#mainmenu-search').hide();
+            $('#menu-items').show();
+        }
+    });
+
+
+
+    $(".fa-bars").click(function(){
+        $(this).toggleClass("fa-times");
+    });
+
+
+    $('#top-link').click(function() {
+        $('html, body').animate({ scrollTop: '0px'},1000);
+    });
+
+
+
+
 });
 
 
-
-$(".fa-bars").click(function(){
-    $(this).toggleClass("fa-times");
-});
-
-
-$('#top-link').click(function() {
-    $('html, body').animate({ scrollTop: '0px'},1000);
-});
 
 
 

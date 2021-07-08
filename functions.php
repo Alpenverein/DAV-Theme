@@ -325,3 +325,12 @@ jQuery("#postexcerpt .handlediv").after("<div style=position:absolute;top:12px;r
 }
 //add_action( 'admin_head-post.php', 'excerpt_count_js');
 //add_action( 'admin_head-post-new.php', 'excerpt_count_js');
+
+
+function my_scripts() {
+    wp_enqueue_script('jquery', "jQuery", null, null, true);
+    wp_enqueue_script('scripts', get_template_directory_uri() . "/assets/scripts/scripts.js", null, null, true);
+
+}
+add_action( 'wp_enqueue_scripts', 'my_scripts' );
+
