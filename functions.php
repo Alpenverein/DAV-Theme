@@ -329,6 +329,9 @@ jQuery("#postexcerpt .handlediv").after("<div style=position:absolute;top:12px;r
 
 function my_scripts() {
     wp_enqueue_script('jquery', "jQuery", null, null, true);
+    wp_enqueue_script('bootstrap', "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", null, null, true);
+    wp_enqueue_script('popper', "https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js", null, null, true);
+    wp_enqueue_script('jquery', "jQuery", null, null, true);
     wp_enqueue_script('scripts', get_template_directory_uri() . "/assets/scripts/scripts.js", null, null, true);
 
 }
