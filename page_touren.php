@@ -265,6 +265,8 @@ if ((get_theme_mod('dav_breadcrumb') != false) && (get_theme_mod('dav_breadcrumb
                 'post_type' => 'personas',
                 'posts_per_page' => -1,
                 'nopaging' => true,
+                'orderby' => 'title',
+                'order' => 'ASC',
                 'tax_query' => array(
                     'relation' => 'OR',
                     array(
