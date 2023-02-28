@@ -23,7 +23,8 @@ function show_slider() {
 
 
         $return = '';
-
+        $padding_helper = ""
+        
         $sliderdata = get_post_meta($slider_id, '', false);
 
         $first = true;
