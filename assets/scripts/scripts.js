@@ -59,9 +59,6 @@ function elementHeight(element) {
 
         if(targeth != 0) {
 
-            console.log(targetn);
-            console.log(targeth);
-
             if (targetn == targeth) {
                 $('#'+targeth).addClass('test');
                 $('#'+targeth).find('.btn-menu').find('i').addClass('fa-chevron-right');
@@ -80,9 +77,7 @@ function elementHeight(element) {
             targeth = targetn;
 
         } else {
-            console.log('null');
             targeth = targetn;
-
         }
 
     });
