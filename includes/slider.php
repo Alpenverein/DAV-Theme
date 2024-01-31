@@ -42,11 +42,10 @@ function show_slider() {
             if(is_front_page() == true) {
                 $slider_id = 'start-slider-full';
             }
-
+            
             if($dav_menucolor == "trans") {
-            $padding_helper = 'style="margin-top: 0px;"';
+                $padding_helper = 'style="margin-top: 0px;"';
             }
-
             if($dav_menuview == "boxed") {
                 $padding_helper = 'style="margin-top: 0px;"';
             }
@@ -54,6 +53,7 @@ function show_slider() {
         else {
             $style_slider = 'container';
             $style_column = '';
+            $padding_helper = '';
 
             if(is_front_page() == true) {
                 $slider_id = 'start-slider-boxed';
